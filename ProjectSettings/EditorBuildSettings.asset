@@ -21,11 +21,8 @@ EditorBuildSettings:
     path: Assets/Scenes/PhysicsLab.unity
     guid: 4fa5fa4c08f926845978a3590ceaf1ce
   - enabled: 1
-    path: Assets/Scenes/3F Hallway B.unity
-    guid: c93aac4558ac32a49933626d5c03868b
-  - enabled: 0
     path: Assets/Scenes/3F Hallway.unity
-    guid: 28129081c9b5a3c47a93b531d37473e8
+    guid: c93aac4558ac32a49933626d5c03868b
   - enabled: 1
     path: Assets/Scenes/503.unity
     guid: ef38816fb49d6b94aa7ed0b325da9a6c
