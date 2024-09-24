@@ -14,6 +14,9 @@ public class DataManager : MonoBehaviour
     public string moveMethod;
     public string turnMethod;
 
+    // SETTINGS
+    public bool togglePC = false;
+
     public string targetSpawnPointID;
 
     void Awake()
@@ -45,5 +48,10 @@ public class DataManager : MonoBehaviour
     {
         // Example method to load data (you can implement JSON/PlayerPrefs here)
         Debug.Log($"Loaded: {playerName}, {yearLevel}, {strand}, {gender}, {moveMethod}, {turnMethod}");
+    }
+
+    public void togglePCSetting(bool value)
+    {
+        togglePC = value;
     }
 }

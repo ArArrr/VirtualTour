@@ -6,6 +6,7 @@ public class SceneLoaderUI : MonoBehaviour
 {
     public TMPro.TMP_Dropdown sceneDropdown; // Reference to the dropdown UI element
     public Button loadSceneButton; // Reference to the button UI element
+    public string transition = "CrossFade";
 
     private void Start()
     {
@@ -19,6 +20,6 @@ public class SceneLoaderUI : MonoBehaviour
         string selectedScene = sceneDropdown.options[sceneDropdown.value].text;
 
         // Load the selected scene
-        SceneManager.LoadScene(selectedScene);
+        LevelManager.Instance.LoadScene(selectedScene, transition, "none");
     }
 }

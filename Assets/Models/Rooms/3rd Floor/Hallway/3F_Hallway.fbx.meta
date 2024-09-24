@@ -128,6 +128,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Floor Hallway
+    second: {fileID: 2100000, guid: 7d126e7f05dd1e64ca9017606cbcf1e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: FloorTile.001
     second: {fileID: 2100000, guid: e13828339180f064e8c5f68321afb078, type: 2}
   - first:
@@ -443,6 +448,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: ceiling_rooms
+    second: {fileID: 2100000, guid: 64a06572815771b4cb790a1cc29f3164, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: mat13
     second: {fileID: 2100000, guid: e66f4d815d83e1744b14050194c1d981, type: 2}
   - first:
@@ -509,132 +519,147 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: 3F
-    second: {fileID: 2800000, guid: 39d542ed100721f48883202b75233ac5, type: 3}
+    second: {fileID: 2800000, guid: 87c2e80c43c44d04aafaa5c948029718, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: 3FHallwayTile2
-    second: {fileID: 2800000, guid: 34c7e9e411b1dc144ab5024e0d53c380, type: 3}
+    second: {fileID: 2800000, guid: e51f2c1de4b6b294f803e83aae08f21c, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: 3FHallwayTile3
-    second: {fileID: 2800000, guid: 3486a09574aa7944f9dabc24bcbaa247, type: 3}
+    second: {fileID: 2800000, guid: edb099a9ea67faa41b38321ea3183671, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: BiologyLab
-    second: {fileID: 2800000, guid: ffc0dba08533c7144b9c384a6e48f1c1, type: 3}
+    second: {fileID: 2800000, guid: cdd4cfde15b266f4b95fd44a4e7d7b6e, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Ceiling Guidance
-    second: {fileID: 2800000, guid: 06e08384e472db5458fbd76c604a2b2b, type: 3}
+    second: {fileID: 2800000, guid: 23c76b27eb8d3e9449740a3a334de85f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ceiling_Rooms
+    second: {fileID: 2800000, guid: ff1c1bbfe2051ec47b787ea88a37e251, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: ChemistryLab
-    second: {fileID: 2800000, guid: 0ead9bc7f4b285447825053c901d59c4, type: 3}
+    second: {fileID: 2800000, guid: 11fd23a148558154eb70acf858ebe7e9, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Clinic
-    second: {fileID: 2800000, guid: 926d9f72743c32e43b1e5258c3254624, type: 3}
+    second: {fileID: 2800000, guid: 1c003c6e7f9c1f241965b55193c2ae4f, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: ElevatorSign
-    second: {fileID: 2800000, guid: bbef0b6982e418d4a88b7e117ab16c96, type: 3}
+    second: {fileID: 2800000, guid: 909127d0504094242a3ba611801b8ec9, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: FemaleSign
-    second: {fileID: 2800000, guid: cc72abd3d9aaaa74f8adfecbf21f2f81, type: 3}
+    second: {fileID: 2800000, guid: a7fac8fdde967ec429db27977e825ac7, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Floor 305
-    second: {fileID: 2800000, guid: ed8ed95c48716f042b1be4bcc53cccb1, type: 3}
+    second: {fileID: 2800000, guid: 5964708aa34f86b45a009991d1862216, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Floor Guidance
-    second: {fileID: 2800000, guid: 4667e2094033ff143ac77a162a980b11, type: 3}
+    second: {fileID: 2800000, guid: 3b61ebb2e12a7354d9003e2e8c27c56b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FloorHallway
+    second: {fileID: 2800000, guid: 955d44d9b0bae21438d50de0854f2e0a, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Guidance
-    second: {fileID: 2800000, guid: d0124e911d06e584a8749e9d02a181c5, type: 3}
+    second: {fileID: 2800000, guid: 4ef80b7f25ad92841af06f85828419e4, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: House_Props_Diffuse
-    second: {fileID: 2800000, guid: 8dd49b16b1ec5234eac41161c64febb4, type: 3}
+    second: {fileID: 2800000, guid: 2a25331cdf3bc7a42a87e276285d2935, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MaleSign
+    second: {fileID: 2800000, guid: d4f02ca8abd17284f9893dd28ac3204f, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: PhysicsLab
-    second: {fileID: 2800000, guid: f871ad4d11d402048b65eeacd0084980, type: 3}
+    second: {fileID: 2800000, guid: 13f5f2a51bd615b43897a30e2699ad89, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Rm301
-    second: {fileID: 2800000, guid: 181e5dede20a97046b962eb384a9e094, type: 3}
+    second: {fileID: 2800000, guid: 1fc046f271c2fe049ab4828def3a3f9d, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Rm302
-    second: {fileID: 2800000, guid: 229bd61dd5319024f8b2093cf8450903, type: 3}
+    second: {fileID: 2800000, guid: 25a9fccc447d320499c13044d845a135, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Rm303
-    second: {fileID: 2800000, guid: 182c6a81aa80a4c4a9e104ac816678c3, type: 3}
+    second: {fileID: 2800000, guid: d49235eaf2816364182af18bc71cc548, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Rm304
-    second: {fileID: 2800000, guid: 8636b06ed8644ed43a5deb8009326160, type: 3}
+    second: {fileID: 2800000, guid: c46541d820e5a6a41b60341492d58686, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Rm305
-    second: {fileID: 2800000, guid: aba33b31f58b63e4483c1d05a27be574, type: 3}
+    second: {fileID: 2800000, guid: 12ed8c96b388e9443b7b6f7fab71922c, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Rm306
-    second: {fileID: 2800000, guid: 054aa65404442bb4ea2fa58fd2aad0c5, type: 3}
+    second: {fileID: 2800000, guid: 6fa31b05a85fc3749be5953c21175172, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Rm307
-    second: {fileID: 2800000, guid: 2b6882c273ca3c845848f647e0ee743c, type: 3}
+    second: {fileID: 2800000, guid: 50c3f434410f2a346a020e0ab0f2215a, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Rm308
-    second: {fileID: 2800000, guid: 503fcc4f6b5e9714987feb749912170c, type: 3}
+    second: {fileID: 2800000, guid: 6177d0e85a4eb0e43a6f67b45fa237f7, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Rm309
-    second: {fileID: 2800000, guid: 380784c04fda44641a0d2faa6baaa09a, type: 3}
+    second: {fileID: 2800000, guid: 8904d094561188444a400a5447f64276, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Rm310
-    second: {fileID: 2800000, guid: a1be447f4e58fb046a647253abeb5d4b, type: 3}
+    second: {fileID: 2800000, guid: 4c4e6d2d28e425c4b9ddf512c391e53f, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Schedule
-    second: {fileID: 2800000, guid: bad12f6699d6a954f8d474e9b57e9877, type: 3}
+    second: {fileID: 2800000, guid: cdee7a9e824ce894db0cdca923d93f50, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: TopSched
-    second: {fileID: 2800000, guid: 24bb96afa9554bf4da959446ebd329ad, type: 3}
+    second: {fileID: 2800000, guid: 1f17f853aebce214882e00bd27d4b556, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -679,7 +704,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
@@ -692,7 +717,7 @@ ModelImporter:
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
-    secondaryUVAreaDistortion: 15.000001
+    secondaryUVAreaDistortion: 15
     secondaryUVHardAngle: 88
     secondaryUVMarginMethod: 1
     secondaryUVMinLightmapResolution: 40

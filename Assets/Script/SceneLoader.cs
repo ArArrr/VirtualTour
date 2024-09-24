@@ -5,6 +5,8 @@ public class SceneLoader : MonoBehaviour
 {
     public string targetSpawnPointID;
     public string sceneName; // Name of the scene to load
+    public string transition = "CrossFade";
+    public string soundEffect = "none";
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,9 +17,9 @@ public class SceneLoader : MonoBehaviour
             {
                 DataManager.Instance.targetSpawnPointID = targetSpawnPointID;
             }
-            
+
             // Load the specified scene
-            SceneManager.LoadScene(sceneName);
+            LevelManager.Instance.LoadScene(sceneName, transition, soundEffect);
         }
     }
 }
