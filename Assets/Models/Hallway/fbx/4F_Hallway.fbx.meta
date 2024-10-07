@@ -37,6 +37,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Blue
+    second: {fileID: 2100000, guid: b7ab40d2c7cb5254aabb36b8ab546646, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: BoardWall
     second: {fileID: 2100000, guid: dd2ef6d3a7fe5d641b5c2d1cafd99a21, type: 2}
   - first:
