@@ -1,9 +1,24 @@
 fileFormatVersion: 2
-guid: 437201924e3a28143a698e198b22be6e
+guid: 000c89762170b5b49be6727dc100b314
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GdoorMetal.001
+    second: {fileID: 2100000, guid: 95f3b2994d37b0f4680376d59bc173bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window Frame
+    second: {fileID: 2100000, guid: 155dba60f053a644b95c3f4b96f80496, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window Glass1
+    second: {fileID: 2100000, guid: 937a4636949387d438ba9109c998b04e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

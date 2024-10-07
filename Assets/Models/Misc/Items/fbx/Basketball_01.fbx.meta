@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ec23a859fe587c1479cc73aa1de3ee07
+guid: d7c5c04dcabb97f44994daaf46e363bf
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,28 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Blue
-    second: {fileID: 2100000, guid: 2bfeae3bd7d779946b9f925be29e4b9a, type: 2}
+      name: BasketBall
+    second: {fileID: 2100000, guid: 621cd2a2c9a11ab418461b0537f821b2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: mat21
-    second: {fileID: 2100000, guid: d73591de4ed6fc24ea56dfc1543ae2bb, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: mat4
-    second: {fileID: 2100000, guid: b8448255b7bbacf46b51961caa675317, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: mat8
-    second: {fileID: 2100000, guid: d7d2e582004aec04eb35cb1cd7ff0721, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: mat9
-    second: {fileID: 2100000, guid: b60c351aac5f9974d8d0fc2a0ba38985, type: 2}
+      name: Black1
+    second: {fileID: 2100000, guid: 4617720843701c44887d182cc2e61dc1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
