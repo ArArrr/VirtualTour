@@ -14,6 +14,8 @@ public class LevelManager : MonoBehaviour
     private SceneTransition[] transitions;
     private AudioSource audioSource;
 
+    private Canvas canva;
+
     // Add a list of sound effects, which can be assigned in the Unity Inspector
     public AudioClip[] soundEffects;
 
@@ -38,6 +40,7 @@ public class LevelManager : MonoBehaviour
         transitions = transitionsContainer.GetComponentsInChildren<SceneTransition>();
         Debug.Log(transitions.Length);
         Debug.Log(transitions.ToList());
+        canva = GetComponent<Canvas>();
     }
 
     public void LoadScene(string sceneName, string transitionName, string soundEffectName)
@@ -47,6 +50,13 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator LoadSceneAsync(string sceneName, string transitionName, string soundEffectName)
     {
+        bool noTransition = false;
+        if (transitionName == "none")
+        {
+            noTransition = true;
+            canva.enabled = false;
+            transitionName = "CrossFade";
+        }
         SceneTransition transition = transitions.First(t => t.name.Equals(transitionName));
 
         AsyncOperation scene = SceneManager.LoadSceneAsync(sceneName);
@@ -72,6 +82,10 @@ public class LevelManager : MonoBehaviour
         // progressBar.gameObject.SetActive(false);
 
         yield return transition.AnimateTransitionOut();
+        if (noTransition)
+        {
+            canva.enabled = true;
+        }
     }
 
     // Play the selected sound effect if it's not "none"

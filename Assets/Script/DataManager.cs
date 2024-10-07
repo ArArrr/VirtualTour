@@ -50,8 +50,8 @@ public class DataManager : MonoBehaviour
         Debug.Log($"Loaded: {playerName}, {yearLevel}, {strand}, {gender}, {moveMethod}, {turnMethod}");
     }
 
-    public void togglePCSetting(bool value)
+    public void togglePCSetting()
     {
-        togglePC = value;
+        togglePC = !togglePC;
     }
 }

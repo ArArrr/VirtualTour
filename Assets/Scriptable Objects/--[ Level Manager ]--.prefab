@@ -462,7 +462,7 @@ Canvas:
   m_GameObject: {fileID: 4152724096799642622}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 0.7
   m_PixelPerfect: 0
@@ -549,6 +549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progressBar: {fileID: 6763374717099882423}
   transitionsContainer: {fileID: 2141784367278206676}
+  soundEffects: []
 --- !u!1 &4844553347254354542
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,7 +659,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -15, y: 0}
+  m_AnchoredPosition: {x: -1500, y: 0}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3488563556685293238

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec85effbd52b6f643af8baf19bf5eb39, type: 3}
   m_Name: Test Naration
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 31122cfbbe80ff84b87d674ae374ce4d, type: 3}
   subtitleLines:
-  - text: 
+  - text: mahalaga ay hindi pag suko sa pagsubo
     startTime: 0
-    endTime: 0
+    endTime: 3.84

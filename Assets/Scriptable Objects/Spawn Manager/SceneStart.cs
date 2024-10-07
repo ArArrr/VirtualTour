@@ -1,11 +1,22 @@
+using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class SceneStart : MonoBehaviour
 {
-    public GameObject player;
+    private GameObject player;
 
     private void Start()
     {
+        // Automatically find the player (XR Origin) in the scene
+        player = FindObjectOfType<XROrigin>().gameObject;
+
+        if (player == null)
+        {
+            Debug.LogError("Player (XR Origin) not found in the scene!");
+            return;
+        }
+
         LoadScene();
     }
 
@@ -25,6 +36,7 @@ public class SceneStart : MonoBehaviour
                 break;
             }
         }
+
         if (!isFound)
         {
             Debug.LogWarning("Spawn ID " + targetID + " not found. Teleporting to default.");
@@ -33,7 +45,6 @@ public class SceneStart : MonoBehaviour
                 if (spawnPoint.spawnPointID == "default")
                 {
                     SpawnManager.Instance.SetSpawnPoint(spawnPoint);
-
                     break;
                 }
             }
