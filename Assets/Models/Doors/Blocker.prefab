@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1591409522941389600}
+  - component: {fileID: 1014169502475510609}
   m_Layer: 7
   m_Name: Blocker
   m_TagString: Untagged
@@ -32,6 +33,20 @@ Transform:
   - {fileID: 2864209368968497538}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1014169502475510609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445630021969374092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5802804b8536372479851286d301dafd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  block: {fileID: 0}
+  toDestroy: 0
 --- !u!1 &2008843051184272451
 GameObject:
   m_ObjectHideFlags: 0
