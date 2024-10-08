@@ -20,7 +20,7 @@ TagManager:
   - Fade
   - Invisible
   - TP Barrier
-  - 
+  - Hair
   - 
   - 
   - 
@@ -43,4 +43,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UIAboveAll
+    uniqueID: 1231203173
     locked: 0

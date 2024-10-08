@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec85effbd52b6f643af8baf19bf5eb39, type: 3}
+  m_Name: VR MODE
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 07cfaa63808ec614d86cffb29ac058ef, type: 3}
+  subtitleLines:
+  - text: Hello, Future STIer! Thank you for choosing STI College Global City
+    startTime: 0
+    endTime: 6.4
+  - text: 'Before we finally start our tour, let me remind you of some stuff. '
+    startTime: 6.4
+    endTime: 10.98
+  - text: "Our tour flow will begin here at the ground floor, next to the basement,
+      go up to 8th floor, and that\u2019s where we tour the floors one by one using
+      the stairs."
+    startTime: 10.98
+    endTime: 24.07
+  - text: To know more about a specific facility, kindly hover to the glowing question
+      mark symbol and click it to see.
+    startTime: 24.07
+    endTime: 32.84
+  - text: "Those are what we called \u201Chotspots\u201D"
+    startTime: 32.84
+    endTime: 36.5
+  - text: To move to the next destination, kindly follow the pathway marker
+    startTime: 36.5
+    endTime: 42.5
+  - text: It will serve as your guide while touring.
+    startTime: 42.5
+    endTime: 46.5
+  - text: Use the joystick on your controller to move and look around you.
+    startTime: 46.5
+    endTime: 51.447
+  - text: To use objects, use the grab button below the trigger button on your controller
+    startTime: 46.5
+    endTime: 59.194
+  - text: Ready? Kindly tap the ID beside the gate to begin
+    startTime: 59.194
+    endTime: 63.7
