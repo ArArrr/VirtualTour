@@ -158,7 +158,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7084796900804663161}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.593, z: 0}
   m_LocalScale: {x: 1.0679126, y: 1.0333068, z: 1.0679126}
   m_ConstrainProportionsScale: 0
@@ -319,7 +319,7 @@ MonoBehaviour:
   distanceFromCamera: 1
   smoothSpeed: 5
   updateAngleThreshold: 5
-  updateDistanceThreshold: 0.5
+  updateDistanceThreshold: 0
 --- !u!1 &8605353066000723716
 GameObject:
   m_ObjectHideFlags: 0
