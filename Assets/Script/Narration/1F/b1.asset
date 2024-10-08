@@ -16,7 +16,7 @@ MonoBehaviour:
   subtitleLines:
   - text: "Upon entering the campus, you will see different offices instantly. Let\u2019s
       go first to School Administration office. "
-    startTime: 1
+    startTime: 0
     endTime: 5.723
   - text: "Let\u2019s go first to School Administration office."
     startTime: 6.03
