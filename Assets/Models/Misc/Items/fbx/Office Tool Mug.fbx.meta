@@ -13,7 +13,7 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: House_Props_Diffuse
-    second: {fileID: 2800000, guid: 9b8bc1e5f36d80b43bd490763cd6b883, type: 3}
+    second: {fileID: 2800000, guid: 9cb3166dada0eaa4eaf63abf51e32d0b, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
