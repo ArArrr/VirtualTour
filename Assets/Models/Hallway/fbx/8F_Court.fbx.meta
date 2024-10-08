@@ -52,8 +52,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Flooring HallwayDark
+    second: {fileID: 2100000, guid: b5ef3ebcda9c6514490b31aa67e09ed8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Flooring Wood Tile
     second: {fileID: 2100000, guid: 6e9eb2d2baab3bc4cb4f6574eba55bbe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flooring_CRTile
+    second: {fileID: 2100000, guid: bea131c1daf22d244a3ce514ff65f1a8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -67,8 +77,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Gym.Guidelines
+    second: {fileID: 2100000, guid: ceab76eeff4e91d47bcc9ecfe6f771ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: HallwayTile4
     second: {fileID: 2100000, guid: 84f943f5757fecc499d4a543e55bfeb2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Light
+    second: {fileID: 2100000, guid: 8f3672d17e170b648b742bc9d3f26f30, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LightBase
+    second: {fileID: 2100000, guid: 96763a7f503e4e843985daa7e4dc951a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -117,6 +142,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: STI Court
+    second: {fileID: 2100000, guid: f1c7387194f4efc40ac3a46e54c578f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Stair1
     second: {fileID: 2100000, guid: 1e5e80eeef20966488949d919d90e6d8, type: 2}
   - first:
@@ -124,6 +154,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Stair2
     second: {fileID: 2100000, guid: 544f4605b28bf234fa807c2a22d5bf5e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trash Bin
+    second: {fileID: 2100000, guid: ef237b6b26c7e9745bfa703578e61dd7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -144,6 +179,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Window Frame
     second: {fileID: 2100000, guid: 155dba60f053a644b95c3f4b96f80496, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window Glass Solid
+    second: {fileID: 2100000, guid: 3abeafa1095018f4c8cfbce1c47de0c9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -193,17 +233,37 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: ElevatorSign
-    second: {fileID: 2800000, guid: 5cfe9dfbbc68a2346b0c0cbc8924903b, type: 3}
+    second: {fileID: 2800000, guid: 97ef2fcddd251c04fba4a1e8d43e67dc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Flooring CR
+    second: {fileID: 2800000, guid: 341a5c8268b33c947bcfe7e6b9aab4ec, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Flooring HallwayDark
+    second: {fileID: 2800000, guid: f9d6f41a6ff83174aada88ba1f1a24dc, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Poliigon_WoodFloorAsh_4186_BaseColor
-    second: {fileID: 2800000, guid: 7325d3cbcf827074181a826ac9e9d587, type: 3}
+    second: {fileID: 2800000, guid: 10f6d6175e262cd4e99e99f72792ed07, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Poliigon_WoodFloorAsh_4186_Roughness
-    second: {fileID: 2800000, guid: 881cec0230856d54da77d422ad8e9a01, type: 3}
+    second: {fileID: 2800000, guid: 0922e4a7867fe4347aa1629e765677ee, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: gym general guidelines
+    second: {fileID: 2800000, guid: 590735a75adc09e49898fa3453b188a9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sti_court2
+    second: {fileID: 2800000, guid: 618a59d08cd3fb5428e136ef4b51c01e, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
