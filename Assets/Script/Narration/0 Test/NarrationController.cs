@@ -5,6 +5,7 @@ using TMPro;
 
 public class NarrationController : MonoBehaviour
 {
+    public bool isIntro = false;
     public SubtitleData subtitleData;  // Assign your subtitle data in the inspector
     public AudioSource audioSource;    // AudioSource for playing narration audio
     public NarrationController nextNarration;  // Reference to the next narration controller
@@ -27,6 +28,7 @@ public class NarrationController : MonoBehaviour
 
             // Hide the subtitle UI at the start
             SetSubtitleVisible(false);
+            StartNarration();
         }
         else
         {
