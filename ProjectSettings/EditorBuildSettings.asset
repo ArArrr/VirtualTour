@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Outdoor.unity
     guid: 4041c5322f0e6d147ac4d6ee168530d5
   - enabled: 1
+    path: Assets/Scenes/BF Canteen.unity
+    guid: 696fd4e33376fc845849d8ba1a5ac871
+  - enabled: 1
     path: Assets/Scenes/1F Lobby.unity
     guid: f8330ada081f3cc4f89162e977f1bb62
   - enabled: 1
@@ -21,8 +24,20 @@ EditorBuildSettings:
     path: Assets/Scenes/4F Hallway.unity
     guid: 74deba13931da7e4885ad70d71ffac41
   - enabled: 1
+    path: Assets/Scenes/5F Hallway.unity
+    guid: 9ec49ad3169406944a53264f5815cb84
+  - enabled: 1
+    path: Assets/Scenes/6F Hallway.unity
+    guid: d1cb210378ef7464490b6bd21c92ca95
+  - enabled: 1
+    path: Assets/Scenes/7F Hallway.unity
+    guid: ed181643c6c07a246bd056a68852f4a4
+  - enabled: 1
     path: Assets/Scenes/8F Court.unity
     guid: b0645b1a465baea4aa868dab976310b8
+  - enabled: 1
+    path: Assets/Scenes/Demo Scene.unity
+    guid: 1260834853293304d8c743e742069f11
   - enabled: 1
     path: Assets/Scenes/PhysicsLab.unity
     guid: 4fa5fa4c08f926845978a3590ceaf1ce
@@ -32,9 +47,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/503.unity
     guid: ef38816fb49d6b94aa7ed0b325da9a6c
-  - enabled: 1
-    path: Assets/Scenes/Demo Scene.unity
-    guid: 1260834853293304d8c743e742069f11
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: d4657bb0e443b174d918c50c029f4233,
       type: 2}
