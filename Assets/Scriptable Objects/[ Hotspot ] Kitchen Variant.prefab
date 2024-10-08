@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8326158034525642456
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 118954703738225869, guid: 07d7b212734244c4fa5a62bc09f2ac11,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476456163858131077, guid: 07d7b212734244c4fa5a62bc09f2ac11,
+        type: 3}
+      propertyPath: m_text
+      value: This facility is the go-to for all BS Hospitality Management students
+        for their cooking practical sessions.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835526257310333487, guid: 07d7b212734244c4fa5a62bc09f2ac11,
+        type: 3}
+      propertyPath: m_Name
+      value: '[ Hotspot ] Kitchen Variant'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149074416654835506, guid: 07d7b212734244c4fa5a62bc09f2ac11,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -46.345
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149074416654835506, guid: 07d7b212734244c4fa5a62bc09f2ac11,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149074416654835506, guid: 07d7b212734244c4fa5a62bc09f2ac11,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.894
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149074416654835506, guid: 07d7b212734244c4fa5a62bc09f2ac11,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149074416654835506, guid: 07d7b212734244c4fa5a62bc09f2ac11,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149074416654835506, guid: 07d7b212734244c4fa5a62bc09f2ac11,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149074416654835506, guid: 07d7b212734244c4fa5a62bc09f2ac11,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149074416654835506, guid: 07d7b212734244c4fa5a62bc09f2ac11,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149074416654835506, guid: 07d7b212734244c4fa5a62bc09f2ac11,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149074416654835506, guid: 07d7b212734244c4fa5a62bc09f2ac11,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781234720716276785, guid: 07d7b212734244c4fa5a62bc09f2ac11,
+        type: 3}
+      propertyPath: m_text
+      value: 'Kitchen
+
+        Laboratory'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781234720716276785, guid: 07d7b212734244c4fa5a62bc09f2ac11,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781234720716276785, guid: 07d7b212734244c4fa5a62bc09f2ac11,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8487281856207041751, guid: 07d7b212734244c4fa5a62bc09f2ac11,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8a5567bfc33a54845a746c43457165f9,
+        type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07d7b212734244c4fa5a62bc09f2ac11, type: 3}
