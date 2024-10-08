@@ -28,7 +28,7 @@ public class NarrationController : MonoBehaviour
 
             // Hide the subtitle UI at the start
             SetSubtitleVisible(false);
-            StartNarration();
+            if (isIntro) StartNarration();
         }
         else
         {

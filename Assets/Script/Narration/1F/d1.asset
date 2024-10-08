@@ -14,7 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: fcdc73e4f9bb893498155667a1e2b0a1, type: 3}
   subtitleLines:
-  - text: Moving forward, three offices are situated here. From left to right, first
-      is the Alumni Placement Office, Office of the Student Affairs, and the HR office.
+  - text: Moving forward, three offices are situated here.
     startTime: 0
+    endTime: 5.278
+  - text: From left to right, first is the Alumni Placement Office
+    startTime: 5.278
+    endTime: 10.89
+  - text: Office of the Student Affairs, and the HR office.
+    startTime: 10.89
     endTime: 16.8

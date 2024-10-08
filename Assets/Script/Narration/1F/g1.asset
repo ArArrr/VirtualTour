@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 3d941f8d6cd7f7148b9df1928d8a2e20, type: 3}
   subtitleLines:
-  - text: After those offices, here is our main lobby hallway, where different activities
-      happen here from time to time.
+  - text: After those offices, here is our main lobby hallway,
     startTime: 0
-    endTime: 9.243
+    endTime: 5.15
+  - text: where different activities happen here from time to time.
+    startTime: 5.3
+    endTime: 9.21
   - text: Whether there may be food stalls, booths, or just a free space for all
       STIers.
     startTime: 9.243
