@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec85effbd52b6f643af8baf19bf5eb39, type: 3}
+  m_Name: b3
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 0f625a22d39a4124cb0063c2dda0c5ce, type: 3}
+  subtitleLines:
+  - text: "That was a hit! Let\u2019s now move on to the next facility. Follow the
+      pathway."
+    startTime: 0
+    endTime: 6.5
