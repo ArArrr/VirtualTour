@@ -13,7 +13,7 @@ public class DataManager : MonoBehaviour
     public string gender;
     public string moveMethod;
     public string turnMethod;
-    public bool isTour = true;
+    public bool isTour = false;
     public bool nextLevel = false;
 
     // SETTINGS
