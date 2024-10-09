@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 3750637b51f1bf04ab1398ae1ff6958a, type: 3}
   subtitleLines:
-  - text: 'Upon arriving here in the basement is the Canteen located, that is open
-      for all STIers. '
+  - text: Besides the canteen is our Parking area.
     startTime: 0
-    endTime: 0
+    endTime: 4.3

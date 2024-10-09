@@ -162,6 +162,20 @@ public class ElevatorButtonController : MonoBehaviour
         }
     }
 
+    public IEnumerator HandleSpawnElevator()
+    {
+        elevatorAnimator.SetBool("isWaiting", false);
+        Debug.Log("isWaiting set to false");
+        elevatorAudio.PlayDing();
+        Debug.Log("ding played");
+        yield return new WaitForSeconds(2);
+        Debug.Log("2 seconds passed");
+        MusicManager.Instance.StopMusic();
+        Debug.Log("music stopped");
+        OpenElevator();
+        Debug.Log("elevator opened");
+    }
+
     private void getFloorID()
     {
         switch (targetFloor)

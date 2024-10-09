@@ -12,6 +12,8 @@ public class MarkerDistanceDisplay : MonoBehaviour
     public NarrationController nextNarration;  // Reference to the next narration controller
     private Canvas canvas;
 
+    public bool nextFloor = false;
+
     private void Start()
     {
         // Automatically get the Canvas component from the GameObject
@@ -41,6 +43,10 @@ public class MarkerDistanceDisplay : MonoBehaviour
     {
         canvas.enabled = true;
         InvokeRepeating(nameof(UpdateDistanceText), 0f, updateInterval);
+        if(nextFloor && DataManager.Instance.isTour)
+        {
+            DataManager.Instance.nextLevel = true;
+        }
     }
 
     private void AdjustMarkerScale(float distance)
@@ -68,10 +74,6 @@ public class MarkerDistanceDisplay : MonoBehaviour
                 nextNarration.StartNarration();
                 CancelInvoke(nameof(UpdateDistanceText));
                 canvas.enabled = false;
-            }
-            else
-            {
-                Debug.LogWarning("NarrationController not found in the scene.");
             }
         }
     }
