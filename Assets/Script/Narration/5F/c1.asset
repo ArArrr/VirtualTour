@@ -10,14 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec85effbd52b6f643af8baf19bf5eb39, type: 3}
-  m_Name: Thats all about the basement
+  m_Name: c1
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 3750637b51f1bf04ab1398ae1ff6958a, type: 3}
+  audioClip: {fileID: 8300000, guid: 84c5dc728c329ad4e89bdf7cb09c8e25, type: 3}
   subtitleLines:
-  - text: "That\u2019s all about the basement. Let\u2019s now go up to 8th floor
-      via elevator. Follow the pathway. "
+  - text: 'A spacious room covered in mirrors - this is our Dance Studio. '
     startTime: 0
-    endTime: 2.6
-  - text: "Let\u2019s now go up to 8th floor via elevator. Follow the pathway. "
-    startTime: 3.1
-    endTime: 8.2
+    endTime: 6.1

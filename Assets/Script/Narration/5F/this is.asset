@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec85effbd52b6f643af8baf19bf5eb39, type: 3}
-  m_Name: b1
+  m_Name: this is
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 8ba6aafb61563ae489f2f1f8cd7367d1, type: 3}
+  audioClip: {fileID: 8300000, guid: 3b6eb140910ca4d4085172b4d5f358a7, type: 3}
   subtitleLines:
-  - text: Aside from classrooms here, this is our Proware, or formally called as
-      Purchasing Office. Learn more by hitting its hotspot icon.
+  - text: This is the 5th floor. Follow the pathway to see different facilities.
     startTime: 0
-    endTime: 11.5
+    endTime: 5.5
+  - text: "Let\u2019s go first to one of the computer laboratories here."
+    startTime: 5.5
+    endTime: 9.6

@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec85effbd52b6f643af8baf19bf5eb39, type: 3}
   m_Name: b1
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 8ba6aafb61563ae489f2f1f8cd7367d1, type: 3}
+  audioClip: {fileID: 8300000, guid: 7f85d21b12f27e749a03991b48d60f26, type: 3}
   subtitleLines:
-  - text: Aside from classrooms here, this is our Proware, or formally called as
-      Purchasing Office. Learn more by hitting its hotspot icon.
+  - text: 'Besides the canteen is our Parking area. '
     startTime: 0
-    endTime: 11.5
+    endTime: 3.7
