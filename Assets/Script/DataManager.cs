@@ -6,7 +6,7 @@ public class DataManager : MonoBehaviour
     public static DataManager Instance { get; private set; }
 
     // Step 3: Add fields for your player data
-    public int lastCompletedFloor;
+    public int lastCompletedFloor = 0;
     public string playerName;
     public string yearLevel;
     public string strand;
