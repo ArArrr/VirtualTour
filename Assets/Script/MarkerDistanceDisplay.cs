@@ -18,6 +18,8 @@ public class MarkerDistanceDisplay : MonoBehaviour
 
     private void Start()
     {
+        if (!enabled) return;
+
         // Automatically get the Canvas component from the GameObject
         canvas = GetComponent<Canvas>();
         canvas.enabled = false;
