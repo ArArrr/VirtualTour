@@ -7,18 +7,30 @@ public class NarrationController : MonoBehaviour
 {
     public bool isIntro = false;
     public SubtitleData subtitleData;  // Assign your subtitle data in the inspector
-    public AudioSource audioSource;    // AudioSource for playing narration audio
+    private AudioSource audioSource;    // AudioSource for playing narration audio
+
+    [Header("Next Narration")]
     public NarrationController nextNarration;  // Reference to the next narration controller
+
+    [Header("Next Marker")]
     public MarkerDistanceDisplay marker;
+
+    [Header("Customization")]
     public float delayBeforeNext = 0f; // Optional delay before playing the next narration
     public bool waitAudioToFinish = true;
 
     private TMP_Text subtitleText;     // Reference to TMP_Text for subtitles
     private CanvasGroup subtitleCanvasGroup; // CanvasGroup to control visibility
 
-
     private void Start()
     {
+        // Automatically find the AudioSource component from the parent object
+        audioSource = GetComponentInParent<AudioSource>();
+        if (audioSource == null)
+        {
+            Debug.LogError("AudioSource not found in the parent object. Please make sure it exists.");
+        }
+
         // Automatically find the Subtitle UI and its components
         GameObject subtitleUI = GameObject.Find("Subtitle UI");  // Find Subtitle UI by name
         if (subtitleUI != null)
@@ -28,6 +40,7 @@ public class NarrationController : MonoBehaviour
 
             // Hide the subtitle UI at the start
             SetSubtitleVisible(false);
+
             if (isIntro) StartNarration();
         }
         else
