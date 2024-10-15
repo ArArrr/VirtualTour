@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3036489827528149969}
   - component: {fileID: 1787428720034603507}
+  - component: {fileID: -4743105843558258039}
   m_Layer: 0
   m_Name: '[ Narrations List ]'
   m_TagString: Untagged
@@ -130,6 +131,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-4743105843558258039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111924887812015157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87381e528ff6043874261713fb34cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredStrand: BSIT
+  selectedFloor: 0
 --- !u!1 &2213564428746030625
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,12 +545,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d866fc892f44394fbb9170671150268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextNarration: {fileID: 0}
+  nextFloor: 0
   playerTransform: {fileID: 0}
   distanceText: {fileID: 5414297271699604259}
   updateInterval: 0.2
   baseScale: 0.01
   distanceMultiplier: 0.0005
-  nextNarration: {fileID: 0}
 --- !u!136 &5472053762070410948
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -615,8 +631,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c47a645355d337f4b8fdfeda19af4aef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isIntro: 0
   subtitleData: {fileID: 0}
-  audioSource: {fileID: 1787428720034603507}
   nextNarration: {fileID: 0}
   marker: {fileID: 0}
   delayBeforeNext: 0
