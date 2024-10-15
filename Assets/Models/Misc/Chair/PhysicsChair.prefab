@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1884504540250369515}
   - component: {fileID: 4198865678631448255}
   - component: {fileID: 3511398296438573420}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Seat (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 3511284218312684537}
   - component: {fileID: 1058405181634636795}
   - component: {fileID: 5453368568486660838}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Leg (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 6972104782334562157}
   - component: {fileID: 3328562283182222892}
   - component: {fileID: 4204694979621700111}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Leg (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 353039848707726656}
   - component: {fileID: 6683283552170652312}
   - component: {fileID: 1871922991255602280}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +432,7 @@ GameObject:
   - component: {fileID: 2362984386449988294}
   - component: {fileID: 4573938064234157957}
   - component: {fileID: 9182131082023202256}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Leg (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 2795945181262004318}
   - component: {fileID: 3817001573252175183}
   - component: {fileID: 8017893410189835925}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Seat (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -642,7 +642,7 @@ GameObject:
   - component: {fileID: 7086887607115511754}
   - component: {fileID: 7000448247515146131}
   - component: {fileID: 8837812799285632467}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Seat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -816,7 +816,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 62083a3381a45864d8c82efa58f98c9f,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

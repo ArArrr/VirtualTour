@@ -24,20 +24,20 @@ public class NarrationsList : MonoBehaviour
 
     [Header("Floor")]
     public FloorOption selectedFloor;
+    public bool demoMode = false;
 
     private NarrationController[] narrationControllers;
 
     private void Start()
     {
-        
-
         playerStrand = DataManager.Instance.strand;
+        currentFloor();
 
         // Find all child objects with NarrationController components
         narrationControllers = GetComponentsInChildren<NarrationController>();
 
         // Check if the player's strand matches the required one
-        if (playerStrand.ToLower().Equals(requiredStrand.ToLower())  || requiredStrand.ToLower().Equals("all"))
+        if (playerStrand.ToLower().Equals(requiredStrand.ToLower()) && currentfloor == DataManager.Instance.lastCompletedFloor || requiredStrand.ToLower().Equals("all") || demoMode)
         {
             Debug.Log("Player's strand matches. Starting narrations.");
             // Enable or start each narration controller

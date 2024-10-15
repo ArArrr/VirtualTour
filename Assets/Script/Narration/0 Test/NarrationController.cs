@@ -24,23 +24,22 @@ public class NarrationController : MonoBehaviour
 
     private void Start()
     {
-        // Automatically find the AudioSource component from the parent object
+        if (!enabled) return;  // Exit if this component was disabled by the parent
+
+        // Proceed with the regular Start logic if enabled
         audioSource = GetComponentInParent<AudioSource>();
         if (audioSource == null)
         {
             Debug.LogError("AudioSource not found in the parent object. Please make sure it exists.");
         }
 
-        // Automatically find the Subtitle UI and its components
-        GameObject subtitleUI = GameObject.Find("Subtitle UI");  // Find Subtitle UI by name
+        GameObject subtitleUI = GameObject.Find("Subtitle UI");
         if (subtitleUI != null)
         {
             subtitleCanvasGroup = subtitleUI.GetComponent<CanvasGroup>();
             subtitleText = subtitleUI.GetComponentInChildren<TMP_Text>();
 
-            // Hide the subtitle UI at the start
             SetSubtitleVisible(false);
-
             if (isIntro) StartNarration();
         }
         else
@@ -48,6 +47,7 @@ public class NarrationController : MonoBehaviour
             Debug.LogError("Subtitle UI not found! Please make sure it exists in the scene.");
         }
     }
+
 
     public void StartNarration()
     {

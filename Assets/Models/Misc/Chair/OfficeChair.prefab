@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5900336629882318199}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6503627022204074364}
   - component: {fileID: 28076775298951160}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Box Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6789619583586895738}
   - component: {fileID: 922785457871847197}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Box Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6019012897432680108}
   - component: {fileID: 5115894196409243296}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Box Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2735260670531589713}
   - component: {fileID: 8543605446162284629}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Box Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1678682500790217010}
   - component: {fileID: 1494978982705105862}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Box Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,7 +323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3410935038702543164}
   - component: {fileID: 6968368645015969042}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Box Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,7 +376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 311900004641627397}
   - component: {fileID: 2132882352942118566}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Box Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -429,7 +429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8744542884166530879}
   - component: {fileID: 5933743183715642222}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Box Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -482,7 +482,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1246131952777444028}
   - component: {fileID: 2949070467054251355}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Box Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -535,7 +535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7865015418241214802}
   - component: {fileID: 312542446646280348}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Box Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -588,7 +588,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2871395104710520765}
   - component: {fileID: 6396476225782639648}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Box Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -641,7 +641,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2843777033222238546}
   - component: {fileID: 5384710462222799349}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Box Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -694,7 +694,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4248186482439582020}
   - component: {fileID: 8429015403987155327}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Box Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -747,7 +747,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6878615034692033403}
   - component: {fileID: 8509596200059541703}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Box Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -800,7 +800,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8701639072895640121}
   - component: {fileID: 8342828410372703740}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Box Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -853,7 +853,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8546252337711929119}
   - component: {fileID: 2630008955887833743}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Box Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -906,7 +906,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3389419486780529001}
   - component: {fileID: 1122623165279230978}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Box Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1015,7 +1015,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8e57a6683b4e42d428cb2ec4efca2def,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

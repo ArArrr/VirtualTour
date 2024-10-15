@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8241096328500850632}
   - component: {fileID: 2354490093276167608}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Seat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63,7 +63,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7884905774423278773}
   - component: {fileID: 222807772501238800}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 159051897702349003}
   - component: {fileID: 8206404450450002995}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3036212057886780460}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4804737492225171024}
   - component: {fileID: 3647863985805692536}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6616907604048170442}
   - component: {fileID: 7648599746731550985}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,7 +314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9036906689319661094}
   - component: {fileID: 829298311854811095}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,7 +367,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4300743691698637791}
   - component: {fileID: 2945551564791918976}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,7 +420,7 @@ GameObject:
   m_Component:
   - component: {fileID: 985527791514623501}
   - component: {fileID: 338341273965715016}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -529,7 +529,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 85378e78d4318de4ea971bdc9a8fe71e,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
