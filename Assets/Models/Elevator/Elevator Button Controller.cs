@@ -33,18 +33,16 @@ public class ElevatorButtonController : MonoBehaviour
     // Method to go to the assigned floor
     public void GoToFloor()
     {
-        if (!ButtonShouldWork()) return; // Check if button should function
         PlayClick();
-
+        if (!ButtonShouldWork()) return; // Check if button should function
         if (!elevatorAnimator.GetBool("isWaiting")) StartCoroutine(HandleFloorChange());
     }
 
     // Method to call the elevator to the current floor
     public void CallElevator()
     {
-        if (!ButtonShouldWork()) return; // Check if button should function
         PlayClick();
-
+        if (!ButtonShouldWork()) return; // Check if button should function
         if (elevatorAudio == null || elevatorAnimator == null || elevatorRenderer == null)
         {
             Debug.LogWarning("ElevatorAudioController, Animator, or Renderer is not assigned!");
@@ -205,7 +203,27 @@ public class ElevatorButtonController : MonoBehaviour
     private bool ButtonShouldWork()
     {
         if (!DataManager.Instance.isTour) return true; // If not on a tour, all buttons work
-        if (DataManager.Instance.isTour && DataManager.Instance.nextLevel && targetFloor == 8) return true; // On tour, only 8th floor works
+        if (DataManager.Instance.isTour && DataManager.Instance.nextLevel && targetFloor == matchFloorButton()) return true; // On tour, only 8th floor works
+        if (targetFloor == -1) return true;
         return false; // All other cases, button should not work
+    }
+
+    private int matchFloorButton()
+    {
+        int playerTargetFloor = DataManager.Instance.lastCompletedFloor;
+        switch(playerTargetFloor)
+        {
+            case 0: return -1;
+            case 1: return 0;
+            case 2: return 8;
+            case 3: return 7;
+            case 4: return 6;
+            case 5: return 5;
+            case 6: return 4;
+            case 7: return 3;
+            case 8: return 2;
+            case 9: return 1;
+            default: return -1;
+        }
     }
 }

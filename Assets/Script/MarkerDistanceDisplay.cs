@@ -51,6 +51,7 @@ public class MarkerDistanceDisplay : MonoBehaviour
         if(nextFloor && DataManager.Instance.isTour)
         {
             DataManager.Instance.nextLevel = true;
+            DataManager.Instance.lastCompletedFloor++;
         }
     }
 
