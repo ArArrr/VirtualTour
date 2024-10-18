@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec85effbd52b6f643af8baf19bf5eb39, type: 3}
+  m_Name: a2
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: e47ba3a863c3f4e408d7623b72ed1cdd, type: 3}
+  subtitleLines:
+  - text: This room is specially crafted for BACOMM students.  to learn more.
+    startTime: 0
+    endTime: 4.5
+  - text: "Something\u2019s inside this room, hit its hotspot icon"
+    startTime: 6
+    endTime: 11.5
