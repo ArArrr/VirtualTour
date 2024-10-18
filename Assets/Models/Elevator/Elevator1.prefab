@@ -3652,7 +3652,7 @@ MonoBehaviour:
   click: {fileID: 8300000, guid: a6227b5c1752f464298d47a904078692, type: 3}
   originalMaterial: {fileID: 2100000, guid: e9863afe830003c42a5da6b0d2725652, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 39b5de4b401ee2741ac89f5b3e9aa7a0, type: 2}
-  targetFloor: 1
+  targetFloor: -1
   floortext: {fileID: 1012527433293857386}
 --- !u!1 &5572355942150711093 stripped
 GameObject:
@@ -4708,6 +4708,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 97c245cdb49e3744ca4d4e68b3982c9a, type: 3}
   - {fileID: 8300000, guid: 18aba23b7646e5b4fa6a04b23a28687d, type: 3}
   - {fileID: 8300000, guid: 463a4ae35b35b944fa59fddf5e8e8a3c, type: 3}
+  audioSource: {fileID: 0}
 --- !u!65 &3012902722229826561
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5648,7 +5649,7 @@ MonoBehaviour:
   click: {fileID: 8300000, guid: a6227b5c1752f464298d47a904078692, type: 3}
   originalMaterial: {fileID: 2100000, guid: e9863afe830003c42a5da6b0d2725652, type: 2}
   highlightMaterial: {fileID: 2100000, guid: 39b5de4b401ee2741ac89f5b3e9aa7a0, type: 2}
-  targetFloor: 1
+  targetFloor: -1
   floortext: {fileID: 1012527433293857386}
 --- !u!82 &4703086178997937149
 AudioSource:

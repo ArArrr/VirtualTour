@@ -51,18 +51,29 @@ public class NarrationController : MonoBehaviour
 
     public void StartNarration()
     {
+        // Log the audio clip name when narration starts
+        if (audioSource != null && audioSource.clip != null)
+        {
+            Debug.Log($"[ Line ] {audioSource.clip.name} is playing..");
+        }
+        else
+        {
+            Debug.LogWarning("[ Line ] No audio clip assigned or AudioSource is missing.");
+        }
+
         StartCoroutine(PlayNarrationWithSubtitles());
     }
 
     private IEnumerator PlayNarrationWithSubtitles()
     {
+        
         // Ensure there's an audio clip to play
         if (subtitleData == null || audioSource == null || subtitleData.audioClip == null)
         {
             Debug.LogError("SubtitleData or AudioSource is missing!");
             yield break;
         }
-
+        if (isIntro) yield return new WaitForSeconds(4);
         SetSubtitleVisible(true);
 
         // Play the audio

@@ -41,7 +41,7 @@ public class NarrationsList : MonoBehaviour
         markerDisplays = GetComponentsInChildren<MarkerDistanceDisplay>();
 
         // Check if the player's strand matches the required one and the current floor is valid
-        if (playerStrand.ToLower().Equals(requiredStrand.ToLower()) && currentfloor == DataManager.Instance.lastCompletedFloor || requiredStrand.ToLower().Equals("all") || demoMode)
+        if ((playerStrand.ToLower().Equals(requiredStrand.ToLower()) && currentfloor == DataManager.Instance.lastCompletedFloor) || requiredStrand.ToLower().Equals("all") || demoMode)
         {
             Debug.Log("Player's strand matches " + requiredStrand + ". Starting narrations and marker displays.");
 
@@ -80,36 +80,16 @@ public class NarrationsList : MonoBehaviour
     {
         switch (selectedFloor)
         {
-            case FloorOption.Floor8:
-                currentfloor = 8;
-                break;
-            case FloorOption.Floor7:
-                currentfloor = 7;
-                break;
-            case FloorOption.Floor6:
-                currentfloor = 6;
-                break;
-            case FloorOption.Floor5:
-                currentfloor = 5;
-                break;
-            case FloorOption.Floor4:
-                currentfloor = 4;
-                break;
-            case FloorOption.Floor3:
-                currentfloor = 3;
-                break;
-            case FloorOption.Floor2:
-                currentfloor = 2;
-                break;
-            case FloorOption.Ground:
-                currentfloor = 0;
-                break;
-            case FloorOption.Ground2:
-                currentfloor = 9;
-                break;
-            case FloorOption.Basement:
-                currentfloor = 1;
-                break;
+            case FloorOption.Floor8:    currentfloor = 2; break;
+            case FloorOption.Floor7:    currentfloor = 3; break;
+            case FloorOption.Floor6:    currentfloor = 4; break;
+            case FloorOption.Floor5:    currentfloor = 5; break;
+            case FloorOption.Floor4:    currentfloor = 6; break;
+            case FloorOption.Floor3:    currentfloor = 7; break;
+            case FloorOption.Floor2:    currentfloor = 8; break;
+            case FloorOption.Ground:    currentfloor = 0; break;
+            case FloorOption.Ground2:   currentfloor = 9; break;
+            case FloorOption.Basement:  currentfloor = 1; break;
         }
     }
 }

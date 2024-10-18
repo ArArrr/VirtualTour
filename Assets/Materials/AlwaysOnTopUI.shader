@@ -17,6 +17,7 @@ Shader "Custom/AlwaysOnTopUI"
             Blend SrcAlpha OneMinusSrcAlpha            // Enable standard alpha blending
 
             CGPROGRAM
+            #pragma multi_compile _ UNITY_SINGLE_PASS_STEREO
             #pragma vertex vert
             #pragma fragment frag
             #include "UnityCG.cginc"
@@ -41,6 +42,8 @@ Shader "Custom/AlwaysOnTopUI"
             v2f vert (appdata v)
             {
                 v2f o;
+
+                // Handle VR stereo rendering using UnityObjectToClipPos and UNITY_MATRIX_MVP
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = v.uv;
                 return o;

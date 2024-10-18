@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Blocker : MonoBehaviour
@@ -8,6 +9,7 @@ public class Blocker : MonoBehaviour
 
     private void Start()
     {
+        if (block.IsUnityNull()) block = gameObject;
         // Check the player's tour status and set the block active state accordingly
         if (DataManager.Instance.isTour)
         {
