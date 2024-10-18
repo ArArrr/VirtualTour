@@ -52,7 +52,7 @@ MonoBehaviour:
   gender: male
   moveMethod: joystick
   turnMethod: continious
-  isTour: 0
+  isTour: 1
   nextLevel: 0
   togglePC: 0
   targetSpawnPointID: default

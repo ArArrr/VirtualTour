@@ -8,6 +8,12 @@ public class SetTurnType : MonoBehaviour
     public ActionBasedContinuousTurnProvider continousTurn;
     public ActionBasedSnapTurnProvider snapTurn;
 
+    private void Start()
+    {
+        int playerTurnSetting = DataManager.Instance.turnMethod.Equals("continious") ? 0 : 1;
+        SetTypeFromIndem(playerTurnSetting);
+    }
+
     public void SetTypeFromIndem(int index)
     {
         if(index == 0)

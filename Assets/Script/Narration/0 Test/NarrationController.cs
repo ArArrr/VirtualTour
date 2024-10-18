@@ -7,26 +7,38 @@ public class NarrationController : MonoBehaviour
 {
     public bool isIntro = false;
     public SubtitleData subtitleData;  // Assign your subtitle data in the inspector
-    public AudioSource audioSource;    // AudioSource for playing narration audio
+    private AudioSource audioSource;    // AudioSource for playing narration audio
+
+    [Header("Next Narration")]
     public NarrationController nextNarration;  // Reference to the next narration controller
+
+    [Header("Next Marker")]
     public MarkerDistanceDisplay marker;
+
+    [Header("Customization")]
     public float delayBeforeNext = 0f; // Optional delay before playing the next narration
     public bool waitAudioToFinish = true;
 
     private TMP_Text subtitleText;     // Reference to TMP_Text for subtitles
     private CanvasGroup subtitleCanvasGroup; // CanvasGroup to control visibility
 
-
     private void Start()
     {
-        // Automatically find the Subtitle UI and its components
-        GameObject subtitleUI = GameObject.Find("Subtitle UI");  // Find Subtitle UI by name
+        if (!enabled) return;  // Exit if this component was disabled by the parent
+
+        // Proceed with the regular Start logic if enabled
+        audioSource = GetComponentInParent<AudioSource>();
+        if (audioSource == null)
+        {
+            Debug.LogError("AudioSource not found in the parent object. Please make sure it exists.");
+        }
+
+        GameObject subtitleUI = GameObject.Find("Subtitle UI");
         if (subtitleUI != null)
         {
             subtitleCanvasGroup = subtitleUI.GetComponent<CanvasGroup>();
             subtitleText = subtitleUI.GetComponentInChildren<TMP_Text>();
 
-            // Hide the subtitle UI at the start
             SetSubtitleVisible(false);
             if (isIntro) StartNarration();
         }
@@ -36,20 +48,32 @@ public class NarrationController : MonoBehaviour
         }
     }
 
+
     public void StartNarration()
     {
+        // Log the audio clip name when narration starts
+        if (audioSource != null && audioSource.clip != null)
+        {
+            Debug.Log($"[ Line ] {audioSource.clip.name} is playing..");
+        }
+        else
+        {
+            Debug.LogWarning("[ Line ] No audio clip assigned or AudioSource is missing.");
+        }
+
         StartCoroutine(PlayNarrationWithSubtitles());
     }
 
     private IEnumerator PlayNarrationWithSubtitles()
     {
+        
         // Ensure there's an audio clip to play
         if (subtitleData == null || audioSource == null || subtitleData.audioClip == null)
         {
             Debug.LogError("SubtitleData or AudioSource is missing!");
             yield break;
         }
-
+        if (isIntro) yield return new WaitForSeconds(4);
         SetSubtitleVisible(true);
 
         // Play the audio

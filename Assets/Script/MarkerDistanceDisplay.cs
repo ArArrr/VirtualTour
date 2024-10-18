@@ -3,22 +3,27 @@ using UnityEngine;
 
 public class MarkerDistanceDisplay : MonoBehaviour
 {
+    [Header("NEXT NARRATION [Line] ")]
+    public NarrationController nextNarration;  // Reference to the next narration controller
+    public bool nextFloor = false;
+
+    [Header("Customization")] 
     public Transform playerTransform;      // Reference to the player's transform
     public TextMeshProUGUI distanceText;   // Reference to the TextMeshPro UI component
     public float updateInterval = 0.2f;    // Time interval between updates in seconds
     public float baseScale = 1f;           // Base scale for the marker
     public float distanceMultiplier = 0.1f; // How much the scale should change with distance
 
-    public NarrationController nextNarration;  // Reference to the next narration controller
     private Canvas canvas;
-
-    public bool nextFloor = false;
 
     private void Start()
     {
+        if (!enabled) return;
+
         // Automatically get the Canvas component from the GameObject
         canvas = GetComponent<Canvas>();
         canvas.enabled = false;
+        playerTransform = Camera.main.transform;
     }
 
     private void UpdateDistanceText()
@@ -46,6 +51,7 @@ public class MarkerDistanceDisplay : MonoBehaviour
         if(nextFloor && DataManager.Instance.isTour)
         {
             DataManager.Instance.nextLevel = true;
+            DataManager.Instance.lastCompletedFloor++;
         }
     }
 
