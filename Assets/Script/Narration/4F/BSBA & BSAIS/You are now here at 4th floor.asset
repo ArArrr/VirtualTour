@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec85effbd52b6f643af8baf19bf5eb39, type: 3}
+  m_Name: You are now here at 4th floor
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 662525ee3e47850418d4b25b41bbd579, type: 3}
+  subtitleLines:
+  - text: "You are now here at 4th floor. Lots of different facilities here, but
+      let\u2019s just only go to some relevant ones. Follow the pathway. "
+    startTime: 0
+    endTime: 10.5
