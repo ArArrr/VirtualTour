@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic; // Required to use lists
 using TMPro;
 
 public class NarrationController : MonoBehaviour
@@ -12,12 +13,16 @@ public class NarrationController : MonoBehaviour
     [Header("Next Narration")]
     public NarrationController nextNarration;  // Reference to the next narration controller
 
-    [Header("Next Marker")]
-    public MarkerDistanceDisplay marker;
+    [Header("Next Markers")]
+    public List<MarkerDistanceDisplay> markers;  // List of markers to trigger
 
     [Header("Customization")]
     public float delayBeforeNext = 0f; // Optional delay before playing the next narration
     public bool waitAudioToFinish = true;
+
+    [Header("Outline Settings")]
+    public List<GameObject> outlinedObjects;  // List of objects to outline during narration
+    public bool removeOutlineAfter = true;    // Should the outline be removed after the narration ends?
 
     private TMP_Text subtitleText;     // Reference to TMP_Text for subtitles
     private CanvasGroup subtitleCanvasGroup; // CanvasGroup to control visibility
@@ -48,7 +53,6 @@ public class NarrationController : MonoBehaviour
         }
     }
 
-
     public void StartNarration()
     {
         // Log the audio clip name when narration starts
@@ -61,12 +65,13 @@ public class NarrationController : MonoBehaviour
             Debug.LogWarning("[ Line ] No audio clip assigned or AudioSource is missing.");
         }
 
+        ApplyOutline();  // Add outline to the specified objects
+
         StartCoroutine(PlayNarrationWithSubtitles());
     }
 
     private IEnumerator PlayNarrationWithSubtitles()
     {
-        
         // Ensure there's an audio clip to play
         if (subtitleData == null || audioSource == null || subtitleData.audioClip == null)
         {
@@ -82,13 +87,11 @@ public class NarrationController : MonoBehaviour
 
         foreach (var line in subtitleData.subtitleLines)
         {
-            
             // Wait until it's time to show the next subtitle, relative to the audio
             while (audioSource.time < line.startTime)
             {
                 yield return null; // Wait for the correct start time
             }
-
 
             // Show the subtitle
             subtitleText.text = line.text;
@@ -107,10 +110,11 @@ public class NarrationController : MonoBehaviour
 
         // Wait until the entire audio clip is finished
         if (waitAudioToFinish) yield return new WaitForSeconds(audioSource.clip.length - subtitleData.subtitleLines[subtitleData.subtitleLines.Length - 1].endTime);
-        
 
         // Hide the subtitle UI
         SetSubtitleVisible(false);
+
+        RemoveOutline();  // Remove the outline if the option is enabled
 
         // Play the next narration, if available
         if (nextNarration != null)
@@ -118,9 +122,14 @@ public class NarrationController : MonoBehaviour
             yield return new WaitForSeconds(delayBeforeNext);  // Add delay before playing the next narration
             nextNarration.StartNarration();
         }
-        if (marker != null)
+
+        // Start all markers in the list
+        foreach (MarkerDistanceDisplay marker in markers)
         {
-            marker.StartMarker();
+            if (marker != null)
+            {
+                marker.StartMarker();
+            }
         }
     }
 
@@ -130,7 +139,36 @@ public class NarrationController : MonoBehaviour
         if (subtitleCanvasGroup != null)
         {
             subtitleCanvasGroup.alpha = isVisible ? 1 : 0;
-            //subtitleCanvasGroup.blocksRaycasts = isVisible;  // Optional: block raycasts only when visible
+        }
+    }
+
+    // Apply outline to all objects in the outlinedObjects list
+    private void ApplyOutline()
+    {
+        if (outlinedObjects == null || outlinedObjects.Count == 0) return;
+
+        foreach (GameObject obj in outlinedObjects)
+        {
+            Outline outline = obj.GetComponent<Outline>();
+            if (outline == null)
+            {
+                outline = obj.AddComponent<Outline>();
+            }
+        }
+    }
+
+    // Remove outline based on removeOutlineAfter flag
+    private void RemoveOutline()
+    {
+        if (!removeOutlineAfter || outlinedObjects == null || outlinedObjects.Count == 0) return;
+
+        foreach (GameObject obj in outlinedObjects)
+        {
+            Outline outline = obj.GetComponent<Outline>();
+            if (outline != null)
+            {
+                Destroy(outline);
+            }
         }
     }
 }
