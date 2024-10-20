@@ -15,6 +15,6 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: c9fbcf3c5c82e644da035ff5b35d4009, type: 3}
   subtitleLines:
   - text: "You are now here at 4th floor. Lots of different facilities here, but
-      let\u2019s just only go to some relevant ones. Follow the pathway. "
+      let\u2019s just only go to some relevant ones. "
     startTime: 0
     endTime: 10.5
