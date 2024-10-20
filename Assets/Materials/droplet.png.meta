@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6ee9c73b50d1e0047a9b459d951dca8b
+guid: 3763462b7b014294e9e96b23bc3697bc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Smoke_0
+      name: droplet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 888.6666
+        y: 666.5
         width: 666.6667
-        height: 444.33334
+        height: 666.5
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,125 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcf7b8355d34e7746bd52819c14e7265
-      internalID: 1163301230
+      spriteID: ce5ba8d60bfe0e54e8a054c422e2e754
+      internalID: 692877576
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Smoke_1
+      name: droplet_1
       rect:
         serializedVersion: 2
-        x: 666
-        y: 888.6666
-        width: 666.6667
-        height: 444.33334
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 18c6668d84584254e96e705c2ea5eecb
-      internalID: -1347230095
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Smoke_2
-      rect:
-        serializedVersion: 2
-        x: 1332
-        y: 888.6666
-        width: 666.6667
-        height: 444.33334
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 92e83173ee0489847b4fab84cdd61a81
-      internalID: -2010544460
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Smoke_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 444.66666
-        width: 666.6667
-        height: 444.33334
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d5da2686b70c524d9ab70b6e3477496
-      internalID: 241701098
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Smoke_4
-      rect:
-        serializedVersion: 2
-        x: 666
-        y: 444.66666
-        width: 666.6667
-        height: 444.33334
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f397b29a4adbbd74ba6cd945c9c9e8e7
-      internalID: 1655310492
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Smoke_5
-      rect:
-        serializedVersion: 2
-        x: 1332
-        y: 444.66666
-        width: 666.6667
-        height: 444.33334
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 34e260d3bddab0b49a72089035e07980
-      internalID: -717975630
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Smoke_6
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 1
+        x: 663
+        y: 667
         width: 667
-        height: 444
+        height: 666
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,41 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fad8087bfafec546b8c464ba4f78824
-      internalID: 55410834
+      spriteID: a0cbc1782502ee5479d863e957e080ee
+      internalID: 1268934830
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Smoke_7
-      rect:
-        serializedVersion: 2
-        x: 666
-        y: 0.6666565
-        width: 666.6667
-        height: 444.33334
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b09e9b67d1cce14da2db9f0af6def5e
-      internalID: -1572776519
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Smoke_8
+      name: droplet_2
       rect:
         serializedVersion: 2
         x: 1332
-        y: 0.6666565
+        y: 666.5
         width: 666.6667
-        height: 444.33334
+        height: 666.5
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,8 +166,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b4cc06b8af9fc84d812dac9642f82fd
-      internalID: 408077764
+      spriteID: d42ef2f1c4428ad4596daa47a48ffc01
+      internalID: 1477369390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droplet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.5
+        width: 666.6667
+        height: 666.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db1b8101c3db8d74cac3c64186766d16
+      internalID: -2077521279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droplet_4
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 0
+        width: 667
+        height: 666
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8586dc09f76602544ad0b8f2210683a9
+      internalID: 2005837281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droplet_5
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 0
+        width: 667
+        height: 666
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3688e31b4e6fc489bb218ace9b60ee
+      internalID: 247198334
       vertices: []
       indices: 
       edges: []
@@ -301,7 +238,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d9a75b8cefb656b4ba5695c1d644a3f5
+    spriteID: 3b87e402dc8a1494ebd3ba0e3b653273
     internalID: 0
     vertices: []
     indices: 
@@ -309,15 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Smoke_0: 1163301230
-      Smoke_1: -1347230095
-      Smoke_2: -2010544460
-      Smoke_3: 241701098
-      Smoke_4: 1655310492
-      Smoke_5: -717975630
-      Smoke_6: 55410834
-      Smoke_7: -1572776519
-      Smoke_8: 408077764
+      droplet_0: 692877576
+      droplet_1: 1268934830
+      droplet_2: 1477369390
+      droplet_3: -2077521279
+      droplet_4: 2005837281
+      droplet_5: 247198334
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
