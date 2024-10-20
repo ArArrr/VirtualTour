@@ -5,17 +5,16 @@ using UnityEngine;
 public class getItem : MonoBehaviour
 {
     public List<GameObject> items;
-
+    private Dictionary<GameObject, Material> initialMaterials = new Dictionary<GameObject, Material>();
     private MeshRenderer m_Renderer;
     private Outline outline;
     public GameObject ItemToGet;
     public Material transparentMat;
-    private Material initialMat;
 
     [Header("Optional")]
     public GameObject nextItem;
     public Outline outlineItemToGet;
-
+    public GameObject activateObject;
     public GameObject disableObject;
 
     // Start is called before the first frame update
@@ -25,10 +24,8 @@ public class getItem : MonoBehaviour
         {
             m_Renderer = item.GetComponent<MeshRenderer>();
             outline = item.GetComponent<Outline>();
-
-            initialMat = m_Renderer.material;
+            initialMaterials[item] = m_Renderer.material;
             m_Renderer.material = transparentMat;
-
             outline.enabled = true;
         }
     }
@@ -42,13 +39,13 @@ public class getItem : MonoBehaviour
             {
                 m_Renderer = item.GetComponent<MeshRenderer>();
                 outline = item.GetComponent<Outline>();
-
                 outline.enabled = false;
-                m_Renderer.material = initialMat;
+                m_Renderer.material = initialMaterials[item];
             }
             if (nextItem != null) nextItem.SetActive(true);
             if (outlineItemToGet != null) outlineItemToGet.enabled = true;
             if (disableObject != null) disableObject.SetActive(false);
+            if (activateObject != null) activateObject.SetActive(true);
         }
     }
 }

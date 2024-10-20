@@ -62,6 +62,11 @@ public class sauceAnimation : MonoBehaviour
     {
         if (isPouring)
         {
+            if (!doughParticles.isPlaying)
+            {
+                Debug.Log("Playing Particle");
+                doughParticles.Play();
+            }
             currentScalingTime += Time.deltaTime;
 
             float progress = Mathf.Clamp01(currentScalingTime / scalingTime);
@@ -109,6 +114,11 @@ public class sauceAnimation : MonoBehaviour
         {
             isInsideCollider = false;
             isPouring = false;
+            if (doughParticles.isPlaying)
+            {
+                Debug.Log("Stopping Particle");
+                doughParticles.Stop();
+            }
         }
     }
 
@@ -125,12 +135,20 @@ public class sauceAnimation : MonoBehaviour
             if ((xTilt < -minTiltAngle || xTilt > maxTiltAngle) || (zTilt < -minTiltAngle || zTilt > maxTiltAngle))
             {
                 isPouring = false;
-                doughParticles.Stop();
+                if (doughParticles.isPlaying)
+                {
+                    Debug.Log("Stopping Particle");
+                    doughParticles.Stop();
+                }
             }
             else
             {
                 isPouring = true;
-                doughParticles.Play();
+                if (!doughParticles.isPlaying)
+                {
+                    Debug.Log("Playing Particle");
+                    doughParticles.Play();
+                }
             }
         }
     }
