@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic; // Required to use lists
 using TMPro;
+using System;
 
 public class NarrationController : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class NarrationController : MonoBehaviour
 
     private TMP_Text subtitleText;     // Reference to TMP_Text for subtitles
     private CanvasGroup subtitleCanvasGroup; // CanvasGroup to control visibility
+
 
     private void Start()
     {
@@ -150,12 +152,15 @@ public class NarrationController : MonoBehaviour
         foreach (GameObject obj in outlinedObjects)
         {
             Outline outline = obj.GetComponent<Outline>();
+            
             if (outline == null)
             {
                 outline = obj.AddComponent<Outline>();
+                outline.OutlineMode = Outline.Mode.OutlineAll;
             } else
             {
                 outline.enabled = true;
+                outline.OutlineMode = Outline.Mode.OutlineAll;
             }
         }
     }
@@ -168,10 +173,12 @@ public class NarrationController : MonoBehaviour
         foreach (GameObject obj in outlinedObjects)
         {
             Outline outline = obj.GetComponent<Outline>();
-            if (outline != null)
-            {
-                Destroy(outline);
-            }
+            //if (outline != null)
+            //{
+            //    outline.OutlineMode = Outline.Mode.OutlineHidden;
+            //}
+
+            outline.enabled = false;
         }
     }
 }
