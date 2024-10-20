@@ -15,6 +15,9 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: 28fba84e49f3d5445aeb46313b8b5a8c, type: 3}
   subtitleLines:
   - text: 'This is a room designed for BSBA and BSAIS students for their specific
-      purposes. Hit its hotspot icon to learn more about this room. '
+      purposes. '
     startTime: 0
+    endTime: 7
+  - text: 'Hit its hotspot icon to learn more about this room. '
+    startTime: 7.7
     endTime: 11.5
