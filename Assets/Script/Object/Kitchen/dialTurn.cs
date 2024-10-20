@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class RotateObject : MonoBehaviour
 {
-    public float rotationDuration = 2f;
+    public float rotationDuration = 1.5f;
     private float rotationTime = 0f;
     private bool shouldRotate = false;
     private Quaternion startRotation;
@@ -21,6 +21,8 @@ public class RotateObject : MonoBehaviour
             if (t >= 1f)
             {
                 shouldRotate = false;
+                Outline outline = gameObject.GetComponent<Outline>();
+                outline.enabled = false;
             }
         }
     }
