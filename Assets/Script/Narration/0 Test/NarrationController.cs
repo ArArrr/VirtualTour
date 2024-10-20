@@ -153,6 +153,9 @@ public class NarrationController : MonoBehaviour
             if (outline == null)
             {
                 outline = obj.AddComponent<Outline>();
+            } else
+            {
+                outline.enabled = true;
             }
         }
     }
