@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using System.Collections.Generic; // Required to use lists
 
 public class MarkerDistanceDisplay : MonoBehaviour
 {
@@ -7,7 +8,10 @@ public class MarkerDistanceDisplay : MonoBehaviour
     public NarrationController nextNarration;  // Reference to the next narration controller
     public bool nextFloor = false;
 
-    [Header("Customization")] 
+    [Header("NEXT MARKERS [Markers]")]
+    public List<MarkerDistanceDisplay> markers;  // List of next markers to trigger
+
+    [Header("Customization")]
     public Transform playerTransform;      // Reference to the player's transform
     public TextMeshProUGUI distanceText;   // Reference to the TextMeshPro UI component
     public float updateInterval = 0.2f;    // Time interval between updates in seconds
@@ -48,7 +52,8 @@ public class MarkerDistanceDisplay : MonoBehaviour
     {
         canvas.enabled = true;
         InvokeRepeating(nameof(UpdateDistanceText), 0f, updateInterval);
-        if(nextFloor && DataManager.Instance.isTour)
+
+        if (nextFloor && DataManager.Instance.isTour)
         {
             DataManager.Instance.nextLevel = true;
             DataManager.Instance.lastCompletedFloor++;
@@ -78,8 +83,16 @@ public class MarkerDistanceDisplay : MonoBehaviour
             if (nextNarration != null && canvas.enabled)
             {
                 nextNarration.StartNarration();
-                CancelInvoke(nameof(UpdateDistanceText));
-                canvas.enabled = false;
+            }
+
+            // Stop updating the distance and hide the marker canvas
+            CancelInvoke(nameof(UpdateDistanceText));
+            canvas.enabled = false;
+
+            // Trigger all the next markers in the list
+            foreach (MarkerDistanceDisplay marker in markers)
+            {
+                marker.StartMarker();
             }
         }
     }
