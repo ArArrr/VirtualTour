@@ -20,10 +20,13 @@ public class NarrationController : MonoBehaviour
     [Header("Customization")]
     public float delayBeforeNext = 0f; // Optional delay before playing the next narration
     public bool waitAudioToFinish = true;
+    public List<GameObject> ActivateObject;
+    public List<GameObject> DeactivateObject;
 
     [Header("Outline Settings")]
     public List<GameObject> outlinedObjects;  // List of objects to outline during narration
     public bool removeOutlineAfter = true;    // Should the outline be removed after the narration ends?
+    public bool OnlyOutlineAfter = false;    // Should the outline be removed after the narration ends?
 
     private TMP_Text subtitleText;     // Reference to TMP_Text for subtitles
     private CanvasGroup subtitleCanvasGroup; // CanvasGroup to control visibility
@@ -67,6 +70,7 @@ public class NarrationController : MonoBehaviour
             Debug.LogWarning("[ Line ] No audio clip assigned or AudioSource is missing.");
         }
 
+        if (!OnlyOutlineAfter)
         ApplyOutline();  // Add outline to the specified objects
 
         StartCoroutine(PlayNarrationWithSubtitles());
@@ -116,7 +120,9 @@ public class NarrationController : MonoBehaviour
         // Hide the subtitle UI
         SetSubtitleVisible(false);
 
-        RemoveOutline();  // Remove the outline if the option is enabled
+
+        if (!OnlyOutlineAfter) RemoveOutline();  // Remove the outline if the option is enabled
+        if (OnlyOutlineAfter) ApplyOutline();
 
         // Play the next narration, if available
         if (nextNarration != null)
@@ -131,6 +137,22 @@ public class NarrationController : MonoBehaviour
             if (marker != null)
             {
                 marker.StartMarker();
+            }
+        }
+
+        foreach (GameObject obj in ActivateObject)
+        {
+            if (obj != null)
+            {
+                obj.SetActive(true);
+            }
+        }
+
+        foreach (GameObject obj in DeactivateObject)
+        {
+            if (obj != null)
+            {
+                obj.SetActive(false);
             }
         }
     }

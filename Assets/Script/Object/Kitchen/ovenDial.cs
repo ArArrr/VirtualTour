@@ -22,6 +22,9 @@ public class OvenDial : DistanceReleaseGrabInteractable
     public GameObject nextItem;
     public GameObject currentItem;
 
+    [Header("Next Narration")]
+    public NarrationController nextNarration;  // Reference to the next narration controller
+
     private void Start()
     {
         // Add listener for the grab event
@@ -85,5 +88,9 @@ public class OvenDial : DistanceReleaseGrabInteractable
 
         nextItem.SetActive(true);
         currentItem.SetActive(false);
+        if (nextNarration != null)
+        {
+            nextNarration.StartNarration();
+        }
     }
 }

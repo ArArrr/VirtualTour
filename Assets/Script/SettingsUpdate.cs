@@ -13,7 +13,7 @@ public class SettingsUpdate : MonoBehaviour
         togglePC.isOn = DataManager.Instance.togglePC;
 
         // Set dropdown based on turn method in DataManager
-        turnDropdown.value = DataManager.Instance.turnMethod.Equals("continious") ? 0 : 1;
+        turnDropdown.value = DataManager.Instance.turnMethod.Equals("continuous") ? 0 : 1;
 
         // Add listener for toggle changes
         togglePC.onValueChanged.AddListener(OnTogglePCChanged);
