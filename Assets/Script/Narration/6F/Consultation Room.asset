@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: f9b5ba28e1c94d647903cd07fa9c87aa, type: 3}
   subtitleLines:
-  - text: 'On your left side, there are small rooms. Those are the consultation rooms
-      that can be used by professors and students for some purpose. '
-    startTime: 0
-    endTime: 13.1
+  - text: 'Beside the door of the faculty room, there are small rooms. '
+    startTime: 0.6
+    endTime: 4.7
+  - text: 'Those are the consultation rooms that can be used by professors and students
+      for some purpose. '
+    startTime: 5
+    endTime: 13
