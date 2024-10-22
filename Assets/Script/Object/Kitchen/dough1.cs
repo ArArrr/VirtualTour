@@ -11,6 +11,9 @@ public class dough1 : MonoBehaviour
     private bool isFlattening = false;        // Whether the roller is inside the dough trigger
     private Vector3 initialScale;             // The initial scale of the dough
 
+    [Header("Next Narration")]
+    public NarrationController nextNarration;  // Reference to the next narration controller
+
     public GameObject nextDough;
 
     private void Start()
@@ -40,8 +43,16 @@ public class dough1 : MonoBehaviour
                 GetComponent<Collider>().enabled = false; // Disable the collider
                 doughParticles.Stop();
                 gameObject.SetActive(false);
-                nextDough.SetActive(true);
+                
 
+                if (nextNarration != null)
+                {
+                    nextNarration.StartNarration();
+                    nextDough.SetActive(true);
+                } else
+                {
+                    nextDough.SetActive(true);
+                }
             }
         }
     }

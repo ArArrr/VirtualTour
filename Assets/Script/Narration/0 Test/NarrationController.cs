@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic; // Required to use lists
 using TMPro;
+using System;
 
 public class NarrationController : MonoBehaviour
 {
@@ -19,13 +20,17 @@ public class NarrationController : MonoBehaviour
     [Header("Customization")]
     public float delayBeforeNext = 0f; // Optional delay before playing the next narration
     public bool waitAudioToFinish = true;
+    public List<GameObject> ActivateObject;
+    public List<GameObject> DeactivateObject;
 
     [Header("Outline Settings")]
     public List<GameObject> outlinedObjects;  // List of objects to outline during narration
     public bool removeOutlineAfter = true;    // Should the outline be removed after the narration ends?
+    public bool OnlyOutlineAfter = false;    // Should the outline be removed after the narration ends?
 
     private TMP_Text subtitleText;     // Reference to TMP_Text for subtitles
     private CanvasGroup subtitleCanvasGroup; // CanvasGroup to control visibility
+
 
     private void Start()
     {
@@ -65,6 +70,7 @@ public class NarrationController : MonoBehaviour
             Debug.LogWarning("[ Line ] No audio clip assigned or AudioSource is missing.");
         }
 
+        if (!OnlyOutlineAfter)
         ApplyOutline();  // Add outline to the specified objects
 
         StartCoroutine(PlayNarrationWithSubtitles());
@@ -114,7 +120,9 @@ public class NarrationController : MonoBehaviour
         // Hide the subtitle UI
         SetSubtitleVisible(false);
 
-        RemoveOutline();  // Remove the outline if the option is enabled
+
+        if (!OnlyOutlineAfter) RemoveOutline();  // Remove the outline if the option is enabled
+        if (OnlyOutlineAfter) ApplyOutline();
 
         // Play the next narration, if available
         if (nextNarration != null)
@@ -129,6 +137,22 @@ public class NarrationController : MonoBehaviour
             if (marker != null)
             {
                 marker.StartMarker();
+            }
+        }
+
+        foreach (GameObject obj in ActivateObject)
+        {
+            if (obj != null)
+            {
+                obj.SetActive(true);
+            }
+        }
+
+        foreach (GameObject obj in DeactivateObject)
+        {
+            if (obj != null)
+            {
+                obj.SetActive(false);
             }
         }
     }
@@ -150,12 +174,15 @@ public class NarrationController : MonoBehaviour
         foreach (GameObject obj in outlinedObjects)
         {
             Outline outline = obj.GetComponent<Outline>();
+            
             if (outline == null)
             {
                 outline = obj.AddComponent<Outline>();
+                outline.OutlineMode = Outline.Mode.OutlineAll;
             } else
             {
                 outline.enabled = true;
+                outline.OutlineMode = Outline.Mode.OutlineAll;
             }
         }
     }
@@ -168,10 +195,12 @@ public class NarrationController : MonoBehaviour
         foreach (GameObject obj in outlinedObjects)
         {
             Outline outline = obj.GetComponent<Outline>();
-            if (outline != null)
-            {
-                Destroy(outline);
-            }
+            //if (outline != null)
+            //{
+            //    outline.OutlineMode = Outline.Mode.OutlineHidden;
+            //}
+
+            outline.enabled = false;
         }
     }
 }

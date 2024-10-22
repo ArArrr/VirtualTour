@@ -20,6 +20,11 @@ public class NextDough : MonoBehaviour
     private bool isSpinning = false;         // Whether the dough is currently spinning
     private MeshRenderer pizza;
 
+    [Header("Next Narration")]
+    public NarrationController nextNarration;  // Reference to the next narration controller
+
+    private int narationIndex = 0;
+
     private void Start()
     {
         pizza = GetComponent<MeshRenderer>();
@@ -60,6 +65,11 @@ public class NextDough : MonoBehaviour
                 pizza.enabled = false;
                 nextDough.SetActive(true);
                 nextItem.SetActive(true);
+                if (nextNarration != null && narationIndex==0)
+                {
+                    narationIndex = 1;
+                    nextNarration.StartNarration();
+                }
             }
         }
     }
