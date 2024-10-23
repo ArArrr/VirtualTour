@@ -348,7 +348,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -6593828118829845052, guid: 7519a0a50e432da488eb3b929b8ebeeb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8748264228762665960}
+      addedObject: {fileID: 6271575517580471175}
     - targetCorrespondingSourceObject: {fileID: -6593828118829845052, guid: 7519a0a50e432da488eb3b929b8ebeeb,
         type: 3}
       insertIndex: -1
@@ -412,7 +412,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8748264228762665960
+--- !u!114 &6271575517580471175
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -421,7 +421,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1329655583777404237}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+  m_Script: {fileID: 11500000, guid: a1a21a5eeb6c1fb46bc48731d2ba8578, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -536,7 +536,7 @@ MonoBehaviour:
   m_SmoothRotation: 0
   m_SmoothRotationAmount: 8
   m_TightenRotation: 0.1
-  m_TrackScale: 1
+  m_TrackScale: 0
   m_SmoothScale: 0
   m_SmoothScaleAmount: 8
   m_TightenScale: 0.1
@@ -565,6 +565,7 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+  maxGrabDistance: 0.25
 --- !u!59 &5459294781138902107
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -581,7 +582,7 @@ HingeJoint:
   serializedVersion: 2
   m_UseSpring: 1
   m_Spring:
-    spring: 0.1
+    spring: 0.2
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -593,7 +594,7 @@ HingeJoint:
   m_ExtendedLimits: 0
   m_UseAcceleration: 0
   m_Limits:
-    min: 0
+    min: -96
     max: 96
     bounciness: 0
     bounceMinVelocity: 0.2

@@ -201,6 +201,7 @@ GameObject:
   - component: {fileID: 6598815579406187027}
   - component: {fileID: 2262370382193989290}
   - component: {fileID: 6598815579406187026}
+  - component: {fileID: 8151300853525164646}
   m_Layer: 0
   m_Name: XR Device Simulator
   m_TagString: Untagged
@@ -387,3 +388,17 @@ MonoBehaviour:
   m_RightControllerTrackingState: 3
   m_LeftHandIsTracked: 1
   m_RightHandIsTracked: 1
+--- !u!114 &8151300853525164646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6598815579406187037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cd94f09b52aa5641b331f6f3944daf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CameraOffset: {fileID: 0}
+  ToActivate: []

@@ -317,7 +317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetCamera: {fileID: 0}
   distanceFromCamera: 0.3
-  smoothSpeed: 7
+  smoothSpeed: 15
   updateAngleThreshold: 5
   updateDistanceThreshold: 0
 --- !u!1 &8605353066000723716

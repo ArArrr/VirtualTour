@@ -145,14 +145,13 @@ GameObject:
   - component: {fileID: 2033427422319305428}
   - component: {fileID: 218458920517231821}
   - component: {fileID: 5651791324108295832}
-  - component: {fileID: 697531444035447635}
   m_Layer: 5
   m_Name: PC Canva
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7022262507036153008
 RectTransform:
   m_ObjectHideFlags: 0
@@ -248,18 +247,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &697531444035447635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 437389352126620702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 490aa53db31805448b8da0ba049f0bc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &576005938889253762
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,14 +260,13 @@ GameObject:
   - component: {fileID: 3003545319885957518}
   - component: {fileID: 2256221778508571296}
   - component: {fileID: 3933465130299894903}
-  - component: {fileID: 8172479162315047696}
   m_Layer: 5
   m_Name: PC Canva
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2374185306084107110
 RectTransform:
   m_ObjectHideFlags: 0
@@ -376,18 +362,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &8172479162315047696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 576005938889253762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 490aa53db31805448b8da0ba049f0bc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &739468907597386121
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,14 +375,13 @@ GameObject:
   - component: {fileID: 7571951882571925973}
   - component: {fileID: 3859343896858358366}
   - component: {fileID: 6402621685970212399}
-  - component: {fileID: 8868297602622675472}
   m_Layer: 5
   m_Name: PC Canva
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6110110377764040383
 RectTransform:
   m_ObjectHideFlags: 0
@@ -504,18 +477,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &8868297602622675472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 739468907597386121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 490aa53db31805448b8da0ba049f0bc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &852925035706962265
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,14 +624,13 @@ GameObject:
   - component: {fileID: 8221806584900463780}
   - component: {fileID: 657171478957405465}
   - component: {fileID: 5813140959859927770}
-  - component: {fileID: 3005305006187641384}
   m_Layer: 5
   m_Name: PC Canva
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7772759767404561869
 RectTransform:
   m_ObjectHideFlags: 0
@@ -766,18 +726,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &3005305006187641384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 898470677159706112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 490aa53db31805448b8da0ba049f0bc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &945163013056115054
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,14 +739,13 @@ GameObject:
   - component: {fileID: 7803210344018327001}
   - component: {fileID: 4644790009584163226}
   - component: {fileID: 2985307109010566006}
-  - component: {fileID: 6828570231283279609}
   m_Layer: 5
   m_Name: PC Canva
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1801022432529952513
 RectTransform:
   m_ObjectHideFlags: 0
@@ -894,18 +841,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &6828570231283279609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 945163013056115054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 490aa53db31805448b8da0ba049f0bc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1037053869833581024
 GameObject:
   m_ObjectHideFlags: 0
@@ -919,14 +854,13 @@ GameObject:
   - component: {fileID: 420095378233871116}
   - component: {fileID: 3366588656996910132}
   - component: {fileID: 5444653239788099728}
-  - component: {fileID: 2367067742339873561}
   m_Layer: 5
   m_Name: PC Canva
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &87763548247486069
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1022,18 +956,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &2367067742339873561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1037053869833581024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 490aa53db31805448b8da0ba049f0bc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1193495163798274890
 GameObject:
   m_ObjectHideFlags: 0
@@ -1047,14 +969,13 @@ GameObject:
   - component: {fileID: 8214384055760611631}
   - component: {fileID: 950567889748980670}
   - component: {fileID: 1207848149401159512}
-  - component: {fileID: 782505280426502670}
   m_Layer: 5
   m_Name: PC Canva
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5833922291155720631
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1150,18 +1071,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &782505280426502670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1193495163798274890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 490aa53db31805448b8da0ba049f0bc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1396506165053322822
 GameObject:
   m_ObjectHideFlags: 0
@@ -1307,14 +1216,13 @@ GameObject:
   - component: {fileID: 1299662929634753551}
   - component: {fileID: 2883606101519100800}
   - component: {fileID: 8197790602317791789}
-  - component: {fileID: 8627325081857684207}
   m_Layer: 5
   m_Name: PC Canva
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1883027536158670364
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1410,18 +1318,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &8627325081857684207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1485587496231866193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 490aa53db31805448b8da0ba049f0bc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1823010936632160003
 GameObject:
   m_ObjectHideFlags: 0
@@ -2220,14 +2116,13 @@ GameObject:
   - component: {fileID: 8819353450126380232}
   - component: {fileID: 2990273728597936064}
   - component: {fileID: 3594264441605467855}
-  - component: {fileID: 3687493116482660241}
   m_Layer: 5
   m_Name: PC Canva
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6524936733684111255
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2323,18 +2218,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &3687493116482660241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4594404791250351435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 490aa53db31805448b8da0ba049f0bc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4971124529356973716
 GameObject:
   m_ObjectHideFlags: 0
@@ -2480,14 +2363,13 @@ GameObject:
   - component: {fileID: 9216068767068392795}
   - component: {fileID: 6030939246883340777}
   - component: {fileID: 9202439450632040084}
-  - component: {fileID: 4295565993098238672}
   m_Layer: 5
   m_Name: PC Canva
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7766480042400839638
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2583,18 +2465,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &4295565993098238672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5113154475068006017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 490aa53db31805448b8da0ba049f0bc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5198274011414585936
 GameObject:
   m_ObjectHideFlags: 0
@@ -2608,14 +2478,13 @@ GameObject:
   - component: {fileID: 6691245996680118389}
   - component: {fileID: 137754492503792251}
   - component: {fileID: 1990925405611214642}
-  - component: {fileID: 7878400553984612508}
   m_Layer: 5
   m_Name: PC Canva
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1477957390025269302
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2711,18 +2580,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &7878400553984612508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5198274011414585936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 490aa53db31805448b8da0ba049f0bc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6027196657907574857
 GameObject:
   m_ObjectHideFlags: 0
@@ -3134,14 +2991,13 @@ GameObject:
   - component: {fileID: 3427426555610363083}
   - component: {fileID: 9009170544711115005}
   - component: {fileID: 2018464244335340270}
-  - component: {fileID: 8514737220532946579}
   m_Layer: 5
   m_Name: PC Canva
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6436090667099831799
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3237,18 +3093,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &8514737220532946579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6476577026683184317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 490aa53db31805448b8da0ba049f0bc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6939359969676115020
 GameObject:
   m_ObjectHideFlags: 0
@@ -3763,14 +3607,13 @@ GameObject:
   - component: {fileID: 1738455321440048316}
   - component: {fileID: 3311693965250204904}
   - component: {fileID: 1904451435290732600}
-  - component: {fileID: 9009515660107013599}
   m_Layer: 5
   m_Name: PC Canva
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4937723166673803821
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3866,18 +3709,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &9009515660107013599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7672623659707413437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 490aa53db31805448b8da0ba049f0bc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7958497224515429794
 GameObject:
   m_ObjectHideFlags: 0
@@ -4138,14 +3969,13 @@ GameObject:
   - component: {fileID: 5476421896606738753}
   - component: {fileID: 2509731027217933775}
   - component: {fileID: 4220187517111584861}
-  - component: {fileID: 8283687460651279831}
   m_Layer: 5
   m_Name: PC Canva
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8490562407684464023
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4241,18 +4071,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &8283687460651279831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8679836902906314214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 490aa53db31805448b8da0ba049f0bc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &9033554334419921148
 GameObject:
   m_ObjectHideFlags: 0
@@ -4743,6 +4561,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1419640737742668399}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0af783538a50f9749a2b02e5afb82300,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8872553831875725691}
     - targetCorrespondingSourceObject: {fileID: -3997527535593500936, guid: 0af783538a50f9749a2b02e5afb82300,
         type: 3}
       insertIndex: -1
@@ -8615,6 +8437,63 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0043442342, y: 0.0013038977, z: 0.023869371}
   m_Center: {x: 0.008110953, y: -0.009036436, z: -0.011933972}
+--- !u!114 &8872553831875725691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7279401158854200397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 490aa53db31805448b8da0ba049f0bc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjects:
+  - {fileID: 8679836902906314214}
+  - {fileID: 898470677159706112}
+  - {fileID: 1193495163798274890}
+  - {fileID: 6476577026683184317}
+  - {fileID: 437389352126620702}
+  - {fileID: 5198274011414585936}
+  - {fileID: 5113154475068006017}
+  - {fileID: 945163013056115054}
+  - {fileID: 1037053869833581024}
+  - {fileID: 4594404791250351435}
+  - {fileID: 739468907597386121}
+  - {fileID: 576005938889253762}
+  - {fileID: 1485587496231866193}
+  - {fileID: 7672623659707413437}
+  interactables:
+  - {fileID: 3507848629239833462}
+  - {fileID: 7021793717289215104}
+  - {fileID: 3670970470010027089}
+  - {fileID: 4414201516801965022}
+  - {fileID: 7283141114569022000}
+  - {fileID: 7635989536551089451}
+  - {fileID: 1266215915341243872}
+  - {fileID: 6674115730587822488}
+  - {fileID: 8913664651958533473}
+  - {fileID: 5047068767605577238}
+  - {fileID: 8539191552475113945}
+  - {fileID: 1712530210730338352}
+  - {fileID: 8634568302916542969}
+  - {fileID: 483015274750799468}
+  prefilters:
+  - {fileID: 8011465705409134958}
+  - {fileID: 2174469118835962596}
+  - {fileID: 7067757403997232542}
+  - {fileID: 8339999825064271037}
+  - {fileID: 4639837544198619501}
+  - {fileID: 4231267563286873681}
+  - {fileID: 8515359177543982211}
+  - {fileID: 1996125636684842853}
+  - {fileID: 3014746648816804487}
+  - {fileID: 2639727669766693938}
+  - {fileID: 3109790681869260314}
+  - {fileID: 4530371709666528915}
+  - {fileID: 6829549978415184620}
+  - {fileID: 1493776369870159413}
 --- !u!1 &7424023619909094629 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1063877818294074873, guid: 0af783538a50f9749a2b02e5afb82300,

@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   block: {fileID: 1445630021969374092}
-  toDestroy: 0
+  toDestroy: 1
 --- !u!1 &2008843051184272451
 GameObject:
   m_ObjectHideFlags: 0
