@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems; // Make sure to include this for EventSystem
+using UnityEngine.EventSystems;
 
 namespace UnityEngine.XR.Interaction.Toolkit.UI
 {
@@ -9,11 +9,18 @@ namespace UnityEngine.XR.Interaction.Toolkit.UI
         public GameObject CameraOffset;
         public List<GameObject> ToActivate;
         public GameObject XROrigin;
+        public Vector3 cameraOffsetPosition = new Vector3(0, 1.55f, 0); // Set default value
 
         private void Start()
         {
             CameraOffset = GameObject.Find("Camera Offset");
             XROrigin = GameObject.Find("XR Origin (VR)");
+            GameObject subtitle = GameObject.Find("Subtitle UI");
+            if (subtitle != null)
+            {
+                SubtitleUIController uIController = subtitle.GetComponent<SubtitleUIController>();
+                if (uIController != null && subtitle != null) uIController.smoothSpeed = 50;
+            }
             OnEnable();
         }
 
@@ -21,7 +28,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.UI
         {
             if (CameraOffset != null)
             {
-                CameraOffset.transform.localPosition = new Vector3(0, 1.55f, 0);
+                CameraOffset.transform.localPosition = cameraOffsetPosition;
             }
 
             // Find the EventSystem object and disable mouse input
@@ -35,23 +42,21 @@ namespace UnityEngine.XR.Interaction.Toolkit.UI
                     xruiInputModule.m_EnableMouseInput = false;
                 }
             }
+
             ActivateGrabRay grabray;
             if (XROrigin != null)
             {
                 grabray = XROrigin.GetComponent<ActivateGrabRay>();
                 grabray.enabled = false;
             }
-            
 
             // Find and deactivate the "Left Grab Ray" and "Right Grab Ray" objects
             GameObject leftGrabRay = GameObject.Find("Left Grab Ray");
             GameObject rightGrabRay = GameObject.Find("Right Grab Ray");
-
             if (leftGrabRay != null)
             {
                 leftGrabRay.SetActive(false);
             }
-
             if (rightGrabRay != null)
             {
                 rightGrabRay.SetActive(false);
@@ -78,4 +83,3 @@ namespace UnityEngine.XR.Interaction.Toolkit.UI
         }
     }
 }
-

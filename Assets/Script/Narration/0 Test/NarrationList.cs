@@ -41,7 +41,7 @@ public class NarrationsList : MonoBehaviour
         markerDisplays = GetComponentsInChildren<MarkerDistanceDisplay>();
 
         // Check if the player's strand matches the required one and the current floor is valid
-        if ((playerStrand.ToLower().Equals(requiredStrand.ToLower()) && currentfloor == DataManager.Instance.lastCompletedFloor) || requiredStrand.ToLower().Equals("all") || demoMode)
+        if ((playerStrand.ToLower().Equals(requiredStrand.ToLower()) && currentfloor == DataManager.Instance.lastCompletedFloor) || (requiredStrand.ToLower().Equals("all") && currentfloor == DataManager.Instance.lastCompletedFloor) || demoMode)
         {
             Debug.Log("Player's strand matches " + requiredStrand + ". Starting narrations and marker displays.");
 

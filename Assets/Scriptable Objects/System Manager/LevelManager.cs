@@ -13,8 +13,7 @@ public class LevelManager : MonoBehaviour
 
     private SceneTransition[] transitions;
     private AudioSource audioSource;
-
-    private Canvas canva;
+    private Canvas canvas;
 
     // Add a list of sound effects, which can be assigned in the Unity Inspector
     public AudioClip[] soundEffects;
@@ -28,6 +27,9 @@ public class LevelManager : MonoBehaviour
 
             // Setup AudioSource
             audioSource = gameObject.AddComponent<AudioSource>();
+
+            // Subscribe to the sceneLoaded event to update the canvas camera after each scene loads
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
@@ -40,7 +42,24 @@ public class LevelManager : MonoBehaviour
         transitions = transitionsContainer.GetComponentsInChildren<SceneTransition>();
         Debug.Log(transitions.Length);
         Debug.Log(transitions.ToList());
-        canva = GetComponent<Canvas>();
+        canvas = GetComponent<Canvas>();
+    }
+
+    // Update the render camera for the canvas when a new scene is loaded
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (canvas.renderMode == RenderMode.ScreenSpaceCamera)
+        {
+            Camera mainCamera = Camera.main; // Automatically find the new Main Camera in the scene
+            if (mainCamera != null)
+            {
+                canvas.worldCamera = mainCamera; // Set the new Main Camera as the canvas' Render Camera
+            }
+            else
+            {
+                Debug.LogWarning("Main Camera not found in scene: " + scene.name);
+            }
+        }
     }
 
     public void LoadScene(string sceneName, string transitionName, string soundEffectName)
@@ -54,7 +73,7 @@ public class LevelManager : MonoBehaviour
         if (transitionName == "none")
         {
             noTransition = true;
-            canva.enabled = false;
+            canvas.enabled = false;
             transitionName = "CrossFade";
         }
         SceneTransition transition = transitions.First(t => t.name.Equals(transitionName));
@@ -63,8 +82,6 @@ public class LevelManager : MonoBehaviour
         scene.allowSceneActivation = false;
 
         yield return transition.AnimateTransitionIn();
-
-        // progressBar.gameObject.SetActive(true);
 
         do
         {
@@ -79,12 +96,11 @@ public class LevelManager : MonoBehaviour
 
         scene.allowSceneActivation = true;
 
-        // progressBar.gameObject.SetActive(false);
-
         yield return transition.AnimateTransitionOut();
+
         if (noTransition)
         {
-            canva.enabled = true;
+            canvas.enabled = true;
         }
     }
 
@@ -105,5 +121,11 @@ public class LevelManager : MonoBehaviour
                 Debug.LogWarning("Sound effect not found: " + soundEffectName);
             }
         }
+    }
+
+    private void OnDestroy()
+    {
+        // Unsubscribe from the event when this object is destroyed
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }
