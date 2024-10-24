@@ -226,7 +226,7 @@ MonoBehaviour:
   isMovingForward: 1
   terrainLayer:
     serializedVersion: 2
-    m_Bits: 129
+    m_Bits: 128
   body: {fileID: 4873196838156830593}
   otherFoot: {fileID: 6340891472780235366}
   speed: 5
@@ -475,7 +475,7 @@ MonoBehaviour:
   isMovingForward: 1
   terrainLayer:
     serializedVersion: 2
-    m_Bits: 129
+    m_Bits: 128
   body: {fileID: 4873196838156830593}
   otherFoot: {fileID: 613209474287035064}
   speed: 5
@@ -825,6 +825,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8973694257831972458, guid: 745213d42a756564eaf5c43e2ed2880f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: -8958773396023001547, guid: 745213d42a756564eaf5c43e2ed2880f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1309,6 +1314,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.08782102
+      objectReference: {fileID: 0}
+    - target: {fileID: -4767255360286155046, guid: 745213d42a756564eaf5c43e2ed2880f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -4693315260764863769, guid: 745213d42a756564eaf5c43e2ed2880f,
         type: 3}
@@ -2529,6 +2539,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.006092726
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598891366336066466, guid: 745213d42a756564eaf5c43e2ed2880f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7253263237773112124, guid: 745213d42a756564eaf5c43e2ed2880f,
         type: 3}
