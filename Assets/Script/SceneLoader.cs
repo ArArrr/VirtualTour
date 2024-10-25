@@ -17,6 +17,10 @@ public class SceneLoader : MonoBehaviour
             {
                 DataManager.Instance.targetSpawnPointID = targetSpawnPointID;
             }
+            if (DataManager.Instance.nextLevel)
+            {
+                DataManager.Instance.nextLevel = false;
+            }
 
             // Load the specified scene
             LevelManager.Instance.LoadScene(sceneName, transition, soundEffect);
