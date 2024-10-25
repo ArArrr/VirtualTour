@@ -20,8 +20,18 @@ public class SmoothRotationTrigger : MonoBehaviour
     private Rigidbody targetRigidbody;                // Rigidbody of the target object
     private Rigidbody secondaryTargetRigidbody;       // Rigidbody of the secondary target object
 
+    [Header("Lock")]
+    public bool isLock = false;
+
     private void Start()
     {
+        if (isLock)
+        {
+            targetRigidbody = targetObject.GetComponent<Rigidbody>();
+            targetRigidbody.isKinematic = true;
+            gameObject.SetActive(false);
+            return;
+        }
         // Store the original rotation of the target objects
         originalRotation = targetObject.transform.rotation;
         if (secondaryTargetObject != null)
