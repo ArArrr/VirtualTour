@@ -983,7 +983,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookAction: {fileID: -3982860943452267705, guid: 3ecbf1acd41d43b4fb22613610a21c52,
     type: 3}
-  sensitivity: 60
+  sensitivity: 50
   playerBody: {fileID: 8198301534777059160}
 --- !u!114 &1834773950530179409
 MonoBehaviour:
