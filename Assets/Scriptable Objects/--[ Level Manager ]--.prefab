@@ -549,7 +549,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progressBar: {fileID: 6763374717099882423}
   transitionsContainer: {fileID: 2141784367278206676}
-  soundEffects: []
+  soundEffects:
+  - {fileID: 8300000, guid: 88176b69ff3a71a42ba3979dc97651c1, type: 3}
+  - {fileID: 8300000, guid: 9c85849d3cc5c2949a4346de9fdb5c6e, type: 3}
+  - {fileID: 8300000, guid: 40627427f2cf142408d62fb661ce5019, type: 3}
 --- !u!1 &4844553347254354542
 GameObject:
   m_ObjectHideFlags: 0
