@@ -203,6 +203,7 @@ GameObject:
   - component: {fileID: 6598815579406187026}
   - component: {fileID: 8151300853525164646}
   - component: {fileID: 1231135620363644332}
+  - component: {fileID: 4109120817956466723}
   - component: {fileID: 8417676492710327270}
   - component: {fileID: 2187128739720684618}
   m_Layer: 0
@@ -406,6 +407,7 @@ MonoBehaviour:
   CameraOffset: {fileID: 0}
   ToActivate: []
   XROrigin: {fileID: 0}
+  cameraOffsetPosition: {x: 0, y: 1.55, z: 0}
 --- !u!114 &1231135620363644332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -477,6 +479,24 @@ MonoBehaviour:
   m_DefaultActionMap: PC
   m_SplitScreenIndex: 0
   m_Camera: {fileID: 0}
+--- !u!114 &4109120817956466723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6598815579406187037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f8e088e8172c547ba6e8b9d687c792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerReach: 3
+  pressE: {fileID: -6667239874327608129, guid: 3ecbf1acd41d43b4fb22613610a21c52, type: 3}
+  pressG: {fileID: -3223181955481736304, guid: 3ecbf1acd41d43b4fb22613610a21c52, type: 3}
+  mouseClick: {fileID: -3800108389724861673, guid: 3ecbf1acd41d43b4fb22613610a21c52,
+    type: 3}
+  offset: {x: 0.2, y: 1.1, z: 0.5}
 --- !u!114 &8417676492710327270
 MonoBehaviour:
   m_ObjectHideFlags: 0

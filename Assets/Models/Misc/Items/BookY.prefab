@@ -13,6 +13,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interaction Affordance
       objectReference: {fileID: 0}
+    - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896237787779704601, guid: eb9104ef66b7305468adb3697fdeed5e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5258331117553129771, guid: eb9104ef66b7305468adb3697fdeed5e,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -162,6 +172,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: BookY
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0cd2fdea0ef32004db605c77ba011e9e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0cd2fdea0ef32004db605c77ba011e9e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -182,6 +202,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 6862596234311339950}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0cd2fdea0ef32004db605c77ba011e9e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9073886524655947860}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0cd2fdea0ef32004db605c77ba011e9e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4537601782575803713}
   m_SourcePrefab: {fileID: 100100000, guid: 0cd2fdea0ef32004db605c77ba011e9e, type: 3}
 --- !u!4 &8523532339081761625 stripped
 Transform:
@@ -396,3 +424,35 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &9073886524655947860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9007897634344896995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4332bc29023dc8449faff4c836f94a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: 
+--- !u!114 &-4537601782575803713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9007897634344896995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  isPartOfNarration: 1
+  bakeKeys: []
+  bakeValues: []

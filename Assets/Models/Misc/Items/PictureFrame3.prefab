@@ -63,6 +63,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PictureFrame3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 14f75a223ac44d649b0938d0ac1bedcf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 14f75a223ac44d649b0938d0ac1bedcf,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -79,6 +89,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: -3999245895587753411}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 14f75a223ac44d649b0938d0ac1bedcf,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4193648647310526218}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 14f75a223ac44d649b0938d0ac1bedcf,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1445373050814944254}
   m_SourcePrefab: {fileID: 100100000, guid: 14f75a223ac44d649b0938d0ac1bedcf, type: 3}
 --- !u!1 &8753947157915775383 stripped
 GameObject:
@@ -286,3 +304,35 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &-4193648647310526218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8753947157915775383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4332bc29023dc8449faff4c836f94a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: 
+--- !u!114 &1445373050814944254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8753947157915775383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  isPartOfNarration: 1
+  bakeKeys: []
+  bakeValues: []

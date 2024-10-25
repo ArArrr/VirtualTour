@@ -9,6 +9,8 @@ TagManager:
   - IDCard
   - Roller
   - SauceBowl
+  - Interactable
+  - Camera
   layers:
   - Default
   - TransparentFX

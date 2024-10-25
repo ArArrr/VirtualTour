@@ -5,6 +5,8 @@ public class DataManager : MonoBehaviour
     // Step 2: Create a static instance for the Singleton
     public static DataManager Instance { get; private set; }
 
+    public bool cameraInUse = false;
+
     // Step 3: Add fields for your player data
     public int lastCompletedFloor = 0;
     public string playerName;

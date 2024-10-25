@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Analytics;
+using UnityEngine.Windows;
 
 public class CharacterList : MonoBehaviour
 {
@@ -16,7 +18,21 @@ public class CharacterList : MonoBehaviour
             Female
         }
         public genderList Gender;
+
+        public void activeChar()
+        {
+            if(DataManager.Instance.strand.ToLower() == course.ToLower() && Gender.ToString().Equals(DataManager.Instance.gender, StringComparison.OrdinalIgnoreCase))
+            characterObj.SetActive(true);
+        }
     }
 
     public List<character> characterList;
+
+    private void Start()
+    {
+        foreach (var chars in characterList)
+        {
+            chars.activeChar();
+        }
+    }
 }
