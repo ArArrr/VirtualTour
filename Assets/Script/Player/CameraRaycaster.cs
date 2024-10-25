@@ -18,7 +18,7 @@ public class CameraRaycaster : MonoBehaviour
     {
         // Perform a raycast from the center of the screen
         Ray ray = mainCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
-        RaycastHit hit;
+        //RaycastHit hit;
 
         // Check if the left mouse button is clicked
         if (Mouse.current.leftButton.wasPressedThisFrame)

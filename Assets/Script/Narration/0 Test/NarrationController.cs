@@ -4,9 +4,18 @@ using System.Collections;
 using System.Collections.Generic; // Required to use lists
 using TMPro;
 using System;
+using UnityEngine.Events;
+using Unity.VisualScripting;
 
 public class NarrationController : MonoBehaviour
 {
+    [System.Serializable]
+    public class DelayedUnityEvent
+    {
+        public UnityEvent unityEvent;
+        public float delay; // Delay in seconds before triggering this specific event
+    }
+
     public bool isIntro = false;
     public SubtitleData subtitleData;  // Assign your subtitle data in the inspector
     private AudioSource audioSource;    // AudioSource for playing narration audio
@@ -31,6 +40,11 @@ public class NarrationController : MonoBehaviour
     private TMP_Text subtitleText;     // Reference to TMP_Text for subtitles
     private CanvasGroup subtitleCanvasGroup; // CanvasGroup to control visibility
 
+    [Header("Invoke Event at the Start")]
+    public List<DelayedUnityEvent> delayedEvents;
+
+    [Header("Invoke Event at the End")]
+    public UnityEvent onCustomEventTriggered2;
 
     private void Start()
     {
@@ -91,8 +105,13 @@ public class NarrationController : MonoBehaviour
         audioSource.clip = subtitleData.audioClip;
         audioSource.Play();
 
+        TriggerCustomEvent();
+
+        const float timeTolerance = 0.05f;  // Small tolerance to prevent looping issue
         foreach (var line in subtitleData.subtitleLines)
         {
+            float adjustedEndTime = Mathf.Min(line.endTime, audioSource.clip.length);
+
             // Wait until it's time to show the next subtitle, relative to the audio
             while (audioSource.time < line.startTime)
             {
@@ -103,10 +122,10 @@ public class NarrationController : MonoBehaviour
             subtitleText.text = line.text;
             SetSubtitleVisible(true);
 
-            // Wait until the subtitle should end
-            while (audioSource.time < line.endTime)
+            // Wait until the subtitle should end, with tolerance
+            while (audioSource.time < adjustedEndTime - timeTolerance)
             {
-                yield return null; // Wait for the correct end time
+                yield return null;  // Wait for the correct end time
             }
 
             // Clear the subtitle
@@ -115,7 +134,12 @@ public class NarrationController : MonoBehaviour
         }
 
         // Wait until the entire audio clip is finished
-        if (waitAudioToFinish) yield return new WaitForSeconds(audioSource.clip.length - subtitleData.subtitleLines[subtitleData.subtitleLines.Length - 1].endTime);
+        if (waitAudioToFinish)
+        {
+            float secondsLeft = audioSource.clip.length - subtitleData.subtitleLines[subtitleData.subtitleLines.Length - 1].endTime;
+            Debug.Log("Waiting for audio to finish. "+secondsLeft+" seconds.");
+            yield return new WaitForSeconds(secondsLeft);
+        }
 
         // Hide the subtitle UI
         SetSubtitleVisible(false);
@@ -130,6 +154,8 @@ public class NarrationController : MonoBehaviour
             yield return new WaitForSeconds(delayBeforeNext);  // Add delay before playing the next narration
             nextNarration.StartNarration();
         }
+
+        TriggerCustomEvent2();
 
         // Start all markers in the list
         foreach (MarkerDistanceDisplay marker in markers)
@@ -201,6 +227,44 @@ public class NarrationController : MonoBehaviour
             //}
 
             outline.enabled = false;
+        }
+    }
+    // Call this method when the event is triggered
+    public void TriggerCustomEvent()
+    {
+        StartCoroutine(InvokeWithDelays());
+    }
+
+    // Coroutine to invoke each event with its associated delay
+    private IEnumerator InvokeWithDelays()
+    {
+        float lastDelay = 0;
+        float eventDelay;
+        float newDelay;
+        int index = 0;
+        foreach (var delayedEvent in delayedEvents)
+        {
+            eventDelay = delayedEvent.delay;
+            if(lastDelay == 0) newDelay = eventDelay;
+            else newDelay =  eventDelay - lastDelay;
+            // Wait for the specified delay
+            Debug.Log("Event " + index + " will play in " + newDelay + " seconds.");
+            yield return new WaitForSeconds(newDelay);
+            lastDelay = delayedEvent.delay;
+            
+            // Invoke the UnityEvent
+            delayedEvent.unityEvent.Invoke();
+            Debug.Log("Playing Event "+index+"...");
+            index++;
+        }
+    }
+
+    public void TriggerCustomEvent2()
+    {
+        // Invoke the event (calls all assigned methods)
+        if (onCustomEventTriggered2 != null)
+        {
+            onCustomEventTriggered2.Invoke();
         }
     }
 }

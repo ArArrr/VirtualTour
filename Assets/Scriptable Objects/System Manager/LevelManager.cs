@@ -28,6 +28,13 @@ public class LevelManager : MonoBehaviour
             // Setup AudioSource
             audioSource = gameObject.AddComponent<AudioSource>();
 
+            // Initialize the canvas here
+            canvas = GetComponent<Canvas>();
+            if (canvas == null)
+            {
+                Debug.LogWarning("Canvas component is missing on this GameObject.");
+            }
+
             // Subscribe to the sceneLoaded event to update the canvas camera after each scene loads
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
@@ -48,17 +55,15 @@ public class LevelManager : MonoBehaviour
     // Update the render camera for the canvas when a new scene is loaded
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (canvas.renderMode == RenderMode.ScreenSpaceCamera)
+
+        Camera mainCamera = Camera.main; // Automatically find the new Main Camera in the scene
+        if (mainCamera != null)
         {
-            Camera mainCamera = Camera.main; // Automatically find the new Main Camera in the scene
-            if (mainCamera != null)
-            {
-                canvas.worldCamera = mainCamera; // Set the new Main Camera as the canvas' Render Camera
-            }
-            else
-            {
-                Debug.LogWarning("Main Camera not found in scene: " + scene.name);
-            }
+            canvas.worldCamera = mainCamera; // Set the new Main Camera as the canvas' Render Camera
+        }
+        else
+        {
+            Debug.LogWarning("Main Camera not found in scene: " + scene.name);
         }
     }
 
