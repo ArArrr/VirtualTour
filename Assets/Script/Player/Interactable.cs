@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,8 +9,13 @@ public class Interactable : MonoBehaviour
     private Outline outline;
     private Transform xrOrigin;
     private Rigidbody rb;
-    private bool isAnchored = false; // Track if the object is currently anchored
+    public bool isAnchored = false; // Track if the object is currently anchored
     private Transform originalParent; // Store the original parent
+    private bool isKinematic;
+
+    // Action event for interactions
+    public Action<Vector3> OnInteract;
+    public Action Dropped;
 
     private void Start()
     {
@@ -32,10 +38,13 @@ public class Interactable : MonoBehaviour
 
         // Automatically get the Rigidbody component and set it as non-kinematic by default
         rb = GetComponent<Rigidbody>();
-        //if (rb != null)
-        //{
-        //    rb.isKinematic = false;
-        //}
+        if (rb != null)
+        {
+            if (rb.isKinematic)
+            {
+                isKinematic = true;
+            }
+        }
 
         // Save the original parent transform
         originalParent = transform.parent;
@@ -62,7 +71,8 @@ public class Interactable : MonoBehaviour
             else
             {
                 // Unanchor the object and set it back to its original parent
-                transform.SetParent(originalParent);
+                if (transform.parent != originalParent) transform.SetParent(originalParent);
+                else transform.SetParent(null);
 
                 // Reset position if it's tagged as "IDCard"
                 if (CompareTag("IDCard"))
@@ -71,15 +81,31 @@ public class Interactable : MonoBehaviour
                 }
 
                 // Set Rigidbody back to non-kinematic for regular physics interactions
-                if (rb != null)
+                if (rb != null && !isKinematic)
                 {
                     rb.isKinematic = false;
                 }
 
                 Debug.Log("Object unanchored and returned to original parent.");
+                Dropped?.Invoke();
             }
             // Toggle the anchored state
             isAnchored = !isAnchored;
+        } else
+        {
+            Debug.LogError("XR Origin (VR) object not found in the scene.");
+        }
+        OnInteract?.Invoke(offset);
+    }
+
+    public void Interact2(float force)
+    {
+        if (xrOrigin != null)
+        {
+            if (!isAnchored)
+            {
+
+            }
         }
     }
 

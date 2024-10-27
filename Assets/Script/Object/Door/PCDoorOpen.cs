@@ -147,4 +147,10 @@ public class SmoothRotationTrigger : MonoBehaviour
             }
         }
     }
+
+    public void unlock()
+    {
+        isLock = false;
+        Start();
+    }
 }

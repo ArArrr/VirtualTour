@@ -37,15 +37,24 @@ public class PlayerInteraction : MonoBehaviour
         pressE.action.performed += context => EKeyInteraction();
         pressG.action.performed += context => GKeyInteraction();
         mouseClick.action.performed += context => ClickInteraction();
+    }
 
+    public void getCamera()
+    {
         GameObject cameraObj = GameObject.Find("Camera(Clone)");
         if (cameraObj != null)
         {
             Interactable cemaraInt = cameraObj.GetComponent<Interactable>();
             SetNewCurrentInteractable(cemaraInt);
+            Debug.Log(currentInteractable.name);
+            isHoldingItem = false;
             EKeyInteraction();
+            Debug.Log(currentInteractable.name);
         }
-        
+        else
+        {
+            Debug.Log("Camera is null");
+        }
     }
 
     private void OnDestroy()
@@ -85,6 +94,7 @@ public class PlayerInteraction : MonoBehaviour
                 isHoldingItem = false;
             }
         }
+        Debug.Log("No Item selected");
     }
 
     private void GKeyInteraction()

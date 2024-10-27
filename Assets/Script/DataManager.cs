@@ -8,21 +8,24 @@ public class DataManager : MonoBehaviour
     public bool cameraInUse = false;
 
     // Step 3: Add fields for your player data
+    [Header("Player Data")]
     public int lastCompletedFloor = 0;
     public string playerName;
     public string yearLevel;
     public string strand;
     public string gender;
-    public string moveMethod;
-    public string turnMethod;
+    public string targetSpawnPointID;
     public bool isTour = false;
     public bool nextLevel = false;
+    public string camp;
 
     // SETTINGS
+    [Header("Settings")]
+    public bool isInMenu = false;
     public bool togglePC = false;
-
-    public string targetSpawnPointID;
-
+    public string moveMethod;
+    public string turnMethod;
+    
     void Awake()
     {
         // Step 4: Implement Singleton Pattern

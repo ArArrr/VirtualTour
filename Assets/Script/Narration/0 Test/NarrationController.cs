@@ -48,8 +48,6 @@ public class NarrationController : MonoBehaviour
 
     private void Start()
     {
-        if (!enabled) return;  // Exit if this component was disabled by the parent
-
         // Proceed with the regular Start logic if enabled
         audioSource = GetComponentInParent<AudioSource>();
         if (audioSource == null)
@@ -70,6 +68,7 @@ public class NarrationController : MonoBehaviour
         {
             Debug.LogError("Subtitle UI not found! Please make sure it exists in the scene.");
         }
+        if (!enabled) return;  // Exit if this component was disabled by the parent
     }
 
     public void StartNarration()
