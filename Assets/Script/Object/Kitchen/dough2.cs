@@ -16,8 +16,8 @@ public class NextDough : MonoBehaviour
 
     private XRGrabInteractable grabInteractable;  // XR Grab Interactable component
     private Rigidbody doughRigidbody;        // Rigidbody of the dough for physics
-    private bool isInAir = false;            // Flag to check if dough is in mid-air
-    private bool isSpinning = false;         // Whether the dough is currently spinning
+    public bool isInAir = false;            // Flag to check if dough is in mid-air
+    public bool isSpinning = false;         // Whether the dough is currently spinning
     private MeshRenderer pizza;
 
     [Header("Next Narration")]
@@ -75,7 +75,7 @@ public class NextDough : MonoBehaviour
     }
 
     // Triggered when the player releases the dough
-    private void OnRelease(SelectExitEventArgs args)
+    public void OnRelease(SelectExitEventArgs args)
     {
         // Reset the scaling timer, but retain the current scale progress
         currentScalingTime = scaleProgress * scalingTime;
@@ -99,14 +99,14 @@ public class NextDough : MonoBehaviour
     }
 
     // Triggered when the player grabs the dough again
-    private void OnGrab(SelectEnterEventArgs args)
+    public void OnGrab(SelectEnterEventArgs args)
     {
         // Unfreeze X and Z positions when grabbed
         doughRigidbody.constraints &= ~(RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ);
     }
 
     // Apply spinning logic only on the Z-axis
-    private void SpinDough()
+    public void SpinDough()
     {
         // Manually control the Z rotation to simulate spinning
         transform.Rotate(Vector3.forward, spinSpeed * Time.deltaTime, Space.Self);

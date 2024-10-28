@@ -5,19 +5,26 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    public string message;
-    private Outline outline;
-    private Transform xrOrigin;
-    private Rigidbody rb;
+    public string tipOnHover = "Press [E] to pick up";
+    public string tipOnEquip = "[E] Drop [G] Throw";
+    public float throwStrength = 10f;
+    protected Outline outline;
+    protected Transform xrOrigin;
+    protected Rigidbody rb;
     public bool isAnchored = false; // Track if the object is currently anchored
-    private Transform originalParent; // Store the original parent
-    private bool isKinematic;
+    public Transform originalParent; // Store the original parent
+    protected Quaternion originalRotation;
+    protected bool isKinematic;
+    public Quaternion rotation;
+    public bool doNotRotate;
+    public bool keepOldRotation;
+    public Vector3 positionOffset;
 
     // Action event for interactions
     public Action<Vector3> OnInteract;
     public Action Dropped;
 
-    private void Start()
+    public virtual void Start()
     {
         outline = GetComponent<Outline>();
         if (outline != null)
@@ -48,6 +55,10 @@ public class Interactable : MonoBehaviour
 
         // Save the original parent transform
         originalParent = transform.parent;
+        if (keepOldRotation)
+        {
+            originalRotation = transform.localRotation;
+        }
     }
 
     public void Interact(Vector3 offset)
@@ -58,14 +69,16 @@ public class Interactable : MonoBehaviour
             {
                 // Anchor the object to XR Origin
                 transform.SetParent(xrOrigin);
-                transform.localPosition = offset;
+                transform.localPosition = offset+positionOffset;
+                if (!doNotRotate)
+                transform.localRotation = rotation;
 
                 // Set Rigidbody to kinematic to prevent physics interactions
                 if (rb != null)
                 {
                     rb.isKinematic = true;
                 }
-
+                isAnchored = true;
                 Debug.Log("Object anchored to XR Origin with offset.");
             }
             else
@@ -79,18 +92,21 @@ public class Interactable : MonoBehaviour
                 {
                     transform.localPosition = Vector3.zero;
                 }
+                if (keepOldRotation)
+                {
+                    transform.localRotation = originalRotation;
+                }
 
                 // Set Rigidbody back to non-kinematic for regular physics interactions
                 if (rb != null && !isKinematic)
                 {
                     rb.isKinematic = false;
                 }
-
+                isAnchored = false;
                 Debug.Log("Object unanchored and returned to original parent.");
                 Dropped?.Invoke();
             }
             // Toggle the anchored state
-            isAnchored = !isAnchored;
         } else
         {
             Debug.LogError("XR Origin (VR) object not found in the scene.");
@@ -98,11 +114,50 @@ public class Interactable : MonoBehaviour
         OnInteract?.Invoke(offset);
     }
 
-    public void Interact2(float force)
+    public virtual void Interact2()
+    {
+        if (xrOrigin != null && isAnchored && rb != null && !isKinematic)
+        {
+            if (CompareTag("IDCard")) return;
+            // Unanchor the object and set it back to its original parent
+            if (transform.parent != originalParent) transform.SetParent(originalParent);
+            else transform.SetParent(null);
+
+            // Set Rigidbody back to non-kinematic for regular physics interactions
+            rb.isKinematic = false;
+
+            // Calculate throw direction from the camera's forward vector
+            Camera mainCamera = Camera.main;
+            if (mainCamera != null)
+            {
+                Vector3 throwDirection = mainCamera.transform.forward;
+
+                // Apply force to throw the object
+                rb.AddForce(throwDirection * throwStrength, ForceMode.VelocityChange);
+
+                Debug.Log("Object thrown in the camera's forward direction.");
+            }
+            else
+            {
+                Debug.LogError("Main Camera not found for throw direction.");
+            }
+            DataManager.Instance.isHoldingItem = false;
+            isAnchored = false;
+            // Invoke Dropped action to notify other scripts if needed
+            Dropped?.Invoke();
+            // Toggle anchored state
+        }
+        else
+        {
+            Debug.LogWarning("XR Origin (VR) or Rigidbody component not found, or object is not anchored.");
+        }
+    }
+
+    public virtual void Interact3()
     {
         if (xrOrigin != null)
         {
-            if (!isAnchored)
+            if (isAnchored)
             {
 
             }
@@ -123,5 +178,14 @@ public class Interactable : MonoBehaviour
         {
             outline.enabled = true;
         }
+    }
+
+    public void setCameraInUse(bool val)
+    {
+        DataManager.Instance.cameraInUse = val;
+    }
+    public void OnDisable()
+    {
+        
     }
 }

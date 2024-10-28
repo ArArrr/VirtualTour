@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,6 +16,8 @@ public class PlayerInteraction : MonoBehaviour
     public Vector3 offset; // Define the offset from XR Origin
     private Transform xrOrigin;
     private bool isHoldingItem = false; // Track if the player is holding an item
+    public GameObject tooltipObj;
+    public TextMeshProUGUI toolTip;
 
     private void Start()
     {
@@ -28,7 +31,6 @@ public class PlayerInteraction : MonoBehaviour
         {
             Debug.LogError("XR Origin (VR) object not found in the scene.");
         }
-
         // Enable input actions and bind to methods
         pressE.action.Enable();
         pressG.action.Enable();
@@ -76,7 +78,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private void EKeyInteraction()
     {
-        if (currentInteractable != null)
+        if (currentInteractable != null && !DataManager.Instance.isInMenu)
         {
             if (!isHoldingItem)
             {
@@ -84,6 +86,12 @@ public class PlayerInteraction : MonoBehaviour
                 Debug.Log("Picked up " + currentInteractable.name);
                 currentInteractable.Interact(offset);
                 isHoldingItem = true;
+                DataManager.Instance.isHoldingItem = isHoldingItem;
+                if (currentInteractable.gameObject.CompareTag("Camera"))
+                {
+                    DataManager.Instance.cameraInUse = true;
+                }
+                toolTip.text = currentInteractable.tipOnEquip;
             }
             else
             {
@@ -92,6 +100,7 @@ public class PlayerInteraction : MonoBehaviour
                 currentInteractable.Interact(Vector3.zero); // Detach item by calling Interact again
                 DisableCurrentInteractable();
                 isHoldingItem = false;
+                DataManager.Instance.isHoldingItem = isHoldingItem;
             }
         }
         Debug.Log("No Item selected");
@@ -99,19 +108,36 @@ public class PlayerInteraction : MonoBehaviour
 
     private void GKeyInteraction()
     {
-        if (currentInteractable != null)
+        if (currentInteractable != null && !DataManager.Instance.isInMenu)
         {
-            Debug.Log("G key pressed on " + currentInteractable.name);
-            // Add additional logic for G key interaction
+            currentInteractable.Interact2();
+            isHoldingItem = DataManager.Instance.isHoldingItem;
+            if (!isHoldingItem)
+            {
+                // If already holding an item, drop it and reset the state
+                Debug.Log("Dropped " + currentInteractable.name);
+                DisableCurrentInteractable();
+                isHoldingItem = false;
+                DataManager.Instance.isHoldingItem = isHoldingItem;
+            }
         }
     }
 
     private void ClickInteraction()
     {
-        if (currentInteractable != null)
+        if (currentInteractable != null && !DataManager.Instance.isInMenu)
         {
-            Debug.Log("Mouse clicked on " + currentInteractable.name);
-            // Add additional logic for mouse click interaction
+            currentInteractable.Interact3();
+            isHoldingItem = DataManager.Instance.isHoldingItem;
+            if (!isHoldingItem)
+            {
+                // If already holding an item, drop it and reset the state
+                Debug.Log("Dropped " + currentInteractable.name);
+                DisableCurrentInteractable();
+                isHoldingItem = false;
+                DataManager.Instance.isHoldingItem = isHoldingItem;
+            }
+
         }
     }
 
@@ -125,17 +151,16 @@ public class PlayerInteraction : MonoBehaviour
         // If colliders with anything within player reach
         if (Physics.Raycast(ray, out hit, playerReach))
         {
-            if (hit.collider.CompareTag("Camera"))
-            {
-                DataManager.Instance.cameraInUse = true;
-            }
+            //if (hit.collider.CompareTag("Camera"))
+            //{
+            //    DataManager.Instance.cameraInUse = true;
+            //}
             if (hit.collider.CompareTag("Interactable") || hit.collider.CompareTag("SauceBowl") || hit.collider.CompareTag("IDCard") || hit.collider.CompareTag("Roller") || hit.collider.CompareTag("Camera"))
             {
                 Interactable newInteract = hit.collider.GetComponent<Interactable>();
                 if (newInteract != null && newInteract.enabled)
                 {
                     SetNewCurrentInteractable(newInteract);
-                    
                 }
                 else
                 {
@@ -153,9 +178,16 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (currentInteractable != newInteractable)
         {
+            
             DisableCurrentInteractable();
             currentInteractable = newInteractable;
             currentInteractable.EnableOutline();
+            if (toolTip != null)
+            {
+                toolTip.enabled = true;
+                toolTip.text = currentInteractable.tipOnHover;
+            }
+            else Debug.LogError("Tooltip not found in the scene.");
         }
     }
 
@@ -165,6 +197,12 @@ public class PlayerInteraction : MonoBehaviour
         {
             currentInteractable.DisableOutline();
             currentInteractable = null;
+            if (toolTip != null)
+            {
+                toolTip.text = "";
+                toolTip.enabled = false;
+            }
+            else Debug.LogError("Tooltip not found in the scene.");
         }
     }
 }

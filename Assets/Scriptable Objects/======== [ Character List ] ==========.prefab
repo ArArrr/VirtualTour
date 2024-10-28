@@ -61,6 +61,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3192341959877982709}
     m_Modifications:
+    - target: {fileID: 3043983239638302929, guid: 206fb1ee3eaca08409f100583efe4f8c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2727
+      objectReference: {fileID: 0}
+    - target: {fileID: 3043983239638302929, guid: 206fb1ee3eaca08409f100583efe4f8c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0731
+      objectReference: {fileID: 0}
     - target: {fileID: 7288778183849201659, guid: 206fb1ee3eaca08409f100583efe4f8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -115,6 +125,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: char_BSIT_Female
+      objectReference: {fileID: 0}
+    - target: {fileID: 7957053016379659585, guid: 206fb1ee3eaca08409f100583efe4f8c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -458,7 +458,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 8
+  m_Intensity: 6
   m_Range: 5
   m_SpotAngle: 76.436966
   m_InnerSpotAngle: 68.239044
@@ -757,10 +757,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5788472038754843309}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5788472038754843309}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -902,8 +926,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4332bc29023dc8449faff4c836f94a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: 
+  tipOnHover: '[E] Pick up [L Click] Take Picture/Close Picture'
+  tipOnEquip: '[E] Drop [L Click] Take Picture/Close Picture'
+  throwStrength: 10
   isAnchored: 0
+  rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+  doNotRotate: 0
+  keepOldRotation: 0
+  positionOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &3507306134949459201
 MonoBehaviour:
   m_ObjectHideFlags: 0

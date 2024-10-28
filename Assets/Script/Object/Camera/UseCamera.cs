@@ -12,6 +12,8 @@ public class UseCamera : MonoBehaviour
     private Animator animator;
     public bool photoTaken;
     private bool wait = false;
+    private bool isBeingHeld = false;
+    private Outline outline;
 
     private void Start()
     {
@@ -19,6 +21,7 @@ public class UseCamera : MonoBehaviour
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
         cameraObj.SetActive(false);
+        outline = GetComponent<Outline>();
 
         if (DataManager.Instance.cameraInUse)
         {
@@ -28,7 +31,6 @@ public class UseCamera : MonoBehaviour
             {
                 playerInteraction?.getCamera();
             }
-            
         }
     }
 
@@ -48,7 +50,7 @@ public class UseCamera : MonoBehaviour
 
     public void ClickInteraction()
     {
-        if (!wait) StartCoroutine(InvokeWithDelays());
+        if (!wait && outline.enabled && !DataManager.Instance.isInMenu) StartCoroutine(InvokeWithDelays());
     }
 
     private IEnumerator InvokeWithDelays()
@@ -83,5 +85,6 @@ public class UseCamera : MonoBehaviour
         }
 
         wait = false;
+        yield break;
     }
 }

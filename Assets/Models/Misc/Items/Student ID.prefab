@@ -685,7 +685,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4332bc29023dc8449faff4c836f94a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: 
+  tipOnHover: Press [E] to pick up
+  tipOnEquip: '[E] Drop'
+  throwStrength: 10
+  isAnchored: 0
+  rotation: {x: 0, y: 0, z: 0, w: 0}
+  doNotRotate: 0
+  keepOldRotation: 1
 --- !u!4 &7764972856080146363 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0f7d1b95323f14d4ba367c835b5e66d4,

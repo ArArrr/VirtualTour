@@ -18,6 +18,7 @@ public class DataManager : MonoBehaviour
     public bool isTour = false;
     public bool nextLevel = false;
     public string camp;
+    public bool isHoldingItem = false;
 
     // SETTINGS
     [Header("Settings")]
