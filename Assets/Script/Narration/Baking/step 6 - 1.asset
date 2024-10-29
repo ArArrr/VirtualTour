@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec85effbd52b6f643af8baf19bf5eb39, type: 3}
+  m_Name: step 6 - 1
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: ce3d927a3e97cb142bdc0c529a8ed049, type: 3}
+  subtitleLines:
+  - text: 'Almost done! '
+    startTime: 0
+    endTime: 1
+  - text: "Now, let\u2019s put our creation in the oven. "
+    startTime: 1.5
+    endTime: 3.5
