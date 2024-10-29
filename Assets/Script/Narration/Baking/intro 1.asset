@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec85effbd52b6f643af8baf19bf5eb39, type: 3}
+  m_Name: intro 1
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 34fe7e02b14ea5047aedd22523687da4, type: 3}
+  subtitleLines:
+  - text: Hello, visitor! Welcome to the STI Career Camp, and thank you for joining
+      for our Bakers Camp workshop!
+    startTime: 0
+    endTime: 6
+  - text: "Today, we\u2019re diving into the delicious world of baking,"
+    startTime: 7
+    endTime: 10
+  - text: where you will get to experience the joy of creating a homemade pizza from
+      scratch.
+    startTime: 10.1
+    endTime: 14.2
