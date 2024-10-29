@@ -106,7 +106,7 @@ public class LevelManager : MonoBehaviour
         // Play sound effect (if not "none")
         PlaySoundEffect(soundEffectName);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
 
         scene.allowSceneActivation = true;
 

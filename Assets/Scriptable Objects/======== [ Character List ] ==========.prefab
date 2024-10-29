@@ -161,6 +161,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: char_BSIT_Male
       objectReference: {fileID: 0}
+    - target: {fileID: 323549935959439693, guid: 6c3a9bfcc78e8484a8ff3fca9aa5e9bc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1096250885606351863, guid: 6c3a9bfcc78e8484a8ff3fca9aa5e9bc,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -26,10 +26,13 @@ public class UseCamera : MonoBehaviour
         if (DataManager.Instance.cameraInUse)
         {
             GameObject devSim = GameObject.Find("XR Device Simulator");
-            PlayerInteraction playerInteraction = devSim.GetComponent<PlayerInteraction>();
-            if (playerInteraction != null && playerInteraction.enabled == true)
+            if(devSim != null )
             {
-                playerInteraction?.getCamera();
+                PlayerInteraction playerInteraction = devSim.GetComponent<PlayerInteraction>();
+                if (playerInteraction != null && playerInteraction.enabled == true)
+                {
+                    playerInteraction?.getCamera();
+                }
             }
         }
     }

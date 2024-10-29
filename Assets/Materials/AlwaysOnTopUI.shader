@@ -8,7 +8,7 @@ Shader "Custom/AlwaysOnTopUI"
     }
     SubShader
     {
-        Tags {"Queue" = "Overlay"}
+        Tags { "Queue" = "Overlay" }
         Pass
         {
             Cull Off
@@ -18,10 +18,9 @@ Shader "Custom/AlwaysOnTopUI"
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-            #pragma multi_compile _ UNITY_SINGLE_PASS_STEREO
+            #pragma multi_compile_instancing
             #include "UnityCG.cginc"
-            
-            // Shader properties
+
             sampler2D _MainTex;
             fixed4 _Color;
             float _AlphaClipThreshold;
@@ -30,17 +29,23 @@ Shader "Custom/AlwaysOnTopUI"
             {
                 float4 vertex : POSITION;
                 float2 uv : TEXCOORD0;
+                UNITY_VERTEX_INPUT_INSTANCE_ID
             };
 
             struct v2f
             {
                 float2 uv : TEXCOORD0;
                 float4 vertex : SV_POSITION;
+                UNITY_VERTEX_OUTPUT_STEREO
             };
 
             v2f vert (appdata v)
             {
                 v2f o;
+                UNITY_SETUP_INSTANCE_ID(v);
+                UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
+                
+                // Transform vertex position with stereo support
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = v.uv;
                 return o;
