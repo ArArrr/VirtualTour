@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec85effbd52b6f643af8baf19bf5eb39, type: 3}
+  m_Name: outro ending
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 5a2ed5dee4448d34699e63fbc69cd090, type: 3}
+  subtitleLines:
+  - text: 'We hope this was an inspiring experience, '
+    startTime: 0
+    endTime: 2.3
+  - text: "and who knows \u2013 "
+    startTime: 2.6
+    endTime: 3.4
+  - text: maybe this is just the beginning of your journey into photography!
+    startTime: 3.9
+    endTime: 7

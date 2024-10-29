@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec85effbd52b6f643af8baf19bf5eb39, type: 3}
+  m_Name: intro 1
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: d24ffb2070404ed469a733a63557f562, type: 3}
+  subtitleLines:
+  - text: 'Hello, visitor! Welcome to the STI Career Camp, and thank you for joining
+      for our Photography Camp workshop! '
+    startTime: 0
+    endTime: 6.7
+  - text: "Today, you\u2019re stepping into the shoes of a photographer, capturing
+      the beauty and excitement of campus life."
+    startTime: 7.4
+    endTime: 13.2
