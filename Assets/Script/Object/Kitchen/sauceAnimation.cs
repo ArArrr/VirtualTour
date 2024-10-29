@@ -9,8 +9,8 @@ public class sauceAnimation : MonoBehaviour
     private float currentScalingTime = 0f;
     private Vector3 initialScale;
 
-    private bool isPouring = false;
-    private bool isInsideCollider = false;
+    public bool isPouring = false;
+    public bool isInsideCollider = false;
 
     public float minTiltAngle = 45f;
     public float maxTiltAngle = 180f;
@@ -63,7 +63,7 @@ public class sauceAnimation : MonoBehaviour
 
     private void Update()
     {
-        if (isPouring)
+        if (isPouring && isInsideCollider)
         {
             if (!doughParticles.isPlaying)
             {
