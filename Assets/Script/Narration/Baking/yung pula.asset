@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec85effbd52b6f643af8baf19bf5eb39, type: 3}
+  m_Name: yung pula
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 58af1da899f8556419f919d3130a9054, type: 3}
+  subtitleLines:
+  - text: pagkatapos nyan lagyan mo ng ano-
+    startTime: 0.3
+    endTime: 2.7
+  - text: yung-
+    startTime: 2.9
+    endTime: 4
+  - text: yung pula
+    startTime: 4
+    endTime: 5.1

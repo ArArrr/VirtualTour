@@ -51,7 +51,7 @@ MonoBehaviour:
   strand: bsit
   gender: male
   moveMethod: joystick
-  turnMethod: continious
+  turnMethod: continuous
   isTour: 1
   nextLevel: 0
   togglePC: 0

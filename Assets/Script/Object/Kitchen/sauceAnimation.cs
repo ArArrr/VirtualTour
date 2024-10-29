@@ -29,6 +29,9 @@ public class sauceAnimation : MonoBehaviour
 
     public XRGrabInteractable grabInteractable;  // XR Grab Interactable component
 
+    [Header("Next Narration")]
+    public NarrationController nextNarration;  // Reference to the next narration controller
+
     private void Start()
     {
         doughParticles.Stop();
@@ -95,6 +98,10 @@ public class sauceAnimation : MonoBehaviour
                 if (nextItemOutline != null) nextItemOutline.enabled = true;
                 nextItemOutline2.enabled = true;
                 sauceOutline.enabled = false;
+                if (nextNarration != null)
+                {
+                    nextNarration.StartNarration();
+                }
             }
         }
     }
@@ -103,6 +110,7 @@ public class sauceAnimation : MonoBehaviour
     {
         if (other.CompareTag("SauceBowl"))
         {
+            Debug.Log("Sauce entered collider");
             isInsideCollider = true;
             CheckForPouring(other.transform);
         }
@@ -112,6 +120,7 @@ public class sauceAnimation : MonoBehaviour
     {
         if (other.CompareTag("SauceBowl"))
         {
+            Debug.Log("Sauce exit collider");
             isInsideCollider = false;
             isPouring = false;
             if (doughParticles.isPlaying)

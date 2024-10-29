@@ -22,6 +22,9 @@ public class OvenDial : DistanceReleaseGrabInteractable
     public GameObject nextItem;
     public GameObject currentItem;
 
+    [Header("Next Narration")]
+    public NarrationController nextNarration;  // Reference to the next narration controller
+
     private void Start()
     {
         // Add listener for the grab event
@@ -43,6 +46,13 @@ public class OvenDial : DistanceReleaseGrabInteractable
             ovenAudioSource.Play();
             StartCoroutine(RotateDial()); // Start rotating the dial
         }
+    }
+
+    public void TurnOn()
+    {
+        ovenAudioSource.clip = turnDial;
+        ovenAudioSource.Play();
+        StartCoroutine(RotateDial()); // Start rotating the dial
     }
 
     private IEnumerator RotateDial()
@@ -85,5 +95,9 @@ public class OvenDial : DistanceReleaseGrabInteractable
 
         nextItem.SetActive(true);
         currentItem.SetActive(false);
+        if (nextNarration != null)
+        {
+            nextNarration.StartNarration();
+        }
     }
 }

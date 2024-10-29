@@ -17,6 +17,9 @@ public class getItem : MonoBehaviour
     public GameObject activateObject;
     public GameObject disableObject;
 
+    [Header("Next Narration")]
+    public NarrationController nextNarration;  // Reference to the next narration controller
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,10 +45,12 @@ public class getItem : MonoBehaviour
                 outline.enabled = false;
                 m_Renderer.material = initialMaterials[item];
             }
+            if (nextNarration != null) nextNarration.StartNarration();
             if (nextItem != null) nextItem.SetActive(true);
             if (outlineItemToGet != null) outlineItemToGet.enabled = true;
             if (disableObject != null) disableObject.SetActive(false);
             if (activateObject != null) activateObject.SetActive(true);
+            
         }
     }
 }

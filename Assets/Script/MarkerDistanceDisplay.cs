@@ -17,6 +17,7 @@ public class MarkerDistanceDisplay : MonoBehaviour
     public float updateInterval = 0.2f;    // Time interval between updates in seconds
     public float baseScale = 1f;           // Base scale for the marker
     public float distanceMultiplier = 0.1f; // How much the scale should change with distance
+    public List<GameObject> outlinedObjects;
 
     private Canvas canvas;
 
@@ -84,6 +85,10 @@ public class MarkerDistanceDisplay : MonoBehaviour
             {
                 nextNarration.StartNarration();
             }
+            if (outlinedObjects != null && canvas.enabled)
+            {
+                ApplyOutline();
+            }
 
             // Stop updating the distance and hide the marker canvas
             CancelInvoke(nameof(UpdateDistanceText));
@@ -93,6 +98,27 @@ public class MarkerDistanceDisplay : MonoBehaviour
             foreach (MarkerDistanceDisplay marker in markers)
             {
                 marker.StartMarker();
+            }
+        }
+    }
+
+    private void ApplyOutline()
+    {
+        if (outlinedObjects == null || outlinedObjects.Count == 0) return;
+
+        foreach (GameObject obj in outlinedObjects)
+        {
+            Outline outline = obj.GetComponent<Outline>();
+
+            if (outline == null)
+            {
+                outline = obj.AddComponent<Outline>();
+                outline.OutlineMode = Outline.Mode.OutlineAll;
+            }
+            else
+            {
+                outline.enabled = true;
+                outline.OutlineMode = Outline.Mode.OutlineAll;
             }
         }
     }

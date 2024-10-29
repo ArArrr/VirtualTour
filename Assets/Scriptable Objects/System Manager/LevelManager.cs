@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Linq;
+using Unity.XR.CoreUtils;
 
 public class LevelManager : MonoBehaviour
 {
@@ -11,10 +12,12 @@ public class LevelManager : MonoBehaviour
     public Slider progressBar;
     public GameObject transitionsContainer;
 
+    public GameObject cameras;
+    private Transform XROrigin;
+
     private SceneTransition[] transitions;
     private AudioSource audioSource;
-
-    private Canvas canva;
+    private Canvas canvas;
 
     // Add a list of sound effects, which can be assigned in the Unity Inspector
     public AudioClip[] soundEffects;
@@ -28,6 +31,16 @@ public class LevelManager : MonoBehaviour
 
             // Setup AudioSource
             audioSource = gameObject.AddComponent<AudioSource>();
+
+            // Initialize the canvas here
+            canvas = GetComponent<Canvas>();
+            if (canvas == null)
+            {
+                Debug.LogWarning("Canvas component is missing on this GameObject.");
+            }
+
+            // Subscribe to the sceneLoaded event to update the canvas camera after each scene loads
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
@@ -40,11 +53,29 @@ public class LevelManager : MonoBehaviour
         transitions = transitionsContainer.GetComponentsInChildren<SceneTransition>();
         Debug.Log(transitions.Length);
         Debug.Log(transitions.ToList());
-        canva = GetComponent<Canvas>();
+        canvas = GetComponent<Canvas>();
+    }
+
+    // Update the render camera for the canvas when a new scene is loaded
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+
+        Camera mainCamera = Camera.main; // Automatically find the new Main Camera in the scene
+        if (mainCamera != null)
+        {
+            canvas.worldCamera = mainCamera; // Set the new Main Camera as the canvas' Render Camera
+        }
+        else
+        {
+            Debug.LogWarning("Main Camera not found in scene: " + scene.name);
+
+        }
+        
     }
 
     public void LoadScene(string sceneName, string transitionName, string soundEffectName)
     {
+        
         StartCoroutine(LoadSceneAsync(sceneName, transitionName, soundEffectName));
     }
 
@@ -54,17 +85,17 @@ public class LevelManager : MonoBehaviour
         if (transitionName == "none")
         {
             noTransition = true;
-            canva.enabled = false;
+            canvas.enabled = false;
             transitionName = "CrossFade";
         }
+
+       
         SceneTransition transition = transitions.First(t => t.name.Equals(transitionName));
 
         AsyncOperation scene = SceneManager.LoadSceneAsync(sceneName);
         scene.allowSceneActivation = false;
 
         yield return transition.AnimateTransitionIn();
-
-        // progressBar.gameObject.SetActive(true);
 
         do
         {
@@ -75,16 +106,50 @@ public class LevelManager : MonoBehaviour
         // Play sound effect (if not "none")
         PlaySoundEffect(soundEffectName);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
 
         scene.allowSceneActivation = true;
 
-        // progressBar.gameObject.SetActive(false);
-
         yield return transition.AnimateTransitionOut();
+
         if (noTransition)
         {
-            canva.enabled = true;
+            canvas.enabled = true;
+        }
+
+        GameObject xrOriginObj = GameObject.Find("XR Origin (VR)");
+        if (xrOriginObj != null)
+        {
+            XROrigin = xrOriginObj.transform;
+        }
+        else
+        {
+            Debug.LogError("XR Origin (VR) object not found in the scenesssss.");
+        }
+
+        if (DataManager.Instance.cameraInUse == true)
+        {
+            //// Store initial values before instantiation
+            //Vector3 initialPosition = cameras.transform.position;
+            Quaternion initialRotation = cameras.transform.rotation;
+            //Vector3 initialScale = cameras.transform.localScale;
+
+            GameObject camera = Instantiate(cameras, XROrigin);
+            Rigidbody rigid = camera.GetComponent<Rigidbody>();
+            if (rigid != null)
+            {
+                rigid.isKinematic = true;
+            }
+
+
+            camera.transform.localPosition = new Vector3(0.2f, 1.1f, 0.5f);
+            camera.transform.localRotation = initialRotation;
+            //camera.transform.localScale = initialScale;
+
+            // Get the Rigidbody component and set it to kinematic
+
+
+            // Set the position, rotation, and scale to the initial values
         }
     }
 
@@ -105,5 +170,11 @@ public class LevelManager : MonoBehaviour
                 Debug.LogWarning("Sound effect not found: " + soundEffectName);
             }
         }
+    }
+
+    private void OnDestroy()
+    {
+        // Unsubscribe from the event when this object is destroyed
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }

@@ -10,7 +10,7 @@ public class SetTurnType : MonoBehaviour
 
     private void Start()
     {
-        int playerTurnSetting = DataManager.Instance.turnMethod.Equals("continious") ? 0 : 1;
+        int playerTurnSetting = DataManager.Instance.turnMethod.ToLower().Equals("continious") ? 0 : 1;
         SetTypeFromIndem(playerTurnSetting);
     }
 
