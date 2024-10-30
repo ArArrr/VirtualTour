@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Interactable : MonoBehaviour
 {
@@ -23,6 +24,11 @@ public class Interactable : MonoBehaviour
     // Action event for interactions
     public Action<Vector3> OnInteract;
     public Action Dropped;
+
+    [Header("Event on Pickup")]
+    public UnityEvent unityEvent;
+    public int pickupCount = 0;
+    public bool onlyOnce = false;
 
     public virtual void Start()
     {
@@ -79,6 +85,7 @@ public class Interactable : MonoBehaviour
                     rb.isKinematic = true;
                 }
                 isAnchored = true;
+                EventOnPickup();
                 Debug.Log("Object anchored to XR Origin with offset.");
             }
             else
@@ -143,6 +150,7 @@ public class Interactable : MonoBehaviour
             }
             DataManager.Instance.isHoldingItem = false;
             isAnchored = false;
+            
             // Invoke Dropped action to notify other scripts if needed
             Dropped?.Invoke();
             // Toggle anchored state
@@ -187,5 +195,14 @@ public class Interactable : MonoBehaviour
     public void OnDisable()
     {
         
+    }
+    public void EventOnPickup()
+    {
+        if(unityEvent != null)
+        {
+            if (onlyOnce && pickupCount > 0) return;
+            unityEvent.Invoke();
+        }
+        pickupCount++;
     }
 }
