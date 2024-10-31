@@ -26,7 +26,12 @@ public class DataManager : MonoBehaviour
     public bool togglePC = false;
     public string moveMethod;
     public string turnMethod;
-    
+
+    [Header("Camp Career Data (Photography)")]
+    public bool introDone = false;
+    public bool firstShot = false;
+    public int picCount = 1;
+
     void Awake()
     {
         // Step 4: Implement Singleton Pattern

@@ -8,6 +8,7 @@ public class sauceInteraction : Interactable
     private bool isRotated = false;
     public float rotationSpeed = 2.0f; // Rotation speed, adjust as needed
     private Coroutine rotationCoroutine;
+    public Outline outline;
     public override void Interact3()
     {
         if (xrOrigin != null && isAnchored)
@@ -15,6 +16,7 @@ public class sauceInteraction : Interactable
             if (rotationCoroutine != null)
             {
                 StopCoroutine(rotationCoroutine);
+                if (outline != null) outline.enabled = false;
             }
 
             if (!isRotated)

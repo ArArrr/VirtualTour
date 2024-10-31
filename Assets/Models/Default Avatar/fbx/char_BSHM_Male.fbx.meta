@@ -23,17 +23,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: char_mtex
-    second: {fileID: 2100000, guid: b7662ccb4871f0d46aa02918dd9b7a1f, type: 2}
+    second: {fileID: 2100000, guid: af37a7b2596567a45b8fdaa926b2d16e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: char_tex
-    second: {fileID: 2100000, guid: b452ef86c6d2c06418110fd8dbc50760, type: 2}
+    second: {fileID: 2100000, guid: b80e92a59573815438c9e75904c9c22f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: face_mtex
-    second: {fileID: 2100000, guid: 2d5c453ff699d054a8f20c7fe4d9f205, type: 2}
+    second: {fileID: 2100000, guid: 9a1c401842211c54e880f51ffc0b3d24, type: 2}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule

@@ -38,7 +38,7 @@ public class sauceAnimation : MonoBehaviour
         initialScale = sauceAnchor.localScale;
         if (sauceOutline != null)
         {
-            sauceOutline.enabled = true;
+            //sauceOutline.enabled = true;
         }
 
         // Subscribe to grab events
@@ -93,10 +93,14 @@ public class sauceAnimation : MonoBehaviour
                 isPouring = false;
                 doughParticles.Stop();
 
-                nextItem.SetActive(true);
-                nextItemOutline = nextItem.GetComponent<Outline>();
-                if (nextItemOutline != null) nextItemOutline.enabled = true;
-                nextItemOutline2.enabled = true;
+                if(nextItem != null)
+                {
+                    nextItem.SetActive(true);
+                    nextItemOutline = nextItem.GetComponent<Outline>();
+                    if (nextItemOutline != null) nextItemOutline.enabled = true;
+                    nextItemOutline2.enabled = true;
+                }
+                
                 sauceOutline.enabled = false;
                 if (nextNarration != null)
                 {

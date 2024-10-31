@@ -11,5 +11,7 @@ public class dialInteraction : Interactable
     {
         rotateObject.StartRotation();
         ovenDial.TurnOn();
+        this.enabled = false;
+        EventOnPickup();
     }
 }
