@@ -69,6 +69,8 @@ public class PlayerInteraction : MonoBehaviour
         pressE.action.performed -= context => EKeyInteraction();
         pressG.action.performed -= context => GKeyInteraction();
         mouseClick.action.performed -= context => ClickInteraction();
+
+        DataManager.Instance.isHoldingItem = false;
     }
 
     private void Update()

@@ -38,7 +38,7 @@ public class sauceAnimation : MonoBehaviour
         initialScale = sauceAnchor.localScale;
         if (sauceOutline != null)
         {
-            sauceOutline.enabled = true;
+            //sauceOutline.enabled = true;
         }
 
         // Subscribe to grab events

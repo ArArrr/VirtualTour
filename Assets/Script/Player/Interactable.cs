@@ -67,7 +67,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    public void Interact(Vector3 offset)
+    public virtual void Interact(Vector3 offset)
     {
         if (xrOrigin != null)
         {

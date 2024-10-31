@@ -33,17 +33,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: char_ftex
-    second: {fileID: 2100000, guid: e766eda61153742468a146a29e78a532, type: 2}
+    second: {fileID: 2100000, guid: e7e8c1776b083204398d3f5ba6cb9a87, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: face_ftex
-    second: {fileID: 2100000, guid: 4574f1b145e8c6145ba9773ef74b3dbd, type: 2}
+    second: {fileID: 2100000, guid: ef66945d147d141438702c6eaa36c823, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: hairF1
-    second: {fileID: 2100000, guid: dadf9f347705c924389e5740374f6d6d, type: 2}
+    second: {fileID: 2100000, guid: 8ccda48554a1ba3439d8aacdc8b416bb, type: 2}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
