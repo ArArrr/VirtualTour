@@ -55,6 +55,7 @@ public class DataManager : MonoBehaviour
         this.gender = gender;
         moveMethod = move;
         turnMethod = turn;
+        lastCompletedFloor = 0;
     }
 
     public void LoadPlayerData()

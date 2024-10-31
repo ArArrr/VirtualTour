@@ -69,26 +69,35 @@ MonoBehaviour:
   - characterObj: {fileID: 547924383450724718}
     course: BACOOM
     Gender: 1
-  - characterObj: {fileID: 157123261684685723}
-    course: BSBA
-    Gender: 1
   - characterObj: {fileID: 6997842159930584616}
     course: BSBA
     Gender: 0
-  - characterObj: {fileID: 1249347200510591421}
-    course: BSHM
+  - characterObj: {fileID: 157123261684685723}
+    course: BSBA
     Gender: 1
   - characterObj: {fileID: 5682868416669683729}
     course: BSHM
     Gender: 0
-  - characterObj: {fileID: 5277014801357085773}
-    course: SHS
+  - characterObj: {fileID: 1249347200510591421}
+    course: BSHM
     Gender: 1
-  - characterObj: {fileID: 741501463745810410}
-    course: SHS
-    Gender: 1
+  - characterObj: {fileID: 8527888964897665246}
+    course: BSTM
+    Gender: 0
   - characterObj: {fileID: 7469598521209492606}
     course: BSTM
+    Gender: 1
+  - characterObj: {fileID: 5277014801357085773}
+    course: STEM
+    Gender: 0
+  - characterObj: {fileID: 741501463745810410}
+    course: STEM
+    Gender: 1
+  - characterObj: {fileID: 5277014801357085773}
+    course: ABM
+    Gender: 0
+  - characterObj: {fileID: 741501463745810410}
+    course: ABM
     Gender: 1
 --- !u!1001 &90529506440136550
 PrefabInstance:
@@ -1285,11 +1294,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: char_BSTM_Male
-      objectReference: {fileID: 0}
-    - target: {fileID: 595061765157166521, guid: a3b504977157cbe49ab533e004b481c8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

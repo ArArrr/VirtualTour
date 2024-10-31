@@ -11,7 +11,7 @@ public class MouseControl : MonoBehaviour
     public float sensitivity = 60f;
     public Transform playerBody;  // Assign the player body to rotate left and right
     private float xRotation = 0f;
-    private bool isActive = true;
+    public bool isActive = true;
     EventSystem eventSystem;
     XRUIInputModule xruiInputModule;
 

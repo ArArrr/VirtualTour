@@ -148,7 +148,12 @@ public class ElevatorButtonController : MonoBehaviour
             elevatorRenderer.material = originalMaterial;
             setTargetSpawnID();
             elevatorAnimator.SetBool("isWaiting", false);
+            if (DataManager.Instance.nextLevel)
+            {
+                DataManager.Instance.nextLevel = false;
+            }
             LevelManager.Instance.LoadScene(targetScene, "none", "none");
+
         }
         else
         {
