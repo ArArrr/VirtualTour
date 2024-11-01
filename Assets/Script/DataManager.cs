@@ -22,6 +22,8 @@ public class DataManager : MonoBehaviour
 
     // SETTINGS
     [Header("Settings")]
+    public float masterVolume = 1.0f;
+    public float musicVolume = 0.5f;
     public bool isInMenu = false;
     public bool togglePC = false;
     public string moveMethod;
