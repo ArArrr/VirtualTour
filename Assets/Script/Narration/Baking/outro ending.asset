@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec85effbd52b6f643af8baf19bf5eb39, type: 3}
+  m_Name: outro ending
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 9782efe9287de3945915ddf4372d6703, type: 3}
+  subtitleLines:
+  - text: 'Thank you for joining the Bakers Camp today. '
+    startTime: 0
+    endTime: 2
+  - text: "We hope you enjoyed this tasty experience, and who knows \u2013"
+    startTime: 2.2
+    endTime: 5.5
+  - text: "maybe we\u2019ll see some of you pursuing a career in the culinary arts
+      one day! "
+    startTime: 5.9
+    endTime: 9.5

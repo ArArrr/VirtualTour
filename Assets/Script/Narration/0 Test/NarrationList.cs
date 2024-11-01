@@ -13,7 +13,11 @@ public class NarrationsList : MonoBehaviour
         Floor2,
         Ground,
         Ground2,
-        Basement
+        Basement,
+        Complete,
+        Baking,
+        Photography,
+        GameDev
     }
 
     private string playerStrand;
@@ -41,7 +45,7 @@ public class NarrationsList : MonoBehaviour
         markerDisplays = GetComponentsInChildren<MarkerDistanceDisplay>();
 
         // Check if the player's strand matches the required one and the current floor is valid
-        if (playerStrand.ToLower().Equals(requiredStrand.ToLower()) && currentfloor == DataManager.Instance.lastCompletedFloor || requiredStrand.ToLower().Equals("all") || demoMode)
+        if ((playerStrand.ToLower().Equals(requiredStrand.ToLower()) && currentfloor == DataManager.Instance.lastCompletedFloor) || (requiredStrand.ToLower().Equals("all") && currentfloor == DataManager.Instance.lastCompletedFloor) || demoMode)
         {
             Debug.Log("Player's strand matches " + requiredStrand + ". Starting narrations and marker displays.");
 
@@ -80,36 +84,36 @@ public class NarrationsList : MonoBehaviour
     {
         switch (selectedFloor)
         {
-            case FloorOption.Floor8:
-                currentfloor = 8;
-                break;
-            case FloorOption.Floor7:
-                currentfloor = 7;
-                break;
-            case FloorOption.Floor6:
-                currentfloor = 6;
-                break;
-            case FloorOption.Floor5:
-                currentfloor = 5;
-                break;
-            case FloorOption.Floor4:
-                currentfloor = 4;
-                break;
-            case FloorOption.Floor3:
-                currentfloor = 3;
-                break;
-            case FloorOption.Floor2:
-                currentfloor = 2;
-                break;
-            case FloorOption.Ground:
-                currentfloor = 0;
-                break;
-            case FloorOption.Ground2:
-                currentfloor = 9;
-                break;
-            case FloorOption.Basement:
-                currentfloor = 1;
-                break;
+            case FloorOption.Floor8:    currentfloor = 2; break;
+            case FloorOption.Floor7:    currentfloor = 3; break;
+            case FloorOption.Floor6:    currentfloor = 4; break;
+            case FloorOption.Floor5:    currentfloor = 5; break;
+            case FloorOption.Floor4:    currentfloor = 6; break;
+            case FloorOption.Floor3:    currentfloor = 7; break;
+            case FloorOption.Floor2:    currentfloor = 8; break;
+            case FloorOption.Ground:    currentfloor = 0; break;
+            case FloorOption.Ground2:   currentfloor = 9; break;
+            case FloorOption.Basement:  currentfloor = 1; break;
+            case FloorOption.Complete: currentfloor = 10; break;
+            case FloorOption.Baking: currentfloor = 11; break;
+            case FloorOption.Photography: currentfloor = 12; break;
+            case FloorOption.GameDev: currentfloor = 13; break;
         }
+    }
+    public void setLevel(int level)
+    {
+        DataManager.Instance.lastCompletedFloor = level;
+    }
+    public void setTour(bool tour)
+    {
+        DataManager.Instance.isTour = tour;
+    }
+    public void setCamp(string c)
+    {
+        DataManager.Instance.camp = c.ToLower();
+    }
+    public void toggleNextlevel(bool nxtLevel)
+    {
+        DataManager.Instance.nextLevel = nxtLevel;
     }
 }

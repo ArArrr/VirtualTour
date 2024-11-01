@@ -100,8 +100,8 @@ RectTransform:
   m_GameObject: {fileID: 2141784367278206676}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.05, y: 1.05, z: 1.05}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.06, y: 1.06, z: 1.06}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6751590198276668762}
   - {fileID: 3582453977790446360}
@@ -464,13 +464,13 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 0}
-  m_PlaneDistance: 0.7
+  m_PlaneDistance: 0.5
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -549,7 +549,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progressBar: {fileID: 6763374717099882423}
   transitionsContainer: {fileID: 2141784367278206676}
-  soundEffects: []
+  cameras: {fileID: 1194892115636639779, guid: 17ae1fb29334a27439e20d83f4198024, type: 3}
+  soundEffects:
+  - {fileID: 8300000, guid: 88176b69ff3a71a42ba3979dc97651c1, type: 3}
+  - {fileID: 8300000, guid: 9c85849d3cc5c2949a4346de9fdb5c6e, type: 3}
+  - {fileID: 8300000, guid: 40627427f2cf142408d62fb661ce5019, type: 3}
 --- !u!1 &4844553347254354542
 GameObject:
   m_ObjectHideFlags: 0

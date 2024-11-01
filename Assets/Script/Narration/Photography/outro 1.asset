@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec85effbd52b6f643af8baf19bf5eb39, type: 3}
+  m_Name: outro 1
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 095466dd16602ea438bd3b77b9166aa6, type: 3}
+  subtitleLines:
+  - text: 'And there you have it! '
+    startTime: 0
+    endTime: 1
+  - text: Thank you so much for exploring our campus and sharing your perspective
+      with us.
+    startTime: 1.4
+    endTime: 5.5
+  - text: Your photos and feedback will help us improve and capture the essence of
+      what makes our campus special.
+    startTime: 6.5
+    endTime: 11.9

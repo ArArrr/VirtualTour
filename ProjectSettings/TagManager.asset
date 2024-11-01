@@ -7,6 +7,10 @@ TagManager:
   - Left Hand
   - Right Hand
   - IDCard
+  - Roller
+  - SauceBowl
+  - Interactable
+  - Camera
   layers:
   - Default
   - TransparentFX

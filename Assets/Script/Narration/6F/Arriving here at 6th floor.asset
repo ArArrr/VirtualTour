@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: e1520be99dc792d49a60c12ce50ba806, type: 3}
   subtitleLines:
-  - text: "Arriving here at 6th floor, different facilities are situated here. Let\u2019s
-      check them out, starting with another classroom. Follow the pathway."
+  - text: 'Arriving here at 6th floor, different facilities are situated here. '
     startTime: 0
+    endTime: 5.2
+  - text: "Let\u2019s check them out, starting with another classroom. Follow the
+      pathway."
+    startTime: 5.7
     endTime: 12.5

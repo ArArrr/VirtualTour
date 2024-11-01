@@ -20,10 +20,12 @@ MonoBehaviour:
   - text: 'Before we finally start our tour, let me remind you of some stuff. '
     startTime: 6.4
     endTime: 10.98
-  - text: "Our tour flow will begin here at the ground floor, next to the basement,
-      go up to 8th floor, and that\u2019s where we tour the floors one by one using
-      the stairs."
+  - text: 'Our tour flow will begin here at the ground floor, next to the basement,
+      go up to 8th floor, '
     startTime: 10.98
+    endTime: 19
+  - text: "and that\u2019s where we tour the floors one by one using the stairs."
+    startTime: 20
     endTime: 24.07
   - text: To know more about a specific facility, kindly hover to the glowing question
       mark symbol and click it to see.
@@ -44,6 +46,6 @@ MonoBehaviour:
   - text: To use objects, use the grab button below the trigger button on your controller
     startTime: 46.5
     endTime: 59.194
-  - text: Ready? Kindly tap the ID beside the gate to begin
+  - text: Ready? Kindly tap your ID beside the gate to begin
     startTime: 59.194
     endTime: 63.7

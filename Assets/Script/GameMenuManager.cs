@@ -23,7 +23,8 @@ public class GameMenuManager : MonoBehaviour
         if (showButton.action.WasPressedThisFrame())
         {
             menu.SetActive(!menu.activeSelf);
-
+            if(menu.activeSelf) DataManager.Instance.isInMenu = true;
+            else DataManager.Instance.isInMenu = false;
             menu.transform.position = head.position + new Vector3(head.forward.x, trackYAxis ? head.forward.y : 0, head.forward.z).normalized * spawnDistance;
         }
 

@@ -17,4 +17,4 @@ MonoBehaviour:
   - text: "This is all what the lobby has. Let\u2019s now go down to the basement
       via stairs. Just turn left."
     startTime: 0
-    endTime: 9.9
+    endTime: 10
