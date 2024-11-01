@@ -64,10 +64,10 @@ MonoBehaviour:
     course: BSIT
     Gender: 1
   - characterObj: {fileID: 8159761280481416903}
-    course: BACOOM
+    course: BACOMM
     Gender: 0
   - characterObj: {fileID: 547924383450724718}
-    course: BACOOM
+    course: BACOMM
     Gender: 1
   - characterObj: {fileID: 6997842159930584616}
     course: BSBA

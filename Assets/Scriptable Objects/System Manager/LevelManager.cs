@@ -68,7 +68,6 @@ public class LevelManager : MonoBehaviour
         else
         {
             Debug.LogWarning("Main Camera not found in scene: " + scene.name);
-
         }
         
     }

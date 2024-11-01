@@ -14,7 +14,7 @@ public class ProgressManager : MonoBehaviour
     public void CompleteFloor(int completedFloor)
     {
         // Update the player's progress
-        currentProgress.lastCompletedFloor = completedFloor;
+        //currentProgress.lastCompletedFloor = completedFloor;
 
         // Save the progress
         SaveGameProgress();
@@ -43,13 +43,16 @@ public class ProgressManager : MonoBehaviour
         if (currentProgress != null)
         {
             // Load data into PersistentDataManager if necessary
-            DataManager.Instance.lastCompletedFloor = currentProgress.lastCompletedFloor;
+            //DataManager.Instance.lastCompletedFloor = currentProgress.lastCompletedFloor;
             DataManager.Instance.playerName = currentProgress.playerName;
             DataManager.Instance.gender = currentProgress.gender;
             DataManager.Instance.yearLevel = currentProgress.yearLevel;
             DataManager.Instance.strand = currentProgress.strand;
             DataManager.Instance.moveMethod = currentProgress.moveMethod;
             DataManager.Instance.turnMethod = currentProgress.turnMethod;
+            DataManager.Instance.masterVolume = currentProgress.masterVolume;
+            DataManager.Instance.mouseSensitivity = currentProgress.mouseSensitivity;
+            DataManager.Instance.musicVolume = currentProgress.musicVolume;
 
             Debug.Log("Game progress loaded: " + JsonUtility.ToJson(currentProgress));
         }
@@ -74,13 +77,18 @@ public class ProgressManager : MonoBehaviour
 [System.Serializable]
 public class PlayerProgress
 {
-    public int lastCompletedFloor;
+    //public int lastCompletedFloor;
     public string playerName;
     public string gender;
     public string yearLevel;
     public string strand;
+    
+
+    public float masterVolume = 1f;
+    public float musicVolume = 0.5f;
     public string moveMethod;
     public string turnMethod;
+    public float mouseSensitivity = 60;
 }
 
 public class SaveSystem

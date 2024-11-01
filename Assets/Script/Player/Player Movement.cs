@@ -36,7 +36,7 @@ public class CharacterControllerScript : MonoBehaviour
         rightHandController = GameObject.Find("Right Hand Controller");
 
         // Save the original CameraOffset position
-        originalCameraOffsetPos = CameraOffset.transform.localPosition;
+        originalCameraOffsetPos = new Vector3(0, 1.5f, 0);
 
         // Enable input actions
         moveAction.action.Enable();

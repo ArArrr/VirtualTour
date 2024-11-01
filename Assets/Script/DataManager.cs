@@ -28,6 +28,7 @@ public class DataManager : MonoBehaviour
     public bool togglePC = false;
     public string moveMethod;
     public string turnMethod;
+    public float mouseSensitivity = 60f;
 
     [Header("Camp Career Data (Photography)")]
     public bool introDone = false;
@@ -46,6 +47,7 @@ public class DataManager : MonoBehaviour
         {
             Destroy(gameObject); // Prevent duplicate managers
         }
+        Application.targetFrameRate = 200;
     }
 
     // Optionally, create methods to load and save player data
