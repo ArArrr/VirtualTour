@@ -1262,7 +1262,8 @@ AudioSource:
   m_GameObject: {fileID: 3992188676477046066}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 5578564160581602193, guid: 84e238d13b3346447b83a66b1837f40b,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -1876,6 +1877,54 @@ MonoBehaviour:
   onCustomEventTriggered2:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 5081003312003613151}
+        m_TargetAssemblyTypeName: NarrationsList, Assembly-CSharp
+        m_MethodName: setTour
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5081003312003613151}
+        m_TargetAssemblyTypeName: NarrationsList, Assembly-CSharp
+        m_MethodName: setLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5081003312003613151}
+        m_TargetAssemblyTypeName: NarrationsList, Assembly-CSharp
+        m_MethodName: setCamp
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2335508239763397505}
+        m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+        m_MethodName: setCameraInUse
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 3507306134949459201}
         m_TargetAssemblyTypeName: UseCamera, Assembly-CSharp
         m_MethodName: teleportToLobby
@@ -2490,6 +2539,8 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 804855bd501df684ca378a924c23d413, type: 3}
   photoTaken: 0
   countTaken: {fileID: 1906077099909395098}
+  accept: {fileID: 8204793284194902763}
+  cancel: {fileID: 4455170403346131158}
   Explain: {fileID: 6133064476843492724}
   narration1: {fileID: 6133064476843492724}
   narration2: {fileID: 2155630832675427244}
@@ -2528,7 +2579,8 @@ AudioSource:
   m_GameObject: {fileID: 1194892115636639779}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 6375720355661015602, guid: 84e238d13b3346447b83a66b1837f40b,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.5

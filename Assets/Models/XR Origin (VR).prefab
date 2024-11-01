@@ -986,6 +986,7 @@ MonoBehaviour:
   esc: {fileID: 655738369067520053, guid: 3ecbf1acd41d43b4fb22613610a21c52, type: 3}
   sensitivity: 20
   playerBody: {fileID: 8198301534777059160}
+  isActive: 1
 --- !u!114 &1834773950530179409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1079,7 +1080,8 @@ AudioSource:
   m_GameObject: {fileID: 861901692645306249}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 6375720355661015602, guid: 84e238d13b3346447b83a66b1837f40b,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1

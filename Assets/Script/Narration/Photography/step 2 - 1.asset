@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 787ffb78593a4da46826e4505a5a5775, type: 3}
   subtitleLines:
-  - text: "2.\tSecond step: Keep exploring! Find another spot that tells a story
-      or catches your attention. "
+  - text: 'Second step: Keep exploring! Find another spot that tells a story or catches
+      your attention. '
     startTime: 0
     endTime: 5.8

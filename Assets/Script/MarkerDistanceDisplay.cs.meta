@@ -3,7 +3,12 @@ guid: 5d866fc892f44394fbb9170671150268
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - nextNarration: {instanceID: 0}
+  - playerTransform: {instanceID: 0}
+  - distanceText: {instanceID: 0}
+  - backup: {fileID: 6131450219783485489, guid: 8aa683cd8ddfc6c4aa0c2e37548af57d,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

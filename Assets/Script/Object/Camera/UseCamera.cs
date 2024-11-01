@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class UseCamera : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class UseCamera : MonoBehaviour
     private bool isBeingHeld = false;
     private Outline outline;
     public TextMeshProUGUI countTaken;
+    public Button accept;
+    public Button cancel;
 
     [Header("Narration List")]
     public NarrationController Explain;
@@ -66,6 +69,7 @@ public class UseCamera : MonoBehaviour
 
     public void confirm()
     {
+        accept.interactable = false;
         DataManager.Instance.picCount++;
         if (DataManager.Instance.picCount != 4) updateText();
         StartCoroutine(closePicture());
@@ -79,6 +83,7 @@ public class UseCamera : MonoBehaviour
 
     public void deny()
     {
+        cancel.interactable = false;
         StartCoroutine(closePicture());
     }
     public void setNarration(bool b)
@@ -135,6 +140,8 @@ public class UseCamera : MonoBehaviour
         yield return new WaitForSeconds(2f);
         wait = false;
         photoTaken = false;
+        accept.interactable = true;
+        cancel.interactable = true;
         yield break;
     }
 

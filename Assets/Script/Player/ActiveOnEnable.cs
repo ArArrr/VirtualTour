@@ -8,6 +8,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.UI
     {
         public GameObject CameraOffset;
         public List<GameObject> ToActivate;
+        public List<GameObject> ToDeactivate;
         public GameObject XROrigin;
         public Vector3 cameraOffsetPosition = new Vector3(0, 1.55f, 0); // Set default value
 
@@ -70,6 +71,21 @@ namespace UnityEngine.XR.Interaction.Toolkit.UI
                 if (mouseControl != null)
                 {
                     mouseControl.enabled = true; // Enable the MouseControl component
+                }
+            }
+            if (ToActivate != null)
+            {
+                foreach (GameObject gameObject in ToActivate)
+                {
+                    gameObject.SetActive(true);
+                }
+            }
+
+            if(ToDeactivate != null)
+            {
+                foreach (GameObject gameObject in ToDeactivate)
+                {
+                    gameObject.SetActive(false);
                 }
             }
         }
