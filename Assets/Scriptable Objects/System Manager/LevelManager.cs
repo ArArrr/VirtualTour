@@ -105,6 +105,9 @@ public class LevelManager : MonoBehaviour
         // Play sound effect (if not "none")
         PlaySoundEffect(soundEffectName);
 
+        DataManager.Instance.isInMenu = false;
+        DataManager.Instance.isHoldingItem = false;
+
         yield return new WaitForSeconds(1f);
 
         scene.allowSceneActivation = true;

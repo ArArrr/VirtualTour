@@ -11,6 +11,8 @@ TagManager:
   - SauceBowl
   - Interactable
   - Camera
+  - Left leg IK_target
+  - Right leg IK_target
   layers:
   - Default
   - TransparentFX

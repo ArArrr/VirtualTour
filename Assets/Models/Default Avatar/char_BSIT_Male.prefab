@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 997733565532684496}
   m_Layer: 3
   m_Name: Right leg IK_target
-  m_TagString: Untagged
+  m_TagString: Right leg IK_target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,7 +116,7 @@ MonoBehaviour:
   speed: 7
   stepDistance: 0.3
   stepLength: 0.3
-  sideStepLength: 0.1
+  sideStepLength: 0.3
   stepHeight: 0.3
   footOffset: {x: 0, y: 0, z: 0}
   footRotOffset: {x: -240, y: 0, z: 0}
@@ -313,7 +313,7 @@ GameObject:
   - component: {fileID: 8599821445366144627}
   m_Layer: 3
   m_Name: Left leg IK_target
-  m_TagString: Untagged
+  m_TagString: Left leg IK_target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -354,7 +354,7 @@ MonoBehaviour:
   speed: 7
   stepDistance: 0.3
   stepLength: 0.3
-  sideStepLength: 0.1
+  sideStepLength: 0.3
   stepHeight: 0.3
   footOffset: {x: 0, y: 0, z: 0}
   footRotOffset: {x: -240, y: 0, z: 0}
@@ -864,7 +864,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ba18583af52ee564882d7c3d1b25bce5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.04999995
+      value: 0.049
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ba18583af52ee564882d7c3d1b25bce5,
         type: 3}
@@ -1404,6 +1404,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5837957805579046753}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ba18583af52ee564882d7c3d1b25bce5,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6188980210321833457}
   m_SourcePrefab: {fileID: 100100000, guid: ba18583af52ee564882d7c3d1b25bce5, type: 3}
 --- !u!4 &211356313221811705 stripped
 Transform:
@@ -1632,6 +1636,20 @@ MonoBehaviour:
       m_Reference: {fileID: 6558622148059887818, guid: c348712bda248c246b8c49b3db54643f,
         type: 3}
   animator: {fileID: 6473509449309616525}
+--- !u!114 &6188980210321833457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323549935959439693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ad16021e4f7d7844bb4f21b20d1d170, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newLeft: {fileID: 0}
+  newRight: {fileID: 0}
 --- !u!4 &385094116923300678 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1000980186838409050, guid: ba18583af52ee564882d7c3d1b25bce5,
