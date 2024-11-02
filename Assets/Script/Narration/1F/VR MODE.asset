@@ -46,6 +46,6 @@ MonoBehaviour:
   - text: To use objects, use the grab button below the trigger button on your controller
     startTime: 46.5
     endTime: 59.194
-  - text: Ready? Kindly tap the ID beside the gate to begin
+  - text: Ready? Kindly tap your ID beside the gate to begin
     startTime: 59.194
     endTime: 63.7

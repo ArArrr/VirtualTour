@@ -22,6 +22,7 @@ public class SmoothRotationTrigger : MonoBehaviour
 
     [Header("Lock")]
     public bool isLock = false;
+    public bool forceClose = false;
 
     private void Start()
     {
@@ -75,13 +76,29 @@ public class SmoothRotationTrigger : MonoBehaviour
             {
                 // Smoothly rotate to the target rotation for the primary object
                 Quaternion targetQuat = Quaternion.Euler(targetRotation);
-                targetObject.transform.rotation = Quaternion.Slerp(targetObject.transform.rotation, targetQuat, rotationSpeed * Time.deltaTime);
+                if (forceClose)
+                {
+                    targetObject.transform.rotation = Quaternion.Slerp(targetObject.transform.rotation, originalRotation, rotationSpeed * Time.deltaTime);
+                }
+                else
+                {
+                    targetObject.transform.rotation = Quaternion.Slerp(targetObject.transform.rotation, targetQuat, rotationSpeed * Time.deltaTime);
+                }
+                
 
                 // If a secondary target exists, rotate it to its specific target rotation
                 if (secondaryTargetObject != null)
                 {
                     Quaternion secondaryTargetQuat = Quaternion.Euler(secondaryTargetRotation);
-                    secondaryTargetObject.transform.rotation = Quaternion.Slerp(secondaryTargetObject.transform.rotation, secondaryTargetQuat, rotationSpeed * Time.deltaTime);
+                    
+                    if (forceClose)
+                    {
+                        secondaryTargetObject.transform.rotation = Quaternion.Slerp(secondaryTargetObject.transform.rotation, originalSecondaryRotation, rotationSpeed * Time.deltaTime);
+                    }
+                    else
+                    {
+                        secondaryTargetObject.transform.rotation = Quaternion.Slerp(secondaryTargetObject.transform.rotation, secondaryTargetQuat, rotationSpeed * Time.deltaTime);
+                    }
                 }
             }
             else
@@ -146,5 +163,15 @@ public class SmoothRotationTrigger : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void unlock()
+    {
+        isLock = false;
+        Start();
+    }
+    public void ForceClose(bool b)
+    {
+        forceClose = b;
     }
 }

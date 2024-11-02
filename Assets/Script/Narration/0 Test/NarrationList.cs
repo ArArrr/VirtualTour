@@ -13,7 +13,11 @@ public class NarrationsList : MonoBehaviour
         Floor2,
         Ground,
         Ground2,
-        Basement
+        Basement,
+        Complete,
+        Baking,
+        Photography,
+        GameDev
     }
 
     private string playerStrand;
@@ -90,6 +94,26 @@ public class NarrationsList : MonoBehaviour
             case FloorOption.Ground:    currentfloor = 0; break;
             case FloorOption.Ground2:   currentfloor = 9; break;
             case FloorOption.Basement:  currentfloor = 1; break;
+            case FloorOption.Complete: currentfloor = 10; break;
+            case FloorOption.Baking: currentfloor = 11; break;
+            case FloorOption.Photography: currentfloor = 12; break;
+            case FloorOption.GameDev: currentfloor = 13; break;
         }
+    }
+    public void setLevel(int level)
+    {
+        DataManager.Instance.lastCompletedFloor = level;
+    }
+    public void setTour(bool tour)
+    {
+        DataManager.Instance.isTour = tour;
+    }
+    public void setCamp(string c)
+    {
+        DataManager.Instance.camp = c.ToLower();
+    }
+    public void toggleNextlevel(bool nxtLevel)
+    {
+        DataManager.Instance.nextLevel = nxtLevel;
     }
 }

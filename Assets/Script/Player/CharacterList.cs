@@ -1,18 +1,38 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
+using UnityEngine.Windows;
 
 public class CharacterList : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [System.Serializable]
+    public class character
     {
-        
+        public GameObject characterObj;
+        public string course;
+        public enum genderList
+        {
+            Male,
+            Female
+        }
+        public genderList Gender;
+
+        public void activeChar()
+        {
+            if(DataManager.Instance.strand.ToLower() == course.ToLower() && Gender.ToString().Equals(DataManager.Instance.gender, StringComparison.OrdinalIgnoreCase))
+            characterObj.SetActive(true);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public List<character> characterList;
+
+    private void Start()
     {
-        
+        foreach (var chars in characterList)
+        {
+            chars.activeChar();
+        }
     }
 }

@@ -9,8 +9,8 @@ public class sauceAnimation : MonoBehaviour
     private float currentScalingTime = 0f;
     private Vector3 initialScale;
 
-    private bool isPouring = false;
-    private bool isInsideCollider = false;
+    public bool isPouring = false;
+    public bool isInsideCollider = false;
 
     public float minTiltAngle = 45f;
     public float maxTiltAngle = 180f;
@@ -38,7 +38,7 @@ public class sauceAnimation : MonoBehaviour
         initialScale = sauceAnchor.localScale;
         if (sauceOutline != null)
         {
-            sauceOutline.enabled = true;
+            //sauceOutline.enabled = true;
         }
 
         // Subscribe to grab events
@@ -63,7 +63,7 @@ public class sauceAnimation : MonoBehaviour
 
     private void Update()
     {
-        if (isPouring)
+        if (isPouring && isInsideCollider)
         {
             if (!doughParticles.isPlaying)
             {
@@ -93,10 +93,14 @@ public class sauceAnimation : MonoBehaviour
                 isPouring = false;
                 doughParticles.Stop();
 
-                nextItem.SetActive(true);
-                nextItemOutline = nextItem.GetComponent<Outline>();
-                if (nextItemOutline != null) nextItemOutline.enabled = true;
-                nextItemOutline2.enabled = true;
+                if(nextItem != null)
+                {
+                    nextItem.SetActive(true);
+                    nextItemOutline = nextItem.GetComponent<Outline>();
+                    if (nextItemOutline != null) nextItemOutline.enabled = true;
+                    nextItemOutline2.enabled = true;
+                }
+                
                 sauceOutline.enabled = false;
                 if (nextNarration != null)
                 {

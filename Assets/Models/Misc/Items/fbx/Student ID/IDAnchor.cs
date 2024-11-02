@@ -7,26 +7,28 @@ public class IDAnchor : MonoBehaviour
     public float returnSpeed = 5f;  // Speed at which the ID returns
 
     private XRGrabInteractable grabInteractable;
+    private Interactable interactable;
     private bool isReturning = false;
 
     private void Start()
     {
-        // Get the XRGrabInteractable component on this object
         grabInteractable = GetComponent<XRGrabInteractable>();
-
-        // Subscribe to the Select Exited event
         grabInteractable.selectExited.AddListener(OnReleased);
+
+        interactable = GetComponent<Interactable>();
+        if (interactable != null)
+        {
+            interactable.Dropped += () => Dropped();
+        }
     }
 
     private void Update()
     {
-        // If the ID is supposed to return, move it smoothly to the home position
         if (isReturning)
         {
             transform.position = Vector3.Lerp(transform.position, homePosition.position, Time.deltaTime * returnSpeed);
             transform.rotation = Quaternion.Slerp(transform.rotation, homePosition.rotation, Time.deltaTime * returnSpeed);
 
-            // Stop returning once it's close enough to the home position
             if (Vector3.Distance(transform.position, homePosition.position) < 0.01f)
             {
                 isReturning = false;
@@ -34,15 +36,26 @@ public class IDAnchor : MonoBehaviour
         }
     }
 
-    // Called when the ID is released from the player's hand
     private void OnReleased(SelectExitEventArgs args)
     {
         isReturning = true;
     }
 
+    private void Dropped()
+    {
+        if (interactable.isAnchored)
+        {
+            isReturning = true;
+        }
+    }
+
     private void OnDestroy()
     {
-        // Unsubscribe to avoid memory leaks
+        if (interactable != null)
+        {
+            interactable.OnInteract -= (offset) => Dropped();
+        }
+
         grabInteractable.selectExited.RemoveListener(OnReleased);
     }
 }

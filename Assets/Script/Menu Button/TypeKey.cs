@@ -9,6 +9,7 @@ public class TypeKey : MonoBehaviour
     // This method will be called when the button is pressed
     public void OnKeyPressed()
     {
+        if (inputField.text.Length < 14)
         inputField.text += key;
     }
     public void OnBackspacePressed()

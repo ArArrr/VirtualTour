@@ -17,6 +17,8 @@ public class NarrationController : MonoBehaviour
     }
 
     public bool isIntro = false;
+    public bool onlyOnce = false;
+    private int played = 0;
     public SubtitleData subtitleData;  // Assign your subtitle data in the inspector
     private AudioSource audioSource;    // AudioSource for playing narration audio
 
@@ -48,8 +50,6 @@ public class NarrationController : MonoBehaviour
 
     private void Start()
     {
-        if (!enabled) return;  // Exit if this component was disabled by the parent
-
         // Proceed with the regular Start logic if enabled
         audioSource = GetComponentInParent<AudioSource>();
         if (audioSource == null)
@@ -70,10 +70,13 @@ public class NarrationController : MonoBehaviour
         {
             Debug.LogError("Subtitle UI not found! Please make sure it exists in the scene.");
         }
+        if (!enabled) return;  // Exit if this component was disabled by the parent
     }
 
     public void StartNarration()
     {
+        if (onlyOnce && played >= 1) return;
+        if (onlyOnce) played++;
         // Log the audio clip name when narration starts
         if (audioSource != null && audioSource.clip != null)
         {
@@ -81,11 +84,11 @@ public class NarrationController : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("[ Line ] No audio clip assigned or AudioSource is missing.");
+            Debug.LogWarning(gameObject.name + " No audio clip assigned or AudioSource is missing.");
         }
 
         if (!OnlyOutlineAfter)
-        ApplyOutline();  // Add outline to the specified objects
+            ApplyOutline();  // Add outline to the specified objects
 
         StartCoroutine(PlayNarrationWithSubtitles());
     }

@@ -22,4 +22,6 @@ public class SceneLoaderUI : MonoBehaviour
         // Load the selected scene
         LevelManager.Instance.LoadScene(selectedScene, transition, "none");
     }
+
+
 }

@@ -6,6 +6,7 @@ public class Blocker : MonoBehaviour
 {
     public GameObject block;            // The GameObject to enable/disable
     public bool toDestroy = false;      // Whether this script should self-destruct when nextLevel turns true
+    public bool doNotUnblock = false;
 
     private void Start()
     {
@@ -15,7 +16,7 @@ public class Blocker : MonoBehaviour
         {
             block.SetActive(true);
             // Start listening for changes in the `nextLevel` variable
-            StartCoroutine(WaitForNextLevel());
+            if(!doNotUnblock) StartCoroutine(WaitForNextLevel());
         }
         else
         {

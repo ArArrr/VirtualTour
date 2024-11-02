@@ -700,7 +700,7 @@ ModelImporter:
     - name: thumb.02.L
       parentName: thumb.01.L
       position: {x: 1.2281816e-10, y: 0.00032967687, z: 1.8626451e-11}
-      rotation: {x: 0.031085014, y: -0.028362585, z: -0.016081102, w: 0.99898493}
+      rotation: {x: 0.03108501, y: -0.028362585, z: -0.0160811, w: 0.99898493}
       scale: {x: 0.9999999, y: 0.9999986, z: 1.0000023}
     - name: thumb.03.L
       parentName: thumb.02.L
@@ -730,7 +730,7 @@ ModelImporter:
     - name: f_middle.03.L
       parentName: f_middle.02.L
       position: {x: 2.0954757e-10, y: 0.0002564782, z: -4.1524797e-10}
-      rotation: {x: 0.03535611, y: 0.023438783, z: -0.013581855, w: 0.99900764}
+      rotation: {x: 0.035356108, y: 0.023438783, z: -0.013581853, w: 0.99900764}
       scale: {x: 1.0000008, y: 1.0000027, z: 1.0000004}
     - name: f_middle.03.L_end
       parentName: f_middle.03.L
@@ -810,7 +810,7 @@ ModelImporter:
     - name: palm.01.R
       parentName: hand.R
       position: {x: -0.0000443366, y: 0.0003286447, z: 0.00019132618}
-      rotation: {x: 0.024730943, y: -0.71409196, z: -0.03867371, w: -0.69854516}
+      rotation: {x: 0.024730945, y: -0.71409196, z: -0.038673714, w: -0.69854516}
       scale: {x: 1.0000008, y: 1.0000018, z: 1.0000026}
     - name: f_index.01.R
       parentName: palm.01.R
@@ -820,7 +820,7 @@ ModelImporter:
     - name: f_index.02.R
       parentName: f_index.01.R
       position: {x: -0, y: 0.00031857728, z: -6.402843e-11}
-      rotation: {x: 0.037485458, y: -0.007215015, z: 0.012123809, w: 0.99919754}
+      rotation: {x: 0.03748546, y: -0.0072150156, z: 0.01212381, w: 0.9991976}
       scale: {x: 1.0000013, y: 1.0000036, z: 1.0000023}
     - name: f_index.03.R
       parentName: f_index.02.R
@@ -860,7 +860,7 @@ ModelImporter:
     - name: f_middle.01.R
       parentName: palm.02.R
       position: {x: -0, y: 0.0005168739, z: -3.5084666e-10}
-      rotation: {x: 0.04779542, y: 0.014552913, z: 0.031011052, w: 0.99826956}
+      rotation: {x: 0.047795422, y: 0.014552913, z: 0.031011054, w: 0.99826956}
       scale: {x: 1.0000007, y: 1.0000012, z: 0.9999997}
     - name: f_middle.02.R
       parentName: f_middle.01.R
@@ -885,7 +885,7 @@ ModelImporter:
     - name: f_ring.01.R
       parentName: palm.03.R
       position: {x: 1.6298145e-11, y: 0.00050461874, z: -6.344635e-10}
-      rotation: {x: 0.0021355706, y: -0.01700475, z: 0.08161437, w: 0.9965166}
+      rotation: {x: 0.0021355709, y: -0.01700475, z: 0.081614375, w: 0.9965166}
       scale: {x: 1.000001, y: 1.0000014, z: 1.0000007}
     - name: f_ring.02.R
       parentName: f_ring.01.R

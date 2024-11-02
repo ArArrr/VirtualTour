@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Linq;
+using Unity.XR.CoreUtils;
 
 public class LevelManager : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class LevelManager : MonoBehaviour
 
     public Slider progressBar;
     public GameObject transitionsContainer;
+
+    public GameObject cameras;
+    private Transform XROrigin;
 
     private SceneTransition[] transitions;
     private AudioSource audioSource;
@@ -65,10 +69,12 @@ public class LevelManager : MonoBehaviour
         {
             Debug.LogWarning("Main Camera not found in scene: " + scene.name);
         }
+        
     }
 
     public void LoadScene(string sceneName, string transitionName, string soundEffectName)
     {
+        
         StartCoroutine(LoadSceneAsync(sceneName, transitionName, soundEffectName));
     }
 
@@ -81,6 +87,8 @@ public class LevelManager : MonoBehaviour
             canvas.enabled = false;
             transitionName = "CrossFade";
         }
+
+       
         SceneTransition transition = transitions.First(t => t.name.Equals(transitionName));
 
         AsyncOperation scene = SceneManager.LoadSceneAsync(sceneName);
@@ -97,7 +105,7 @@ public class LevelManager : MonoBehaviour
         // Play sound effect (if not "none")
         PlaySoundEffect(soundEffectName);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
 
         scene.allowSceneActivation = true;
 
@@ -106,6 +114,41 @@ public class LevelManager : MonoBehaviour
         if (noTransition)
         {
             canvas.enabled = true;
+        }
+
+        GameObject xrOriginObj = GameObject.Find("XR Origin (VR)");
+        if (xrOriginObj != null)
+        {
+            XROrigin = xrOriginObj.transform;
+        }
+        else
+        {
+            Debug.LogError("XR Origin (VR) object not found in the scenesssss.");
+        }
+
+        if (DataManager.Instance.cameraInUse == true)
+        {
+            //// Store initial values before instantiation
+            //Vector3 initialPosition = cameras.transform.position;
+            Quaternion initialRotation = cameras.transform.rotation;
+            //Vector3 initialScale = cameras.transform.localScale;
+
+            GameObject camera = Instantiate(cameras, XROrigin);
+            Rigidbody rigid = camera.GetComponent<Rigidbody>();
+            if (rigid != null)
+            {
+                rigid.isKinematic = true;
+            }
+
+
+            camera.transform.localPosition = new Vector3(0.2f, 1.1f, 0.5f);
+            camera.transform.localRotation = initialRotation;
+            //camera.transform.localScale = initialScale;
+
+            // Get the Rigidbody component and set it to kinematic
+
+
+            // Set the position, rotation, and scale to the initial values
         }
     }
 

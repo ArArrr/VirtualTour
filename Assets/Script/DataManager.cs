@@ -5,21 +5,35 @@ public class DataManager : MonoBehaviour
     // Step 2: Create a static instance for the Singleton
     public static DataManager Instance { get; private set; }
 
+    public bool cameraInUse = false;
+
     // Step 3: Add fields for your player data
+    [Header("Player Data")]
     public int lastCompletedFloor = 0;
     public string playerName;
     public string yearLevel;
     public string strand;
     public string gender;
-    public string moveMethod;
-    public string turnMethod;
+    public string targetSpawnPointID;
     public bool isTour = false;
     public bool nextLevel = false;
+    public string camp;
+    public bool isHoldingItem = false;
 
     // SETTINGS
+    [Header("Settings")]
+    public float masterVolume = 1.0f;
+    public float musicVolume = 0.5f;
+    public bool isInMenu = false;
     public bool togglePC = false;
+    public string moveMethod;
+    public string turnMethod;
+    public float mouseSensitivity = 60f;
 
-    public string targetSpawnPointID;
+    [Header("Camp Career Data (Photography)")]
+    public bool introDone = false;
+    public bool firstShot = false;
+    public int picCount = 1;
 
     void Awake()
     {
@@ -33,6 +47,7 @@ public class DataManager : MonoBehaviour
         {
             Destroy(gameObject); // Prevent duplicate managers
         }
+        Application.targetFrameRate = 200;
     }
 
     // Optionally, create methods to load and save player data
@@ -44,6 +59,7 @@ public class DataManager : MonoBehaviour
         this.gender = gender;
         moveMethod = move;
         turnMethod = turn;
+        lastCompletedFloor = 0;
     }
 
     public void LoadPlayerData()

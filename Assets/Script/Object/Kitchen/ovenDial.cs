@@ -48,6 +48,13 @@ public class OvenDial : DistanceReleaseGrabInteractable
         }
     }
 
+    public void TurnOn()
+    {
+        ovenAudioSource.clip = turnDial;
+        ovenAudioSource.Play();
+        StartCoroutine(RotateDial()); // Start rotating the dial
+    }
+
     private IEnumerator RotateDial()
     {
         float elapsedTime = 0f;

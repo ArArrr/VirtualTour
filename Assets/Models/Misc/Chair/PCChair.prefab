@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2354490093276167608}
   m_Layer: 13
   m_Name: Seat
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,7 +65,7 @@ GameObject:
   - component: {fileID: 222807772501238800}
   m_Layer: 13
   m_Name: Leg
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 8206404450450002995}
   m_Layer: 13
   m_Name: Leg
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 3036212057886780460}
   m_Layer: 13
   m_Name: Colliders
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 3647863985805692536}
   m_Layer: 13
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 7648599746731550985}
   m_Layer: 13
   m_Name: Leg
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -316,7 +316,7 @@ GameObject:
   - component: {fileID: 829298311854811095}
   m_Layer: 13
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -369,7 +369,7 @@ GameObject:
   - component: {fileID: 2945551564791918976}
   m_Layer: 13
   m_Name: Back
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -422,7 +422,7 @@ GameObject:
   - component: {fileID: 338341273965715016}
   m_Layer: 13
   m_Name: Leg
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -531,6 +531,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 85378e78d4318de4ea971bdc9a8fe71e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -547,6 +552,18 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5220210257587581184}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 85378e78d4318de4ea971bdc9a8fe71e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8506430827055755284}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 85378e78d4318de4ea971bdc9a8fe71e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 406280945959118048}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 85378e78d4318de4ea971bdc9a8fe71e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3977992600630311507}
   m_SourcePrefab: {fileID: 100100000, guid: 85378e78d4318de4ea971bdc9a8fe71e, type: 3}
 --- !u!1 &2864100731809119442 stripped
 GameObject:
@@ -741,6 +758,63 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &8506430827055755284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2864100731809119442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  isPartOfNarration: 1
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &406280945959118048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2864100731809119442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4332bc29023dc8449faff4c836f94a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tipOnHover: Press [E] to pick up
+  tipOnEquip: '[E] Drop [G] Throw'
+  throwStrength: 10
+  isAnchored: 0
+  rotation: {x: 0.70710677, y: 0, z: 0, w: -0.70710677}
+--- !u!65 &3977992600630311507
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2864100731809119442}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0048132055, y: 0.0052157915, z: 0.011170298}
+  m_Center: {x: 2.7372117e-21, y: 3.3087225e-24, z: -2.3283064e-10}
 --- !u!4 &3239360114475099752 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 85378e78d4318de4ea971bdc9a8fe71e,
