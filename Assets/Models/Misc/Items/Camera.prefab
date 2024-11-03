@@ -423,7 +423,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.07
-  far clip plane: 50
+  far clip plane: 70
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -1744,7 +1744,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 6
+  m_Intensity: 3
   m_Range: 5
   m_SpotAngle: 76.436966
   m_InnerSpotAngle: 68.239044
@@ -2494,15 +2494,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf85019459126f741bcba3877b20cc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipOnHover: '[E] Pick up [L Click] Take Picture/Close Picture'
-  tipOnEquip: '[E] Drop [L Click] Take Picture/Close Picture'
+  tipOnHover: '[E] Pick up   [Left Click] Take Picture'
+  tipOnEquip: '[E] Drop   [Left Click] Take Picture'
   throwStrength: 10
   isAnchored: 0
   originalParent: {fileID: 0}
   rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
   doNotRotate: 0
   keepOldRotation: 0
-  positionOffset: {x: 0, y: 0, z: 0}
+  positionOffset: {x: 0, y: 0.1, z: 0}
   unityEvent:
     m_PersistentCalls:
       m_Calls:

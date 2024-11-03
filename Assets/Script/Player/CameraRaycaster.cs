@@ -72,6 +72,23 @@ public class CameraRaycaster : MonoBehaviour
                         toggle.isOn = !toggle.isOn; // Toggles the current value
                         return;
                     }
+
+                    // Check for Slider and set its value
+                    var slider = result.gameObject.GetComponent<Slider>();
+                    if (slider != null)
+                    {
+                        // Get the RectTransform component of the slider
+                        RectTransform sliderRectTransform = slider.GetComponent<RectTransform>();
+
+                        // Get the current mouse position using the new Input System
+                        Vector2 mousePosition = Mouse.current.position.ReadValue();
+                        RectTransformUtility.ScreenPointToLocalPointInRectangle(sliderRectTransform, mousePosition, mainCamera, out Vector2 localPoint);
+
+                        // Calculate the normalized value from the local point on the slider
+                        float normalizedValue = Mathf.Clamp01((localPoint.x - sliderRectTransform.rect.xMin) / (sliderRectTransform.rect.width));
+                        slider.value = normalizedValue; // Set the slider value
+                        return;
+                    }
                 }
             }
         }

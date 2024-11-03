@@ -46,12 +46,14 @@ public class MouseControl : MonoBehaviour
     {
         if (isActive)
         {
+            sensitivity = DataManager.Instance.mouseSensitivity;
+            sensitivity = sensitivity / 150;
             // Read the mouse input from the InputAction
             Vector2 mouseInput = lookAction.action.ReadValue<Vector2>();
 
             // Calculate mouse movement
-            float mouseX = mouseInput.x * sensitivity * Time.deltaTime;
-            float mouseY = mouseInput.y * sensitivity * Time.deltaTime;
+            float mouseX = mouseInput.x * sensitivity;
+            float mouseY = mouseInput.y * sensitivity;
 
             // Adjust xRotation to clamp vertical rotation between -90 and +90 degrees
             xRotation -= mouseY;

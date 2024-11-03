@@ -68,7 +68,6 @@ public class LevelManager : MonoBehaviour
         else
         {
             Debug.LogWarning("Main Camera not found in scene: " + scene.name);
-
         }
         
     }
@@ -105,6 +104,9 @@ public class LevelManager : MonoBehaviour
 
         // Play sound effect (if not "none")
         PlaySoundEffect(soundEffectName);
+
+        DataManager.Instance.isInMenu = false;
+        DataManager.Instance.isHoldingItem = false;
 
         yield return new WaitForSeconds(1f);
 

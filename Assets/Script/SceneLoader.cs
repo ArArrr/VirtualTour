@@ -7,6 +7,7 @@ public class SceneLoader : MonoBehaviour
     public string sceneName; // Name of the scene to load
     public string transition = "CrossFade";
     public string soundEffect = "none";
+    public int level = -1;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -20,6 +21,10 @@ public class SceneLoader : MonoBehaviour
             if (DataManager.Instance.nextLevel)
             {
                 DataManager.Instance.nextLevel = false;
+            }
+            if (level != -1)
+            {
+                DataManager.Instance.lastCompletedFloor = level;
             }
 
             // Load the specified scene

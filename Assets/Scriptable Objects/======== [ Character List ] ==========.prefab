@@ -64,10 +64,10 @@ MonoBehaviour:
     course: BSIT
     Gender: 1
   - characterObj: {fileID: 8159761280481416903}
-    course: BACOOM
+    course: BACOMM
     Gender: 0
   - characterObj: {fileID: 547924383450724718}
-    course: BACOOM
+    course: BACOMM
     Gender: 1
   - characterObj: {fileID: 6997842159930584616}
     course: BSBA
@@ -111,11 +111,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: char_BSTM_Female
-      objectReference: {fileID: 0}
-    - target: {fileID: 7415449863815942936, guid: e6567874456a73244be12cc0bfe6ed88,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7900203184151824802, guid: e6567874456a73244be12cc0bfe6ed88,
         type: 3}
@@ -214,11 +209,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: char_BSHM_Female
-      objectReference: {fileID: 0}
-    - target: {fileID: 1224846368871791284, guid: 268b5f33b3c30214e954b62d3f69e1b6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1996317175550828558, guid: 268b5f33b3c30214e954b62d3f69e1b6,
         type: 3}
@@ -368,11 +358,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: char_BSBA_Male
       objectReference: {fileID: 0}
-    - target: {fileID: 8778515750983989743, guid: ac97d11024e49de40bee98edbfaeae9a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -420,11 +405,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: char_BACOOM_Male
-      objectReference: {fileID: 0}
-    - target: {fileID: 5989966589261783293, guid: d95ac179313c01245a88078f6fb9e1fe,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6371311772545612359, guid: d95ac179313c01245a88078f6fb9e1fe,
         type: 3}
@@ -632,11 +612,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: char_SHS_Male
       objectReference: {fileID: 0}
-    - target: {fileID: 7088948097879903328, guid: 440564c927e0b1345831a6afdfb98d20,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7578098094166791898, guid: 440564c927e0b1345831a6afdfb98d20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -785,11 +760,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: char_BACOOM_Female
       objectReference: {fileID: 0}
-    - target: {fileID: 2907907381457779237, guid: bb270a197ec0efd4ba3b8202730f193e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -888,11 +858,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: char_SHS_Female
       objectReference: {fileID: 0}
-    - target: {fileID: 4217897930069655265, guid: 7ace75b206ab8804ba4705908b027f65,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -940,11 +905,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: char_BSHM_Male
-      objectReference: {fileID: 0}
-    - target: {fileID: 478679032044959242, guid: 0c61fc987956c644590d2b428b2e2450,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1004105525170269360, guid: 0c61fc987956c644590d2b428b2e2450,
         type: 3}
@@ -1191,11 +1151,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: char_BSBA_Female
-      objectReference: {fileID: 0}
-    - target: {fileID: 6874930687607629024, guid: 99d0af7701c3aa6438896f02c6a1665e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

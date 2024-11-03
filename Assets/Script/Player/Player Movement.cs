@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -25,6 +26,10 @@ public class CharacterControllerScript : MonoBehaviour
     private Vector3 crouchedPosition = new Vector3(0, 1f, 0);
     private Coroutine crouchCoroutine;
 
+    // IKFootSolver references for active left and right legs
+    private IKFootSolver activeLeftLegIKSolver;
+    private IKFootSolver activeRightLegIKSolver;
+
     void Start()
     {
         CameraOffset = GameObject.Find("Camera Offset");
@@ -36,12 +41,15 @@ public class CharacterControllerScript : MonoBehaviour
         rightHandController = GameObject.Find("Right Hand Controller");
 
         // Save the original CameraOffset position
-        originalCameraOffsetPos = CameraOffset.transform.localPosition;
+        originalCameraOffsetPos = new Vector3(0, 1.5f, 0);
 
         // Enable input actions
         moveAction.action.Enable();
         sprintAction.action.Enable();
         crouchAction.action.Enable(); // Enable the crouch action
+
+        // Find active IKFootSolver components
+        FindActiveIKSolvers();
     }
 
     void Update()
@@ -83,6 +91,7 @@ public class CharacterControllerScript : MonoBehaviour
     public void OnSprint(InputAction.CallbackContext context)
     {
         isSprinting = context.ReadValueAsButton();
+        UpdateIKSolverSpeed();
     }
 
     // This method is called when the "Crouch" action is triggered
@@ -128,5 +137,43 @@ public class CharacterControllerScript : MonoBehaviour
 
         // Ensure the final position is set to the target
         CameraOffset.transform.localPosition = targetPosition;
+    }
+
+    // Update the speed of the IKFootSolver based on the sprinting state
+    private void UpdateIKSolverSpeed()
+    {
+        float targetSpeed = isSprinting ? 10f : 7f;
+
+        if (activeLeftLegIKSolver != null)
+        {
+            activeLeftLegIKSolver.speed = targetSpeed;
+        } 
+        else FindActiveIKSolvers();
+
+
+        if (activeRightLegIKSolver != null)
+        {
+            activeRightLegIKSolver.speed = targetSpeed;
+        } 
+        else FindActiveIKSolvers();
+    }
+
+    // Find active IKFootSolver components on the active Left and Right leg targets
+    private void FindActiveIKSolvers()
+    {
+        GameObject[] leftLegTargets = GameObject.FindGameObjectsWithTag("Left leg IK_target");
+        GameObject[] rightLegTargets = GameObject.FindGameObjectsWithTag("Right leg IK_target");
+
+        // Find the active IKFootSolver on Left leg targets
+        activeLeftLegIKSolver = leftLegTargets
+            .Where(target => target.activeSelf)
+            .Select(target => target.GetComponent<IKFootSolver>())
+            .FirstOrDefault(solver => solver != null);
+
+        // Find the active IKFootSolver on Right leg targets
+        activeRightLegIKSolver = rightLegTargets
+            .Where(target => target.activeSelf)
+            .Select(target => target.GetComponent<IKFootSolver>())
+            .FirstOrDefault(solver => solver != null);
     }
 }
