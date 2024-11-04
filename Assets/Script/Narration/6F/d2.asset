@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec85effbd52b6f643af8baf19bf5eb39, type: 3}
   m_Name: d2
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: be0c933d6e51a4e4ab9307464c4175e6, type: 3}
+  audioClip: {fileID: 8300000, guid: 8bf819e2e44ce6d409315060ebdd5402, type: 3}
   subtitleLines:
-  - text: More information from the magical question mark
-    startTime: 0
-    endTime: 3.5
+  - text: More information from its hotspot icon!
+    startTime: 0.5
+    endTime: 3

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec85effbd52b6f643af8baf19bf5eb39, type: 3}
   m_Name: a1
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: aaafb84c7baa3ec42aa893cfd7744292, type: 3}
+  audioClip: {fileID: 8300000, guid: a8801debcc8c35a4e8be06875014d105, type: 3}
   subtitleLines:
-  - text: This is one of seven computer laboratories STI College Global City has
-    startTime: 0
-    endTime: 7.1
+  - text: This is one of eight computer laboratories STI College Global City has
+    startTime: 0.7
+    endTime: 7
