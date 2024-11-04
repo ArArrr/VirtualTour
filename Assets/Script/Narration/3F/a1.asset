@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec85effbd52b6f643af8baf19bf5eb39, type: 3}
   m_Name: a1
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 15d551fc6f13a4b4c83cc7e6a29cae52, type: 3}
+  audioClip: {fileID: 8300000, guid: b39b489cf9f79514ea3ed63913e047f0, type: 3}
   subtitleLines:
-  - text: First office here is the Guidance Office.
-    startTime: 0
-    endTime: 3.9
-  - text: ' Hit the question mark symbol to know more.'
-    startTime: 4.5
-    endTime: 7.2
+  - text: First office here is the Guidance Office. Hit its hotspot icon to know
+      more.
+    startTime: 0.6
+    endTime: 7

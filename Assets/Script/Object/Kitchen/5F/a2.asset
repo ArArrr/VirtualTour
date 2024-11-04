@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: e47ba3a863c3f4e408d7623b72ed1cdd, type: 3}
   subtitleLines:
-  - text: This room is specially crafted for BACOMM students.  to learn more.
+  - text: 'This room is specially crafted for BACOMM students. '
     startTime: 0
     endTime: 4.5
-  - text: "Something\u2019s inside this room, hit its hotspot icon"
+  - text: "Something\u2019s inside this room, hit its hotspot icon to learn more."
     startTime: 6
     endTime: 11.5

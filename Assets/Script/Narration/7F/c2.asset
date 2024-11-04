@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec85effbd52b6f643af8baf19bf5eb39, type: 3}
   m_Name: c2
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: d1e907c650576924b91d11e47a587ba0, type: 3}
+  audioClip: {fileID: 8300000, guid: 55bb5111f7b4bfa49b1c0107b2678162, type: 3}
   subtitleLines:
   - text: 'Curious about it? '
     startTime: 0
-    endTime: 1.6
+    endTime: 1
   - text: Just hit its hotspot icon to learn more.
-    startTime: 2
-    endTime: 5
+    startTime: 1.6
+    endTime: 4.7
