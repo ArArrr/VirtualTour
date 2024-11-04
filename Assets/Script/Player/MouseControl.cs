@@ -47,7 +47,7 @@ public class MouseControl : MonoBehaviour
         if (isActive)
         {
             sensitivity = DataManager.Instance.mouseSensitivity;
-            sensitivity = sensitivity / 150;
+            sensitivity = sensitivity / 250;
             // Read the mouse input from the InputAction
             Vector2 mouseInput = lookAction.action.ReadValue<Vector2>();
 
