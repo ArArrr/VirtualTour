@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec85effbd52b6f643af8baf19bf5eb39, type: 3}
+  m_Name: PC MODE
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 04d001fbb1154ca479097349dbdb75cd, type: 3}
+  subtitleLines:
+  - text: Hello, future STIer! Thank you for choosing STI College Global City.
+    startTime: 0
+    endTime: 6
+  - text: Before we finally start our tour, please be reminded of some stuff.
+    startTime: 6.8
+    endTime: 11
+  - text: 'Our tour flow will begin here at the ground floor, next to the basement,
+      go up to 8th floor, '
+    startTime: 12.5
+    endTime: 19.5
+  - text: "and that\u2019s where we tour the floors one by one using the stairs."
+    startTime: 19.7
+    endTime: 23.5
+  - text: To know more about a specific facility, kindly hover to the glowing question
+      mark symbol and click it to see.
+    startTime: 24.7
+    endTime: 32.5
+  - text: "Those are what we called \u201Chotspots\u201D."
+    startTime: 33.3
+    endTime: 36
+  - text: To move to the next destination, kindly follow the pathway marker. It will
+      serve as your guide while touring.
+    startTime: 37.5
+    endTime: 45.6
+  - text: Use the W-A-S-D keys on your keyboard to move.
+    startTime: 46.7
+    endTime: 51
+  - text: To look around and interact with things, use your mouse.
+    startTime: 51.8
+    endTime: 56.2
+  - text: Ready? Kindly tap your ID beside the gate to begin.
+    startTime: 56.8
+    endTime: 61
