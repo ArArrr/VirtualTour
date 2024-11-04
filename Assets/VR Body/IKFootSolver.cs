@@ -9,7 +9,7 @@ public class IKFootSolver : MonoBehaviour
     [SerializeField] LayerMask terrainLayer = default;
     [SerializeField] Transform body = default;
     [SerializeField] IKFootSolver otherFoot = default;
-    [SerializeField] float speed = 4;
+    [SerializeField] public float speed = 4;
     [SerializeField] float stepDistance = .2f;
     [SerializeField] float stepLength = .2f;
     [SerializeField] float sideStepLength = .1f;

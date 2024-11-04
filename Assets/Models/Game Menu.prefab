@@ -2764,7 +2764,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 200
+  m_SortingOrder: 99
   m_TargetDisplay: 0
 --- !u!114 &243446335328649661
 MonoBehaviour:
@@ -3651,13 +3651,9 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: 8F Court
       m_Image: {fileID: 0}
+    - m_Text: Complete
+      m_Image: {fileID: 0}
     - m_Text: Demo Scene
-      m_Image: {fileID: 0}
-    - m_Text: PhysicsLab
-      m_Image: {fileID: 0}
-    - m_Text: 503
-      m_Image: {fileID: 0}
-    - m_Text: 2FR Lec
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:

@@ -190,11 +190,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -357,6 +357,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CameraOffset: {fileID: 0}
   ToActivate: []
+  ToDeactivate: []
   XROrigin: {fileID: 0}
   cameraOffsetPosition: {x: 0, y: 1.55, z: 0}
 --- !u!114 &1231135620363644332
@@ -498,6 +499,7 @@ MonoBehaviour:
   rightHandController: {fileID: 0}
   leftHandPosition: {x: -0.2, y: -0.7, z: 0.1}
   rightHandPosition: {x: 0.2, y: -0.7, z: 0.1}
+  crouchTransitionDuration: 0.3
   moveAction: {fileID: -7869327975154128544, guid: 3ecbf1acd41d43b4fb22613610a21c52,
     type: 3}
   sprintAction: {fileID: 4551445641982524380, guid: 3ecbf1acd41d43b4fb22613610a21c52,
@@ -521,6 +523,7 @@ MonoBehaviour:
   interactableLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
+  mouseControl: {fileID: 0}
 --- !u!1 &6608576960365043093
 GameObject:
   m_ObjectHideFlags: 0

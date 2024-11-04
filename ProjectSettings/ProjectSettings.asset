@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: SGAJ
-  productName: STI VR Tour v0.12
+  productName: STI VR Tour v0.123
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -139,8 +139,14 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 0.12
-  preloadedAssets: []
+  bundleVersion: 0.123
+  preloadedAssets:
+  - {fileID: -4920568113667972601, guid: 16ab2979ee115e543a7bb6208f54bfea, type: 2}
+  - {fileID: 11400000, guid: d4657bb0e443b174d918c50c029f4233, type: 2}
+  - {fileID: 11400000, guid: bcd10f31cf9643e448804a3219705f58, type: 2}
+  - {fileID: 11400000, guid: 61e3bdb40ceeb6342a260cf9258f812b, type: 2}
+  - {fileID: 11400000, guid: 6e877eb8f095be643adee02105e60aa5, type: 2}
+  - {fileID: -3938666435308052422, guid: 5bece554e421f064f9d82d028739355e, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -162,7 +168,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.SGAJ.STIVRTour
-    Standalone: com.SGAJ.STI-VR-Tour-v0.12
+    Standalone: com.SGAJ.STI-VR-Tour-v0.123
   buildNumber:
     Standalone: 0
     VisionOS: 0
