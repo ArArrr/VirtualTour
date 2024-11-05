@@ -12,11 +12,17 @@ public class VRRaycastUIDrag : MonoBehaviour, IPointerDownHandler, IDragHandler,
     private CameraRaycaster pcRaycaster;
     private bool isDragging = false;
     private Vector3 offset;
+    private Collider collider;
+    private Animator animator;
+    public bool isActive = true;
+
+    public LayerMask interactableLayerMask;
+    private static VRRaycastUIDrag currentDraggedObject = null;
 
     private void Start()
     {
-        // Automatically find Left and Right XRRayInteractors
         XRRayInteractor[] rayInteractors = FindObjectsOfType<XRRayInteractor>();
+        collider = gameObject.GetComponent<Collider>();
 
         foreach (XRRayInteractor interactor in rayInteractors)
         {
@@ -35,16 +41,18 @@ public class VRRaycastUIDrag : MonoBehaviour, IPointerDownHandler, IDragHandler,
             Debug.LogWarning("Could not find both Left and Right XRRayInteractors.");
         }
 
-        // Find CameraRaycaster for PC mode
         pcRaycaster = FindObjectOfType<CameraRaycaster>();
     }
 
     private void Update()
     {
+        if (!isActive) return;
+
+        //Debug.Log(DataManager.Instance.togglePC ? "PC Mode Active" : "VR Mode Active");
+
         if (DataManager.Instance.togglePC)
         {
-            // Check for left mouse button press in PC mode
-            if (Mouse.current.leftButton.isPressed && !isDragging)
+            if (Mouse.current.leftButton.isPressed && !isDragging && currentDraggedObject == null)
             {
                 ManualOnPointerDown();
             }
@@ -59,107 +67,128 @@ public class VRRaycastUIDrag : MonoBehaviour, IPointerDownHandler, IDragHandler,
         }
     }
 
-    // Called automatically by Unity in VR mode, or manually in PC mode
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (!isActive) return;
+        //Debug.Log("Pointer down detected.");
         StartDragging(eventData);
     }
 
     private void ManualOnPointerDown()
     {
-        // Simulate OnPointerDown in PC mode
-        StartDragging(null);
+        if (!isActive) return;
+        Ray ray = pcRaycaster.mainCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+        if (Physics.Raycast(ray, out RaycastHit hit, pcRaycaster.raycastDistance, interactableLayerMask) && hit.transform == transform)
+        {
+            //Debug.Log("Pointer down on valid target in PC Mode.");
+            StartDragging(null);
+        }
+        else
+        {
+            //Debug.Log("Pointer down but no valid target in PC Mode.");
+        }
     }
 
     private void StartDragging(PointerEventData eventData)
     {
+        if (!isActive) return;
+        if (currentDraggedObject != null) return;
+
+        isDragging = true;
+        currentDraggedObject = this;
+        collider.excludeLayers = LayerMask.GetMask("UI");
+
         if (DataManager.Instance.togglePC)
         {
-            // PC Mode
-            Debug.Log("PC Mode: Starting drag on UI element");
-            isDragging = true;
             Ray ray = pcRaycaster.mainCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
-            if (Physics.Raycast(ray, out RaycastHit hit, pcRaycaster.raycastDistance, pcRaycaster.interactableLayerMask))
+            if (Physics.Raycast(ray, out RaycastHit hit, pcRaycaster.raycastDistance, interactableLayerMask))
             {
                 offset = transform.position - hit.point;
+                //Debug.Log("Dragging started in PC Mode.");
             }
         }
         else
         {
-            // VR Mode
-            Debug.Log("VR Mode: Starting drag on UI element");
             if (leftRayInteractor != null && leftRayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit leftHit) && leftHit.transform == transform)
             {
                 activeRayInteractor = leftRayInteractor;
                 offset = transform.position - leftHit.point;
-                isDragging = true;
+                //Debug.Log("Dragging started in VR Mode with Left Ray Interactor.");
             }
             else if (rightRayInteractor != null && rightRayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit rightHit) && rightHit.transform == transform)
             {
                 activeRayInteractor = rightRayInteractor;
                 offset = transform.position - rightHit.point;
-                isDragging = true;
+                //Debug.Log("Dragging started in VR Mode with Right Ray Interactor.");
+            }
+            else
+            {
+                //Debug.Log("Pointer down but no valid target in VR Mode.");
             }
         }
     }
 
-    // Called automatically by Unity in VR mode, or manually in PC mode
     public void OnDrag(PointerEventData eventData)
     {
+        if (!isActive) return;
+        //Debug.Log("OnDrag event triggered.");
         UpdateDragPosition();
     }
 
     private void ManualOnDrag()
     {
-        // Simulate OnDrag in PC mode
+        if (!isActive) return;
+        //Debug.Log("Manual drag in PC Mode.");
         UpdateDragPosition();
     }
 
     private void UpdateDragPosition()
     {
-        if (isDragging)
+        if (!isActive || !isDragging) return;
+
+        if (DataManager.Instance.togglePC)
         {
-            if (DataManager.Instance.togglePC)
+            Ray ray = pcRaycaster.mainCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+            if (Physics.Raycast(ray, out RaycastHit hit, pcRaycaster.raycastDistance, interactableLayerMask))
             {
-                // PC Mode: Drag UI with mouse control
-                Ray ray = pcRaycaster.mainCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
-                if (Physics.Raycast(ray, out RaycastHit hit, pcRaycaster.raycastDistance, pcRaycaster.interactableLayerMask))
-                {
-                    Vector3 newPosition = hit.point + offset;
-                    newPosition.z = transform.position.z; // Lock to X and Y axis
-                    transform.position = newPosition;
-                }
+                Vector3 newPosition = hit.point + offset;
+                newPosition.z = transform.position.z; // Lock to X and Y axis
+                transform.position = newPosition;
+                //Debug.Log("Updating position in PC Mode.");
             }
-            else if (activeRayInteractor != null)
+        }
+        else if (activeRayInteractor != null)
+        {
+            if (activeRayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit hit))
             {
-                // VR Mode: Drag UI with XRRayInteractor
-                if (activeRayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit hit))
-                {
-                    Vector3 newPosition = hit.point + offset;
-                    newPosition.z = transform.position.z; // Lock to X and Y axis
-                    transform.position = newPosition;
-                }
+                Vector3 newPosition = hit.point + offset;
+                newPosition.z = transform.position.z; // Lock to X and Y axis
+                transform.position = newPosition;
+                //Debug.Log("Updating position in VR Mode.");
             }
         }
     }
 
-    // Called automatically by Unity in VR mode, or manually in PC mode
     public void OnPointerUp(PointerEventData eventData)
     {
+        if (!isActive) return;
+        //Debug.Log("Pointer up detected.");
         StopDragging();
     }
 
     private void ManualOnPointerUp()
     {
-        // Simulate OnPointerUp in PC mode
+        if (!isActive) return;
+        //Debug.Log("Manual pointer up in PC Mode.");
         StopDragging();
     }
 
     private void StopDragging()
     {
-        // Stop dragging for both VR and PC modes
         isDragging = false;
         activeRayInteractor = null;
-        Debug.Log("Stopped dragging UI element");
+        currentDraggedObject = null;
+        collider.excludeLayers = 0;
+        //Debug.Log("Stopped dragging UI element.");
     }
 }
