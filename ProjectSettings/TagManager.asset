@@ -13,6 +13,8 @@ TagManager:
   - Camera
   - Left leg IK_target
   - Right leg IK_target
+  - ID UI
+  - Get
   layers:
   - Default
   - TransparentFX
