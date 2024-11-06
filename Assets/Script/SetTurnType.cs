@@ -17,6 +17,14 @@ public class SetTurnType : MonoBehaviour
 
     private void Start()
     {
+        if (continousTurn == null)
+        {
+            continousTurn = FindFirstObjectByType<ActionBasedContinuousTurnProvider>();
+        }
+        if (snapTurn == null)
+        {
+            snapTurn = FindFirstObjectByType<ActionBasedSnapTurnProvider>();
+        }
         if (DataManager.Instance.togglePC)
         {
             Dropdown.gameObject.SetActive(false);

@@ -44,6 +44,3 @@ MonoBehaviour:
   - text: Use the joystick on your controller to move and look around you.
     startTime: 48
     endTime: 52.5
-  - text: To interact with things, use the grip trigger.
-    startTime: 6.801
-    endTime: 6.399

@@ -640,6 +640,7 @@ GameObject:
   - component: {fileID: 7863486385990458050}
   - component: {fileID: 3488563556685293238}
   - component: {fileID: 4352766449145687427}
+  - component: {fileID: 1168052775770407190}
   m_Layer: 5
   m_Name: Circle
   m_TagString: Untagged
@@ -704,6 +705,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!225 &1168052775770407190
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7073447704751432403}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &8788486795663990707
 GameObject:
   m_ObjectHideFlags: 0

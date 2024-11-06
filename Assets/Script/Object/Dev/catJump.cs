@@ -9,6 +9,8 @@ public class CatJump : MonoBehaviour
     [Tooltip("Jump force for the cat.")]
     public float jumpForce = 5f;
 
+    public float groundDistance = 0.1f;
+
     private Rigidbody rb;
 
     private void Awake()
@@ -43,7 +45,10 @@ public class CatJump : MonoBehaviour
 
     private bool IsGrounded()
     {
+        bool isGround = Physics.Raycast(transform.position, Vector3.down, groundDistance);
+        Debug.Log("Ground is " + isGround);
         // Simple check to see if the object is on the ground
-        return Physics.Raycast(transform.position, Vector3.down, 0.1f);
+        return isGround;
+        
     }
 }

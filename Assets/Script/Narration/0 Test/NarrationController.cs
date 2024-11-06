@@ -89,6 +89,27 @@ public class NarrationController : MonoBehaviour
         if (!enabled) return;  // Exit if this component was disabled by the parent
     }
 
+    private void OnEnable()
+    {
+        SetSubtitleVisible(false);
+        if (isIntro)
+        {
+            StartNarration();
+        }
+        if (checkPcIntro)
+        {
+            if (DataManager.Instance.togglePC)
+            {
+                Debug.Log(gameObject.name + " Switching Dialog..");
+                PcNarration.StartNarration();
+            }
+            else
+            {
+                StartNarration();
+            }
+        }
+    }
+
     public void StartNarration()
     {
         if (onlyOnce && played >= 1) return;
