@@ -17,6 +17,7 @@ public class NarrationController : MonoBehaviour
     }
 
     public bool isIntro = false;
+    public bool checkPcIntro = false;
     public bool onlyOnce = false;
     private int played = 0;
     public SubtitleData subtitleData;  // Assign your subtitle data in the inspector
@@ -24,6 +25,7 @@ public class NarrationController : MonoBehaviour
 
     [Header("Next Narration")]
     public NarrationController nextNarration;  // Reference to the next narration controller
+    public NarrationController PcNarration;
 
     [Header("Next Markers")]
     public List<MarkerDistanceDisplay> markers;  // List of markers to trigger
@@ -64,13 +66,48 @@ public class NarrationController : MonoBehaviour
             subtitleText = subtitleUI.GetComponentInChildren<TMP_Text>();
 
             SetSubtitleVisible(false);
-            if (isIntro) StartNarration();
+            if (isIntro)
+            {
+                StartNarration();
+            }
+            if (checkPcIntro)
+            {
+                if (DataManager.Instance.togglePC)
+                {
+                    Debug.Log(gameObject.name + " Switching Dialog..");
+                    PcNarration.StartNarration();
+                } else
+                {
+                    StartNarration();
+                }
+            }
         }
         else
         {
             Debug.LogError("Subtitle UI not found! Please make sure it exists in the scene.");
         }
         if (!enabled) return;  // Exit if this component was disabled by the parent
+    }
+
+    private void OnEnable()
+    {
+        SetSubtitleVisible(false);
+        if (isIntro)
+        {
+            StartNarration();
+        }
+        if (checkPcIntro)
+        {
+            if (DataManager.Instance.togglePC)
+            {
+                Debug.Log(gameObject.name + " Switching Dialog..");
+                PcNarration.StartNarration();
+            }
+            else
+            {
+                StartNarration();
+            }
+        }
     }
 
     public void StartNarration()
@@ -155,7 +192,17 @@ public class NarrationController : MonoBehaviour
         if (nextNarration != null)
         {
             yield return new WaitForSeconds(delayBeforeNext);  // Add delay before playing the next narration
-            nextNarration.StartNarration();
+            if(PcNarration != null && DataManager.Instance.togglePC && !checkPcIntro)
+            {
+                PcNarration.StartNarration();
+            }
+            else nextNarration.StartNarration();
+        } else
+        {
+            if (PcNarration != null && DataManager.Instance.togglePC && !checkPcIntro)
+            {
+                PcNarration.StartNarration();
+            }
         }
 
         TriggerCustomEvent2();

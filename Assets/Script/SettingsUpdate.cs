@@ -30,4 +30,18 @@ public class SettingsUpdate : MonoBehaviour
         // Remove listener when the object is destroyed to prevent memory leaks
         togglePC.onValueChanged.RemoveListener(OnTogglePCChanged);
     }
+
+    public void exitGame()
+    {
+        // Log for when the game is closed (only visible in Editor)
+        Debug.Log("Quitting the game...");
+
+        // Closes the application
+        Application.Quit();
+
+#if UNITY_EDITOR
+        // Stops playing in the editor
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+    }
 }
