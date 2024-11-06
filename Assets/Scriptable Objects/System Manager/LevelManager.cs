@@ -30,8 +30,9 @@ public class LevelManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
 
             // Setup AudioSource
+            if (audioSource == null)
             audioSource = gameObject.AddComponent<AudioSource>();
-
+            audioSource.loop = false;
             // Initialize the canvas here
             canvas = GetComponent<Canvas>();
             if (canvas == null)
