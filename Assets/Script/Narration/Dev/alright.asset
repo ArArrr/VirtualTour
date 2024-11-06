@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec85effbd52b6f643af8baf19bf5eb39, type: 3}
+  m_Name: alright
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 54f7f183adc078d42befb8282c03c322, type: 3}
+  subtitleLines:
+  - text: Alright!
+    startTime: 0
+    endTime: 0.5
+  - text: 'Now we have one final task to complete the game: '
+    startTime: 1
+    endTime: 3.9
+  - text: "help the Cat reach the goal \u2013 a tasty fish in the top right corner
+      of the screen!"
+    startTime: 4.4
+    endTime: 9.3
+  - text: 'You can place as many Platform objects as you like, creating a path for
+      the Cat to jump on to reach the fish. '
+    startTime: 9.9
+    endTime: 15.9
+  - text: "Feel free to experiment with the platform layout until you\u2019re happy
+      with it!"
+    startTime: 16.4
+    endTime: 20.1

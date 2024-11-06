@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec85effbd52b6f643af8baf19bf5eb39, type: 3}
+  m_Name: head over
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 68f637d154ebbc245850020d5c33e13d, type: 3}
+  subtitleLines:
+  - text: "Head over to the monitor that\u2019s pointed out to you \u2013 "
+    startTime: 0
+    endTime: 2
+  - text: "that\u2019s where the magic begins!"
+    startTime: 2.3
+    endTime: 4.1
