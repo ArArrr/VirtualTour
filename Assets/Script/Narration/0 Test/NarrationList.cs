@@ -17,7 +17,8 @@ public class NarrationsList : MonoBehaviour
         Complete,
         Baking,
         Photography,
-        GameDev
+        GameDev,
+        Camps
     }
 
     private string playerStrand;
@@ -98,6 +99,7 @@ public class NarrationsList : MonoBehaviour
             case FloorOption.Baking: currentfloor = 11; break;
             case FloorOption.Photography: currentfloor = 12; break;
             case FloorOption.GameDev: currentfloor = 13; break;
+            case FloorOption.Camps: currentfloor = 14; break;
         }
     }
     public void setLevel(int level)

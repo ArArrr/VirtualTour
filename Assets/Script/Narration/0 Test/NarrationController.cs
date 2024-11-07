@@ -137,9 +137,9 @@ public class NarrationController : MonoBehaviour
         if (subtitleData == null || audioSource == null || subtitleData.audioClip == null)
         {
             Debug.LogError(gameObject.name+"'s SubtitleData or AudioSource is missing!");
-            Debug.LogError("Audio Source: " + audioSource == null?"null":"fine");
-            Debug.LogError("SubtitleData: " + subtitleData == null ? "null" : "fine");
-            Debug.LogError("Audio Clip: " + subtitleData.audioClip == null ? "null" : "fine");
+            //Debug.LogError("Audio Source: " + audioSource == null?"null":"fine");
+            //Debug.LogError("SubtitleData: " + subtitleData == null ? "null" : "fine");
+            //Debug.LogError("Audio Clip: " + subtitleData.audioClip == null ? "null" : "fine");
             yield break;
         }
         if (waitForCheck)
@@ -172,7 +172,7 @@ public class NarrationController : MonoBehaviour
         audioSource.Play();
 
         TriggerCustomEvent();
-        Debug.Log("HIIIIII");
+        //Debug.Log("HIIIIII");
 
         const float timeTolerance = 0.05f;  // Small tolerance to prevent looping issue
         foreach (var line in subtitleData.subtitleLines)
