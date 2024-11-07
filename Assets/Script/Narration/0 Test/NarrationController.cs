@@ -29,7 +29,7 @@ public class NarrationController : MonoBehaviour
     public bool waitForCheck = false;
     public bool needToBeCalledAgain = false;
     public int count = 0;
-    private int currentCount = 0;
+    public int currentCount = 0;
 
     [Header("Next Markers")]
     public List<MarkerDistanceDisplay> markers;  // List of markers to trigger
