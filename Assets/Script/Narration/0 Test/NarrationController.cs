@@ -26,6 +26,10 @@ public class NarrationController : MonoBehaviour
     [Header("Next Narration")]
     public NarrationController nextNarration;  // Reference to the next narration controller
     public NarrationController PcNarration;
+    public bool waitForCheck = false;
+    public bool needToBeCalledAgain = false;
+    public int count = 0;
+    private int currentCount = 0;
 
     [Header("Next Markers")]
     public List<MarkerDistanceDisplay> markers;  // List of markers to trigger
@@ -124,9 +128,6 @@ public class NarrationController : MonoBehaviour
             Debug.LogWarning(gameObject.name + " No audio clip assigned or AudioSource is missing.");
         }
 
-        if (!OnlyOutlineAfter)
-            ApplyOutline();  // Add outline to the specified objects
-
         StartCoroutine(PlayNarrationWithSubtitles());
     }
 
@@ -135,10 +136,35 @@ public class NarrationController : MonoBehaviour
         // Ensure there's an audio clip to play
         if (subtitleData == null || audioSource == null || subtitleData.audioClip == null)
         {
-            Debug.LogError("SubtitleData or AudioSource is missing!");
+            Debug.LogError(gameObject.name+"'s SubtitleData or AudioSource is missing!");
+            Debug.LogError("Audio Source: " + audioSource == null?"null":"fine");
+            Debug.LogError("SubtitleData: " + subtitleData == null ? "null" : "fine");
+            Debug.LogError("Audio Clip: " + subtitleData.audioClip == null ? "null" : "fine");
             yield break;
         }
+        if (waitForCheck)
+        {
+            int i = 0;
+            if (needToBeCalledAgain && currentCount != count)
+            {
+                Debug.Log("Cancelling "+gameObject.name+ ".. Checks: (" + currentCount + "/" + count + ")");
+                yield break;
+            }
+            while (currentCount != count)
+            {
+                i++;
+                yield return new WaitForSeconds(0.2f);
+                if (i == 1)
+                {
+                    Debug.Log(gameObject.name+" is waiting.. ("+currentCount+"/"+count+")");
+                    i = 0;
+                }
+            }
+        }
+
         if (isIntro) yield return new WaitForSeconds(4);
+        if (!OnlyOutlineAfter)
+            ApplyOutline();  // Add outline to the specified objects
         SetSubtitleVisible(true);
 
         // Play the audio
@@ -146,6 +172,7 @@ public class NarrationController : MonoBehaviour
         audioSource.Play();
 
         TriggerCustomEvent();
+        Debug.Log("HIIIIII");
 
         const float timeTolerance = 0.05f;  // Small tolerance to prevent looping issue
         foreach (var line in subtitleData.subtitleLines)
@@ -316,5 +343,24 @@ public class NarrationController : MonoBehaviour
         {
             onCustomEventTriggered2.Invoke();
         }
+    }
+
+    public void invokeCheck()
+    {
+        currentCount++;
+        Debug.Log(gameObject.name + " : current check " + currentCount + "/" + count);
+    }
+
+    public void uninvokeCheck()
+    {
+        currentCount--;
+        Debug.Log(gameObject.name + " deinvoked : current check " + currentCount + "/" + count);
+    }
+
+    private bool isInvoked = false;
+    public void invokeOnce()
+    {
+        if (isInvoked) currentCount++;
+        isInvoked = true;
     }
 }

@@ -22,22 +22,25 @@ public class GetUI : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Check if the exact assigned prefab is the one that collided
-        Debug.Log(other.gameObject.name + " detected.");
-        if (other.gameObject.name.Contains(ItemToGet.name) || other == ItemToGet)
+        if (this.enabled)
         {
-            CanvasGroup canvasGroup = GetComponent<CanvasGroup>();
-            if (canvasGroup != null)
+            // Check if the exact assigned prefab is the one that collided
+            Debug.Log(other.gameObject.name + " detected.");
+            if (other.gameObject.name.Contains(ItemToGet.name) || other == ItemToGet)
             {
-                canvasGroup.alpha = 1; // Make UI visible (or any effect you want)
+                CanvasGroup canvasGroup = GetComponent<CanvasGroup>();
+                if (canvasGroup != null)
+                {
+                    canvasGroup.alpha = 1; // Make UI visible (or any effect you want)
+                }
+                if (events != null)
+                {
+                    events.Invoke();
+                }
+                // Disable the script after interaction
+                Destroy(other.gameObject); // Destroy the specific object instance
+                this.enabled = false;
             }
-            if (events != null)
-            {
-                events.Invoke();
-            }
-            // Disable the script after interaction
-            Destroy(other.gameObject); // Destroy the specific object instance
-            this.enabled = false;
         }
     }
 }
