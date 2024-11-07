@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec85effbd52b6f643af8baf19bf5eb39, type: 3}
+  m_Name: intro 1
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 317b1d565c792b54b9c7b86fd2763994, type: 3}
+  subtitleLines:
+  - text: 'Hello, everyone! Welcome to the STI Career Camp, and thank you for joining
+      us for our Game Developers Camp workshop! '
+    startTime: 0
+    endTime: 7
+  - text: "Today, you\u2019ll get a hands-on experience in game creation \u2013 diving
+      right into what it\u2019s like to be a game developer! "
+    startTime: 7.8
+    endTime: 14

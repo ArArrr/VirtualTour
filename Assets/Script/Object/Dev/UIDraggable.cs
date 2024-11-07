@@ -15,6 +15,7 @@ public class VRRaycastUIDrag : MonoBehaviour, IPointerDownHandler, IDragHandler,
     private Collider collider;
     private Animator animator;
     public bool isActive = true;
+    public bool notTriggerWhileDragging = true;
 
     public LayerMask interactableLayerMask;
     private static VRRaycastUIDrag currentDraggedObject = null;
@@ -96,7 +97,7 @@ public class VRRaycastUIDrag : MonoBehaviour, IPointerDownHandler, IDragHandler,
 
         isDragging = true;
         currentDraggedObject = this;
-        collider.excludeLayers = LayerMask.GetMask("UI");
+        if (notTriggerWhileDragging) collider.excludeLayers = LayerMask.GetMask("UI");
 
         if (DataManager.Instance.togglePC)
         {

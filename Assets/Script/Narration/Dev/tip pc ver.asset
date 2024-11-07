@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec85effbd52b6f643af8baf19bf5eb39, type: 3}
+  m_Name: tip pc ver
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: ef4b6877736bde24faac5c8463ed30be, type: 3}
+  subtitleLines:
+  - text: 'Important Tip:'
+    startTime: 0
+    endTime: 0.8
+  - text: "You can enable or disable each function by clicking on it once it\u2019s
+      in the list. "
+    startTime: 1.4
+    endTime: 5.7
+  - text: 'And remember, the keys are:'
+    startTime: 6.4
+    endTime: 8
+  - text: "Press \u201CA\u201D to move left"
+    startTime: 8.3
+    endTime: 9.7
+  - text: "Press \u201CD\u201D to move right"
+    startTime: 10.1
+    endTime: 11.6
+  - text: "Press \u201CSpace bar\u201D to jump"
+    startTime: 12
+    endTime: 13.5
