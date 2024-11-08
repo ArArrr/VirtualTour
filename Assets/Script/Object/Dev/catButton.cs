@@ -8,11 +8,16 @@ public class catButton : MonoBehaviour
 {
     public Button btn;
     public UnityEvent events;
+    public NarrationController controller;
     public void Invoke()
     {
         if (events != null && btn.enabled)
         {
             events.Invoke();
+            if (controller.count == controller.currentCount )
+            {
+                controller.StartNarration();
+            }
         }
     }
 }
