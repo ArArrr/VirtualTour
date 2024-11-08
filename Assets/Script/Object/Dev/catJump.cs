@@ -11,6 +11,12 @@ public class CatJump : MonoBehaviour
 
     public float groundDistance = 0.1f;
 
+    [Header("Audio")]
+    [Tooltip("Jump sound for the cat.")]
+    public AudioClip jumpSound;
+    public AudioSource source;
+
+
     private Rigidbody rb;
 
     private void Awake()
@@ -39,6 +45,8 @@ public class CatJump : MonoBehaviour
         if (IsGrounded())
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            source.clip = jumpSound;
+            source.Play();
             Debug.Log("Jumping!");
         }
     }
