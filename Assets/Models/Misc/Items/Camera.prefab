@@ -45,9 +45,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isIntro: 0
+  checkPcIntro: 0
   onlyOnce: 0
   subtitleData: {fileID: 11400000, guid: aea5597e3f45e08428c3ecdaea831a41, type: 2}
   nextNarration: {fileID: 7726321882337479581}
+  PcNarration: {fileID: 0}
+  waitForCheck: 0
+  needToBeCalledAgain: 0
+  count: 0
+  currentCount: 0
   markers: []
   delayBeforeNext: 0
   waitAudioToFinish: 1
@@ -121,9 +127,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isIntro: 0
+  checkPcIntro: 0
   onlyOnce: 0
   subtitleData: {fileID: 11400000, guid: 02dd4c7d949c1374790f21e36dec2115, type: 2}
   nextNarration: {fileID: 0}
+  PcNarration: {fileID: 0}
+  waitForCheck: 0
+  needToBeCalledAgain: 0
+  count: 0
+  currentCount: 0
   markers: []
   delayBeforeNext: 0
   waitAudioToFinish: 1
@@ -343,9 +355,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isIntro: 0
+  checkPcIntro: 0
   onlyOnce: 1
   subtitleData: {fileID: 11400000, guid: 408e70ff0153bdd408326006ec0f1990, type: 2}
   nextNarration: {fileID: 0}
+  PcNarration: {fileID: 0}
+  waitForCheck: 0
+  needToBeCalledAgain: 0
+  count: 0
+  currentCount: 0
   markers: []
   delayBeforeNext: 0
   waitAudioToFinish: 1
@@ -752,9 +770,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isIntro: 0
+  checkPcIntro: 0
   onlyOnce: 0
   subtitleData: {fileID: 11400000, guid: f8068ebd09bb93a41bcf171353a24c09, type: 2}
   nextNarration: {fileID: 0}
+  PcNarration: {fileID: 0}
+  waitForCheck: 0
+  needToBeCalledAgain: 0
+  count: 0
+  currentCount: 0
   markers: []
   delayBeforeNext: 0
   waitAudioToFinish: 1
@@ -824,9 +848,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isIntro: 0
+  checkPcIntro: 0
   onlyOnce: 0
   subtitleData: {fileID: 11400000, guid: 531f463ca85d32c4b9c9fef50be1bbf6, type: 2}
   nextNarration: {fileID: 2208530106045090225}
+  PcNarration: {fileID: 0}
+  waitForCheck: 0
+  needToBeCalledAgain: 0
+  count: 0
+  currentCount: 0
   markers: []
   delayBeforeNext: 0
   waitAudioToFinish: 1
@@ -1045,9 +1075,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isIntro: 0
+  checkPcIntro: 0
   onlyOnce: 1
   subtitleData: {fileID: 11400000, guid: a05ceecd8461efc4aa0628fe80952254, type: 2}
   nextNarration: {fileID: 0}
+  PcNarration: {fileID: 0}
+  waitForCheck: 0
+  needToBeCalledAgain: 0
+  count: 0
+  currentCount: 0
   markers: []
   delayBeforeNext: 0
   waitAudioToFinish: 1
@@ -1536,9 +1572,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isIntro: 0
+  checkPcIntro: 0
   onlyOnce: 0
   subtitleData: {fileID: 11400000, guid: ab4b32b2d0845ad47b14173fa9da60e6, type: 2}
   nextNarration: {fileID: 0}
+  PcNarration: {fileID: 0}
+  waitForCheck: 0
+  needToBeCalledAgain: 0
+  count: 0
+  currentCount: 0
   markers: []
   delayBeforeNext: 0
   waitAudioToFinish: 1
@@ -1608,9 +1650,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isIntro: 0
+  checkPcIntro: 0
   onlyOnce: 1
   subtitleData: {fileID: 11400000, guid: 1130d7b48402f6447ab7594e2c634827, type: 2}
   nextNarration: {fileID: 4247612743717310956}
+  PcNarration: {fileID: 0}
+  waitForCheck: 0
+  needToBeCalledAgain: 0
+  count: 0
+  currentCount: 0
   markers: []
   delayBeforeNext: 0
   waitAudioToFinish: 1
@@ -1668,9 +1716,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isIntro: 0
+  checkPcIntro: 0
   onlyOnce: 0
   subtitleData: {fileID: 11400000, guid: a3a272344656f98428fb52db2da6bba4, type: 2}
   nextNarration: {fileID: 4744872316030872948}
+  PcNarration: {fileID: 0}
+  waitForCheck: 0
+  needToBeCalledAgain: 0
+  count: 0
+  currentCount: 0
   markers: []
   delayBeforeNext: 0
   waitAudioToFinish: 1
@@ -1744,7 +1798,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 3
+  m_Intensity: 1
   m_Range: 5
   m_SpotAngle: 76.436966
   m_InnerSpotAngle: 68.239044
@@ -1862,9 +1916,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isIntro: 0
+  checkPcIntro: 0
   onlyOnce: 0
   subtitleData: {fileID: 11400000, guid: 694216c49d328a84a88465c52f4e8415, type: 2}
   nextNarration: {fileID: 0}
+  PcNarration: {fileID: 0}
+  waitForCheck: 0
+  needToBeCalledAgain: 0
+  count: 0
+  currentCount: 0
   markers: []
   delayBeforeNext: 0
   waitAudioToFinish: 1
@@ -2368,6 +2428,18 @@ MonoBehaviour:
   m_Activated:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 5788472038754843309}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 3507306134949459201}
         m_TargetAssemblyTypeName: UseCamera, Assembly-CSharp
         m_MethodName: ClickInteraction

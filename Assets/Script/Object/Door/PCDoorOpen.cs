@@ -19,6 +19,8 @@ public class SmoothRotationTrigger : MonoBehaviour
     private HingeJoint hinge;                    // HingeJoint component of the target object
     private Rigidbody targetRigidbody;                // Rigidbody of the target object
     private Rigidbody secondaryTargetRigidbody;       // Rigidbody of the secondary target object
+    private BoxCollider collider1;
+    private BoxCollider collider2;
 
     [Header("Lock")]
     public bool isLock = false;
@@ -43,11 +45,13 @@ public class SmoothRotationTrigger : MonoBehaviour
         // Get the HingeJoint and Rigidbody components from the target object
         hinge = targetObject.GetComponent<HingeJoint>();
         targetRigidbody = targetObject.GetComponent<Rigidbody>();
+        collider1 = targetObject.GetComponent<BoxCollider>();
 
         // Automatically get the Rigidbody for the secondary target object
         if (secondaryTargetObject != null)
         {
             secondaryTargetRigidbody = secondaryTargetObject.GetComponent<Rigidbody>();
+            collider2 = targetObject.GetComponent<BoxCollider>();
         }
 
         // Start checking for PC mode
@@ -83,6 +87,7 @@ public class SmoothRotationTrigger : MonoBehaviour
                 else
                 {
                     targetObject.transform.rotation = Quaternion.Slerp(targetObject.transform.rotation, targetQuat, rotationSpeed * Time.deltaTime);
+                    collider1.isTrigger = true;
                 }
                 
 
@@ -98,6 +103,7 @@ public class SmoothRotationTrigger : MonoBehaviour
                     else
                     {
                         secondaryTargetObject.transform.rotation = Quaternion.Slerp(secondaryTargetObject.transform.rotation, secondaryTargetQuat, rotationSpeed * Time.deltaTime);
+                        collider1.isTrigger = true;
                     }
                 }
             }
@@ -105,11 +111,13 @@ public class SmoothRotationTrigger : MonoBehaviour
             {
                 // Return to the original rotation for the primary object
                 targetObject.transform.rotation = Quaternion.Slerp(targetObject.transform.rotation, originalRotation, rotationSpeed * Time.deltaTime);
+                collider1.isTrigger = false;
 
                 // If a secondary target exists, return it to its original rotation as well
                 if (secondaryTargetObject != null)
                 {
                     secondaryTargetObject.transform.rotation = Quaternion.Slerp(secondaryTargetObject.transform.rotation, originalSecondaryRotation, rotationSpeed * Time.deltaTime);
+                    collider1.isTrigger = false;
                 }
             }
         }

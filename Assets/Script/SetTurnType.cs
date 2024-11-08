@@ -40,7 +40,7 @@ public class SetTurnType : MonoBehaviour
             Slider.onValueChanged.AddListener(OnSliderValueChanged);
             return;
         }
-        int playerTurnSetting = DataManager.Instance.turnMethod.ToLower().Equals("continious") ? 0 : 1;
+        int playerTurnSetting = DataManager.Instance.turnMethod.ToLower().Equals("continuous") ? 0 : 1;
         SetTypeFromIndem(playerTurnSetting);
     }
 
@@ -50,7 +50,7 @@ public class SetTurnType : MonoBehaviour
         {
             snapTurn.enabled = false;
             continousTurn.enabled = true;
-            DataManager.Instance.turnMethod = "continious";
+            DataManager.Instance.turnMethod = "continuous";
         }
         else if (index == 1) 
         {

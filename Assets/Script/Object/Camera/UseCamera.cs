@@ -164,6 +164,12 @@ public class UseCamera : MonoBehaviour
             great.StartNarration();
         }
     }
+
+    public void setCameraInUse(bool val)
+    {
+        DataManager.Instance.cameraInUse = val;
+    }
+
     public void teleportToLobby()
     {
         DataManager.Instance.targetSpawnPointID = "Lobby";
