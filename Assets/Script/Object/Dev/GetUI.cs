@@ -6,6 +6,8 @@ public class GetUI : MonoBehaviour
 {
     public GameObject ItemToGet;
     public UnityEvent events;
+    public AudioSource source;
+    public AudioClip clip;
     private void Start()
     {
         CanvasGroup canvasGroup = GetComponent<CanvasGroup>();
@@ -36,6 +38,8 @@ public class GetUI : MonoBehaviour
                 if (events != null)
                 {
                     events.Invoke();
+                    source.clip = clip;
+                    source.Play();
                 }
                 // Disable the script after interaction
                 Destroy(other.gameObject); // Destroy the specific object instance
