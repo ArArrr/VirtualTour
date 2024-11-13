@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: SGAJ
-  productName: STI VR Tour v0.13
+  productName: STI Global Virtual Voyage
   defaultCursor: {fileID: 2800000, guid: 9e4e923f2e0534a56b6a0c2321388194, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -22,7 +22,7 @@ PlayerSettings:
   m_SplashScreenOverlayOpacity: 1
   m_SplashScreenAnimation: 1
   m_SplashScreenLogoStyle: 1
-  m_SplashScreenDrawMode: 0
+  m_SplashScreenDrawMode: 1
   m_SplashScreenBackgroundAnimationZoom: 1
   m_SplashScreenLogoAnimationZoom: 1
   m_SplashScreenBackgroundLandscapeAspect: 1
@@ -39,7 +39,11 @@ PlayerSettings:
     y: 0
     width: 1
     height: 1
-  m_SplashScreenLogos: []
+  m_SplashScreenLogos:
+  - logo: {fileID: 10404, guid: 0000000000000000f000000000000000, type: 0}
+    duration: 2
+  - logo: {fileID: 21300000, guid: a4841fdd3840d214085500903586c4f2, type: 3}
+    duration: 2
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1920
@@ -139,8 +143,14 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 0.13
-  preloadedAssets: []
+  bundleVersion: 0.135
+  preloadedAssets:
+  - {fileID: -4920568113667972601, guid: 16ab2979ee115e543a7bb6208f54bfea, type: 2}
+  - {fileID: 11400000, guid: d4657bb0e443b174d918c50c029f4233, type: 2}
+  - {fileID: 11400000, guid: bcd10f31cf9643e448804a3219705f58, type: 2}
+  - {fileID: 11400000, guid: 61e3bdb40ceeb6342a260cf9258f812b, type: 2}
+  - {fileID: 11400000, guid: 6e877eb8f095be643adee02105e60aa5, type: 2}
+  - {fileID: -3938666435308052422, guid: 5bece554e421f064f9d82d028739355e, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -162,7 +172,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.SGAJ.STIVRTour
-    Standalone: com.SGAJ.STI-VR-Tour-v0.13
+    Standalone: com.SGAJ.STI-Global-Virtual-Voyage
   buildNumber:
     Standalone: 0
     VisionOS: 0
