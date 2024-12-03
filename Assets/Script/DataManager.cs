@@ -19,6 +19,8 @@ public class DataManager : MonoBehaviour
     public bool nextLevel = false;
     public string camp;
     public bool isHoldingItem = false;
+    public bool isDemo = false;
+    public float timer = 5f;
 
     // SETTINGS
     [Header("Settings")]
@@ -71,5 +73,10 @@ public class DataManager : MonoBehaviour
     public void togglePCSetting()
     {
         togglePC = !togglePC;
+    }
+
+    public void SetTimer(string num)
+    {
+        timer = float.Parse(num);
     }
 }
