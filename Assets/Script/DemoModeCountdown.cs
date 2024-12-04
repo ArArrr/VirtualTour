@@ -8,26 +8,20 @@ public class DemoModeCountdown : MonoBehaviour
     public TextMeshProUGUI countdownText;
 
     [Tooltip("Total time for the countdown in seconds.")]
-    public float countdownTime = DataManager.Instance.timer * 60f;
+    public float countdownTime = 300;
     private bool countdownActive = false;
 
     private void Start()
     {
-        if (DataManager.Instance.isDemo)
-        {
-            StartCountdown();
-        } 
-        else
-        {
-            gameObject.SetActive(false);
-        }
-        
+        countdownText.enabled = false;
     }
 
     // Starts the countdown timer
     public void StartCountdown()
     {
+        countdownTime = DataManager.Instance.timer * 60f;
         countdownActive = true;
+        countdownText.enabled = true;
         StartCoroutine(CountdownRoutine());
     }
 
@@ -37,9 +31,9 @@ public class DemoModeCountdown : MonoBehaviour
 
         while (remainingTime > 0)
         {
-            // Convert remaining time to minutes and seconds
-            float minutes = remainingTime / 60;
-            float seconds = remainingTime % 60;
+            // Convert remaining time to minutes and seconds using integer division
+            int minutes = Mathf.FloorToInt(remainingTime / 60);
+            int seconds = Mathf.FloorToInt(remainingTime % 60);
 
             // Update the TextMeshPro component
             countdownText.text = $"{minutes:00} : {seconds:00}";
@@ -59,6 +53,7 @@ public class DemoModeCountdown : MonoBehaviour
     private void TeleportPlayerToEnd()
     {
         LevelManager.Instance.LoadScene("Outdoor", "CrossFade", "none");
-        gameObject.SetActive(false);
+        countdownText.enabled = false;
+        countdownActive = false;
     }
 }

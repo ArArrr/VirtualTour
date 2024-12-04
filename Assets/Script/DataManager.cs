@@ -74,9 +74,4 @@ public class DataManager : MonoBehaviour
     {
         togglePC = !togglePC;
     }
-
-    public void SetTimer(string num)
-    {
-        timer = float.Parse(num);
-    }
 }
