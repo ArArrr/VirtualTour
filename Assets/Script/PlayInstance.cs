@@ -11,6 +11,10 @@ public class PlayInstance : MonoBehaviour
 
     public void startTimer()
     {
-        LevelManager.Instance.GetComponentInChildren<DemoModeCountdown>().StartCountdown();
+        if (DataManager.Instance.isDemo)
+        {
+            LevelManager.Instance.GetComponentInChildren<DemoModeCountdown>().StartCountdown();
+            Debug.Log("Starting Countdown");
+        }
     }
 }

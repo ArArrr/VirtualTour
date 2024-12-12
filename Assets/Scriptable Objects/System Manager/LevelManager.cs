@@ -9,6 +9,7 @@ using System.Threading;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
+    public DemoModeCountdown timerHeight;
 
     public Slider progressBar;
     public GameObject transitionsContainer;

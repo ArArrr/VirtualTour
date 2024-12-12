@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
 
 public class ElevatorButtonController : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class ElevatorButtonController : MonoBehaviour
 
     private string targetScene;
     private string targetSpawnID;
+    public GameObject lib;
+    public GameObject libOut;
 
     private void Start()
     {
@@ -69,6 +72,8 @@ public class ElevatorButtonController : MonoBehaviour
             elevatorAudio.PlayOpen();
             elevatorAnimator.SetTrigger("Open");
             elevatorAnimator.SetBool("isOpen", true);
+            //lib.SetActive(false);
+            //libOut.SetActive(false);
         }
     }
 
@@ -86,6 +91,13 @@ public class ElevatorButtonController : MonoBehaviour
 
     private IEnumerator HandleCallElevator()
     {
+        Debug.Log("fun: "+DataManager.Instance.funValue);
+        if (DataManager.Instance.funValue == 5 && lib != null && elevatorAudio.floor == 5 && targetFloor == -1)
+        {
+            Debug.Log("lib is here");
+            lib.SetActive(true);
+        }
+        DataManager.Instance.rollFun();
         elevatorAnimator.SetBool("isWaiting", true);
         elevatorRenderer.material = highlightMaterial;
         yield return new WaitForSeconds(1);
@@ -105,6 +117,8 @@ public class ElevatorButtonController : MonoBehaviour
         elevatorAnimator.SetBool("isWaiting", false);
 
         OpenElevator();
+        yield return new WaitForSeconds(3);
+        lib.SetActive(false);
     }
 
     private IEnumerator HandleFloorChange()
@@ -132,14 +146,48 @@ public class ElevatorButtonController : MonoBehaviour
                     for (int f = currentFloor; f <= targetFloor; f += update)
                     {
                         elevatorAudio.ChangeFloor(f);
+                        if (f == 5 && DataManager.Instance.funValue == 13)
+                        {
+                            Debug.Log("lib is here");
+                            elevatorAudio.audioSource.Stop();
+                            MusicManager.Instance.audioSource.Pause();
+                            yield return new WaitForSeconds(1);
+                            elevatorAudio.audioSource.clip = elevatorAudio.noise3;
+                            //buttonAudio.clip = elevatorAudio.noise2;
+                            //buttonAudio.Play();
+                            elevatorAudio.audioSource.Play();
+                            yield return new WaitForSeconds(10);
+                            buttonAudio.Stop();
+                            //elevatorAudio.audioSource.Stop();
+                            yield return new WaitForSeconds(2);
+                            elevatorAudio.PlayNoise();
+                            MusicManager.Instance.audioSource.Play();
+                        }
                         yield return new WaitForSeconds(2);
                     }
                 }
                 else
                 {
-                    for (int f = currentFloor; f >= targetFloor; f += update)
+                    for (int f = currentFloor; f <= targetFloor; f += update)
                     {
                         elevatorAudio.ChangeFloor(f);
+                        if (f == 5 && DataManager.Instance.funValue == 13)
+                        {
+                            Debug.Log("lib is here");
+                            elevatorAudio.audioSource.Stop();
+                            MusicManager.Instance.audioSource.Pause();
+                            yield return new WaitForSeconds(1);
+                            elevatorAudio.audioSource.clip = elevatorAudio.noise3;
+                            //buttonAudio.clip = elevatorAudio.noise2;
+                            //buttonAudio.Play();
+                            elevatorAudio.audioSource.Play();
+                            yield return new WaitForSeconds(10);
+                            buttonAudio.Stop();
+                            //elevatorAudio.audioSource.Stop();
+                            yield return new WaitForSeconds(2);
+                            elevatorAudio.PlayNoise();
+                            MusicManager.Instance.audioSource.Play();
+                        }
                         yield return new WaitForSeconds(2);
                     }
                 }
@@ -167,16 +215,25 @@ public class ElevatorButtonController : MonoBehaviour
 
     public IEnumerator HandleSpawnElevator()
     {
+        Debug.Log("fun: " + DataManager.Instance.funValue);
+        if (DataManager.Instance.targetSpawnPointID == "F5Elevator1" && DataManager.Instance.funValue == 26)
+        {
+            Debug.Log("lib is here");
+            libOut.SetActive(true);
+        }
+        DataManager.Instance.rollFun();
         elevatorAnimator.SetBool("isWaiting", false);
-        Debug.Log("isWaiting set to false");
+        //Debug.Log("isWaiting set to false");
         elevatorAudio.PlayDing();
-        Debug.Log("ding played");
+        //Debug.Log("ding played");
         yield return new WaitForSeconds(2);
-        Debug.Log("2 seconds passed");
+        //Debug.Log("2 seconds passed");
         MusicManager.Instance.StopMusic();
-        Debug.Log("music stopped");
+        //Debug.Log("music stopped");
         OpenElevator();
-        Debug.Log("elevator opened");
+        //Debug.Log("elevator opened");
+        yield return new WaitForSeconds(3);
+        libOut.SetActive(false);
     }
 
     private void getFloorID()

@@ -9,6 +9,7 @@ public class MusicManager : MonoBehaviour
     public AudioSource audioSource; // Reference to the AudioSource component
     public List<AudioClip> MusicPlaylist;
     public bool autoPlay = true;
+    public bool playing = false;
     public int currentlyPlaying = 0;
     
     private void Awake()
@@ -47,6 +48,7 @@ public class MusicManager : MonoBehaviour
 
         audioSource.clip = clip;
         audioSource.Play();
+        playing = true;
     }
 
     // New helper method to stop the current music
@@ -55,11 +57,12 @@ public class MusicManager : MonoBehaviour
         if (audioSource.isPlaying)
         {
             audioSource.Stop();
+            playing = false;
         }
     }
     private void Update()
     {
-        if (autoPlay && !audioSource.isPlaying)
+        if (autoPlay && !playing)
         {
             StartCoroutine(nextMusic());
         }

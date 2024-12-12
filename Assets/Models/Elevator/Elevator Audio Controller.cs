@@ -17,6 +17,8 @@ public class ElevatorAudioController : MonoBehaviour
     [SerializeField] AudioClip open;
     [SerializeField] AudioClip close;
     [SerializeField] AudioClip noise;
+    [SerializeField] public AudioClip noise2;
+    [SerializeField] public AudioClip noise3;
     public AudioClip[] music;
 
     public AudioSource audioSource;

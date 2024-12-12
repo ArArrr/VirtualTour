@@ -32,18 +32,18 @@ public class SceneLoaderUI : MonoBehaviour
         {
             case "Main Menu": return 0; 
             case "Outdoor": return 0;
-            case "1F Lobby": return 0;
-            case "BF Canteen": return 1;
-            case "8F Court": return 2;
-            case "7F Hallway": return 3;
-            case "6F Hallway": return 4;
-            case "5F Hallway": return 5;
-            case "4F Hallwayn": return 6;
-            case "3F Hallway": return 7;
-            case "2F Hallway": return 8;
-            case "Complete": DataManager.Instance.targetSpawnPointID = "Lobby"; return 9; 
+            case "1F Lobby": DataManager.Instance.isTour = true; return 0;
+            case "BF Canteen": DataManager.Instance.isTour = true; return 1;
+            case "8F Court": DataManager.Instance.isTour = true; return 2;
+            case "7F Hallway": DataManager.Instance.isTour = true; return 3;
+            case "6F Hallway": DataManager.Instance.isTour = true; return 4;
+            case "5F Hallway": DataManager.Instance.isTour = true; return 5;
+            case "4F Hallwayn": DataManager.Instance.isTour = true; return 6;
+            case "3F Hallway": DataManager.Instance.isTour = true; return 7;
+            case "2F Hallway": DataManager.Instance.isTour = true; return 8;
+            case "Complete": DataManager.Instance.targetSpawnPointID = "Lobby"; DataManager.Instance.isTour = false; return 9; 
             case "Demo Scene": return 0;
-            case "Career Camps": DataManager.Instance.targetSpawnPointID = "Lobby"; return 14;
+            case "Career Camps": DataManager.Instance.targetSpawnPointID = "Lobby"; DataManager.Instance.isTour = false; return 14;
             default: return 0;
         }
     }
